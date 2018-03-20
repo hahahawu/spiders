@@ -1,0 +1,393 @@
+2018-02-03 22:34:44 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: wy163Spider)
+2018-02-03 22:34:44 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-03 22:34:44 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'wy163Spider', 'CONCURRENT_ITEMS': 3000, 'CONCURRENT_REQUESTS': 5000, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'wy163Spider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'wy163Spider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['wy163Spider.spiders'], 'USER_AGENT': ''}
+2018-02-03 22:34:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-03 22:34:44 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-03 22:34:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'wy163Spider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-03 22:34:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-03 22:34:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'wy163Spider.pipelines.SaveToMysqlPipeline']
+2018-02-03 22:34:44 [scrapy.core.engine] INFO: Spider opened
+2018-02-03 22:34:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: data.ent.163.com | conc: 2 | delay:  341 ms (+91) | latency: 3419 ms | size:  7705 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: bbs.ent.163.com | conc: 1 | delay:  250 ms (+0) | latency:  922 ms | size:   178 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: bbs.sports.163.com | conc: 2 | delay:  295 ms (+45) | latency: 2956 ms | size:   178 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: cs.sports.163.com | conc: 2 | delay:  300 ms (+50) | latency: 3008 ms | size:  2188 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: go.news.163.com | conc: 2 | delay:  341 ms (+91) | latency: 3419 ms | size:   240 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: sh.news.163.com | conc: 2 | delay:  250 ms (+0) | latency: 1616 ms | size:  1812 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: sh.news.163.com | conc: 1 | delay:  250 ms (+0) | latency:   87 ms | size:  1812 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 2 | delay:  398 ms (+148) | latency: 3989 ms | size:    11 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: data.ent.163.com | conc: 1 | delay:  341 ms (+0) | latency:  121 ms | size:   154 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 2 | delay:  250 ms (+0) | latency:  108 ms | size:   130 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 2 | delay:  305 ms (+55) | latency: 3055 ms | size: 15264 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: data.sports.163.com | conc: 2 | delay:  250 ms (+0) | latency:  130 ms | size:   774 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: sd.news.163.com | conc: 1 | delay:  250 ms (+0) | latency:  615 ms | size:  1812 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 1 | delay:  206 ms (-192) | latency:  146 ms | size:    11 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 1 | delay:  306 ms (+56) | latency: 3066 ms | size:   130 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: bbs.sports.163.com | conc: 1 | delay:  295 ms (+0) | latency:  133 ms | size:   178 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: go.news.163.com | conc: 1 | delay:  341 ms (+0) | latency:  152 ms | size:   240 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 2 | delay:  131 ms (-118) | latency:  132 ms | size: 10101 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: sports.163.com | conc: 2 | delay:  132 ms (-117) | latency:  158 ms | size: 15262 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 1 | delay:  160 ms (-144) | latency:  159 ms | size: 14642 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  133 ms (-116) | latency:  164 ms | size: 18052 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: news.163.com | conc: 2 | delay:  346 ms (+96) | latency: 3460 ms | size: 10653 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: goal.sports.163.com | conc: 2 | delay:  337 ms (+87) | latency: 3373 ms | size:  8921 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: gd.news.163.com | conc: 2 | delay:  250 ms (+0) | latency: 1255 ms | size:  1812 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: data.sports.163.com | conc: 1 | delay:  356 ms (+106) | latency: 3562 ms | size:   774 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: gd.news.163.com | conc: 1 | delay:  250 ms (+0) | latency:  163 ms | size:  1812 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 1 | delay:  222 ms (+90) | latency: 2222 ms | size: 13074 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: nba.sports.163.com | conc: 2 | delay:  310 ms (+60) | latency: 3105 ms | size: 10439 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: war.news.163.com | conc: 2 | delay:  250 ms (+0) | latency:  196 ms | size:   178 bytes
+2018-02-03 22:34:49 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 2 | delay:  314 ms (+64) | latency: 3142 ms | size:  9602 bytes
+2018-02-03 22:34:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <400 http://ent.163.com?t=1346316469449>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://sh.news.163.com/08/0806/10/4ILGDT3V003700C7.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: focus.news.163.com | conc: 1 | delay:  190 ms (-59) | latency: 1313 ms | size: 44404 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: war.news.163.com | conc: 1 | delay:  371 ms (+121) | latency: 3712 ms | size: 10549 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: goal.sports.163.com | conc: 1 | delay:  186 ms (-150) | latency:  358 ms | size: 10110 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: cs.sports.163.com | conc: 1 | delay:  167 ms (-132) | latency:  349 ms | size:  2188 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 2 | delay:  143 ms (-106) | latency:  375 ms | size:  3342 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 2 | delay:  142 ms (-107) | latency:  355 ms | size: 35486 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 2 | delay:  372 ms (+122) | latency: 3722 ms | size: 18603 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 2 | delay:  207 ms (-42) | latency: 1643 ms | size: 43798 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: news.163.com | conc: 1 | delay:  181 ms (-164) | latency:  176 ms | size: 46597 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 3 | delay:  144 ms (-105) | latency:  384 ms | size: 18905 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: sports.163.com | conc: 1 | delay:  351 ms (+218) | latency: 3511 ms | size: 46030 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 1 | delay:  205 ms (-166) | latency:  384 ms | size: 18563 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: nba.sports.163.com | conc: 1 | delay:  174 ms (-136) | latency:  381 ms | size: 10439 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 2 | delay:  374 ms (+124) | latency: 3740 ms | size: 18777 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 1 | delay:  321 ms (+178) | latency: 3210 ms | size: 36402 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  333 ms (+200) | latency: 3335 ms | size: 14590 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 2 | delay:  374 ms (+230) | latency: 3745 ms | size: 18963 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: comment.ent.163.com | conc: 1 | delay:  207 ms (-42) | latency: 1656 ms | size: 17755 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 1 | delay:  207 ms (-166) | latency:  403 ms | size: 18749 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 1 | delay:  112 ms (-95) | latency:  169 ms | size: 46003 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: comment.sports.163.com | conc: 3 | delay:  134 ms (-115) | latency:  181 ms | size: 18098 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 1 | delay:  164 ms (-149) | latency:  143 ms | size:  9655 bytes
+2018-02-03 22:34:50 [scrapy.extensions.throttle] INFO: slot: run.sports.163.com | conc: 1 | delay:  169 ms (-80) | latency:  893 ms | size: 42795 bytes
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://sh.news.163.com/08/0806/10/4ILGICSR003700C7.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://vote.sports.163.com/vote/sports.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://info.2012.163.com/team/home/0005000DBETB.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://sd.news.163.com/08/0407/09/48TS1UV60059007Q.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://vote.sports.163.com/sports.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://gd.news.163.com/08/1223/15/4TS16RJC0036008B.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://info.2012.163.com/team/home/0005000DBELF.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://gd.news.163.com/special/0036sp/liede2007.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:51 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 1 | delay:  232 ms (-101) | latency: 1305 ms | size: 13988 bytes
+2018-02-03 22:34:51 [scrapy.extensions.throttle] INFO: slot: comment.sports.163.com | conc: 2 | delay:  303 ms (+169) | latency: 3033 ms | size: 18099 bytes
+2018-02-03 22:34:51 [scrapy.extensions.throttle] INFO: slot: bj.news.163.com | conc: 1 | delay:  311 ms (+61) | latency: 3114 ms | size:  1812 bytes
+2018-02-03 22:34:51 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 2 | delay:  552 ms (+409) | latency: 5528 ms | size:  4374 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: war.news.163.com | conc: 1 | delay:  325 ms (-46) | latency: 2789 ms | size: 40853 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 2 | delay:  220 ms (+14) | latency: 2209 ms | size:    55 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: bbs.sports.163.com | conc: 2 | delay:  295 ms (+0) | latency: 2465 ms | size:   178 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: data.ent.163.com | conc: 1 | delay:  341 ms (+0) | latency: 1801 ms | size:   154 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 2 | delay:  298 ms (+138) | latency: 2988 ms | size: 12994 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: post2.news.163.com | conc: 4 | delay:  431 ms (+181) | latency: 4316 ms | size:   166 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 2 | delay:  384 ms (-168) | latency: 2152 ms | size:  4149 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 2 | delay:  298 ms (-22) | latency: 2757 ms | size: 34796 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 2 | delay:  278 ms (+73) | latency: 2783 ms | size:    95 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 1 | delay:  182 ms (+70) | latency: 1824 ms | size: 42194 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: cs.sports.163.com | conc: 1 | delay:  182 ms (+14) | latency: 1827 ms | size:  2188 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: goal.sports.163.com | conc: 1 | delay:  184 ms (-1) | latency: 1830 ms | size: 11631 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 1 | delay:  193 ms (-13) | latency: 1804 ms | size: 18747 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 1 | delay:  202 ms (-19) | latency: 1823 ms | size: 10108 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: sports.163.com | conc: 2 | delay:  324 ms (-26) | latency: 2974 ms | size: 17692 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: nba.sports.163.com | conc: 2 | delay:  253 ms (+79) | latency: 2536 ms | size: 10439 bytes
+2018-02-03 22:34:53 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 1 | delay:  181 ms (+16) | latency: 1812 ms | size:  9271 bytes
+2018-02-03 22:34:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://bj.news.163.com/08/0922/10/4MEJ52U3003800UT.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: go.news.163.com | conc: 2 | delay:  383 ms (+41) | latency: 3833 ms | size:   240 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 2 | delay:  274 ms (-24) | latency: 2502 ms | size: 12995 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: post2.news.163.com | conc: 4 | delay:  546 ms (+114) | latency: 5465 ms | size:   176 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: news.163.com | conc: 2 | delay:  258 ms (+76) | latency: 2582 ms | size:  7985 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 3 | delay:  313 ms (-61) | latency: 2520 ms | size: 18693 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 2 | delay:  262 ms (-16) | latency: 2457 ms | size: 18659 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 2 | delay:  516 ms (+202) | latency: 5161 ms | size: 18641 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: nba.sports.163.com | conc: 2 | delay:  244 ms (-8) | latency: 2361 ms | size: 10439 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 2 | delay:  267 ms (-31) | latency: 2362 ms | size: 31383 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 1 | delay:  221 ms (+0) | latency: 2216 ms | size:    55 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  383 ms (+151) | latency: 3834 ms | size: 17232 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: bbs.sports.163.com | conc: 1 | delay:  295 ms (+0) | latency: 2239 ms | size:   178 bytes
+2018-02-03 22:34:55 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 1 | delay:  303 ms (-80) | latency: 2220 ms | size:    67 bytes
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033195", "1", "True", "0", "1", "0", "回扣！回扣惹的祸啊！！", "2008-04-30 13:40:33", "118.24.*.*", "0", "四川省成都", "0", "False", "", "网易", "18")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033550", "1", "True", "0", "1", "0", "垃圾，还不是对平民，什么反恐哦", "2008-04-30 15:24:26", "60.55.*.*", "0", "浙江省宁波", "0", "False", "", "网易", "6")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9031898", "1", "True", "0", "1", "0", "哈哈拉灯看了多笑了", "2008-04-30 12:35:38", "220.172.*.*", "0", "贵州省毕节", "0", "False", "", "网易", "2")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9029730", "2", "True", "0", "1", "0", "抄作乱花纳税人血汗", "2008-04-30 12:15:19", "116.11.*.*", "0", "广西壮族自治区北海", "0", "False", "", "网易", "26")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033450", "1", "True", "0", "1", "0", "纯粹是浪费。", "2008-04-30 15:11:53", "60.208.*.*", "0", "山东省济南", "0", "False", "", "网易", "2")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034704", "0", "True", "0", "1", "0", "{'2':{'f':'','b':'当然有用了，要不能这么稳定？','p':'4APAVNNL0001125G_4APPGKTE'},'1':{'f':'网易河北唐山网友 [zzg_981212] 的原贴：','b':'只想知道这些车对我们国家有用吗？》？？？？？？','p':'4APAVNNL0001125G_4APDQ46J'}}", "2008-04-30 15:53:12", "60.220.*.*", "0", "山西省长治", "0", "False", "", "网易", "2")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034409", "1", "True", "0", "1", "0", "{'3':{'f':'','b':'回扣七辆奔驰','p':'4APAVNNL0001125G_4APKVEHR'},'2':{'f':'网易广东深圳网友(58.61.*.*) 的原贴：','b':'回扣五辆奔驰','p':'4APAVNNL0001125G_4APFOK50'},'1':{'f':'网易广东广州网友(58.248.*.*) 的原贴：','b':'回扣三辆奔驰','p':'4APAVNNL0001125G_4APE321L'}}", "2008-04-30 14:33:54", "125.121.*.*", "0", "浙江省杭州", "0", "False", "", "网易", "0")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9035094", "0", "True", "0", "1", "0", "{'2':{'f':'','b':'3.5辆','p':'4APAVNNL0001125G_4APH7KQN'},'1':{'f':'网易广东广州网友(58.248.*.*) 的原贴：','b':'回扣三辆奔驰','p':'4APAVNNL0001125G_4APE321L'}}", "2008-04-30 13:28:28", "59.46.*.*", "0", "辽宁省沈阳", "0", "False", "", "网易", "14")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034448", "1", "True", "0", "1", "0", "其实只值2辆奔驰<br>报7辆奔驰  回扣5辆!", "2008-04-30 14:36:39", "61.132.*.*", "0", "江苏省无锡", "0", "False", "", "网易", "0")
+2018-02-03 22:34:55 [stdout] INFO: Comment!!!
+2018-02-03 22:34:55 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9028937", "1", "True", "0", "1", "0", "回扣三辆奔驰", "2008-04-30 12:33:32", "58.248.*.*", "0", "广东省广州", "0", "False", "", "网易", "79")
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: data.sports.163.com | conc: 3 | delay:  507 ms (+151) | latency: 5079 ms | size:   774 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 2 | delay:  203 ms (-70) | latency: 1333 ms | size: 12992 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  304 ms (-79) | latency: 2249 ms | size: 10951 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: comment.sports.163.com | conc: 3 | delay:  515 ms (+212) | latency: 5156 ms | size: 18100 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 1 | delay:  195 ms (-71) | latency: 1245 ms | size: 36808 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 1 | delay:  194 ms (-67) | latency: 1270 ms | size: 18642 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: news.163.com | conc: 2 | delay:  199 ms (-59) | latency: 1398 ms | size: 11070 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 3 | delay:  579 ms (+272) | latency: 5792 ms | size:  7645 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 1 | delay:  318 ms (-197) | latency: 1202 ms | size: 19665 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: go.news.163.com | conc: 1 | delay:  383 ms (+0) | latency: 2265 ms | size:   240 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 2 | delay:  226 ms (+33) | latency: 2268 ms | size:  9501 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 2 | delay:  314 ms (+131) | latency: 3143 ms | size: 41952 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 2 | delay:  307 ms (+104) | latency: 3071 ms | size: 10110 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 2 | delay:  227 ms (+46) | latency: 2279 ms | size:  9376 bytes
+2018-02-03 22:34:56 [scrapy.extensions.throttle] INFO: slot: nba.sports.163.com | conc: 1 | delay:  187 ms (-57) | latency: 1299 ms | size: 10439 bytes
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033259", "0", "False", "0", "1", "0", "再多的反恐车也难挡百姓的怒火，搞好国计民生才是根本。", "2008-04-30 14:26:12", "121.20.*.*", "410930", "河北省唐山", "0", "False", "", "网易", "5")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9030711", "1", "False", "0", "1", "0", "不用这些<br>有一条街的城管，整个重庆都平安了。", "2008-04-30 12:04:55", "221.192.*.*", "190639", "河北省保定", "0", "False", "", "网易", "0")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033410", "0", "True", "0", "1", "0", "原来是“要你命3000”！", "2008-04-30 15:03:34", "221.10.*.*", "0", "四川省成都", "0", "False", "", "网易", "0")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9035291", "2", "True", "0", "1", "0", "{'2':{'f':'','b':'成都人不要搞地狱攻击！','p':'4APAVNNL0001125G_4APKLD97'},'1':{'f':'网易四川成都网友(218.205.*.*) 的原贴：','b':'看来重庆很不安全,要配备这么级反恐设备,用的着吗?不过重庆很喜欢好大喜功,','p':'4APAVNNL0001125G_4APGB989'}}", "2008-04-30 14:28:25", "124.161.*.*", "0", "四川省成都", "0", "False", "", "网易", "1")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9029755", "2", "False", "0", "1", "0", "至于吗?", "2008-04-30 12:27:38", "116.232.*.*", "398654", "上海市徐汇区", "0", "False", "", "网易", "20")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033522", "0", "True", "0", "1", "0", "{'3':{'f':'网易浙江杭州网友(125.121.*.*) 的原贴：','b':'回扣七辆奔驰','p':'4APAVNNL0001125G_4APKVEHR'},'2':{'f':'网易广东深圳网友(58.61.*.*) 的原贴：','b':'回扣五辆奔驰','p':'4APAVNNL0001125G_4APFOK50'},'1':{'f':'网易广东广州网友(58.248.*.*) 的原贴：','b':'回扣三辆奔驰','p':'4APAVNNL0001125G_4APE321L'},'4':{'f':'','b':'回扣不给现金不交易','p':'4APAVNNL0001125G_4APN5SFH'}}", "2008-04-30 15:12:22", "122.5.*.*", "0", "山东省烟台", "0", "False", "", "网易", "0")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9030801", "2", "False", "0", "1", "0", "只想知道这些车对我们国家有用吗？》？？？？？？", "2008-04-30 12:28:40", "121.20.*.*", "67129841", "河北省唐山", "0", "False", "", "网易", "40")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728212", "0", "False", "0", "1", "0", "画面是不错的，但是歌词和音乐差了点。<br>说实话像超男超女的人气选手正式出道后就销声匿迹就是因为没有好歌唱。<br>这里韩庚也一样", "2010-09-15 21:43:55", "220.173.*.*", "2753157", "广西壮族自治区贺州", "0", "False", "", "网易", "2")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727698", "0", "True", "0", "1", "0", "韩庚，我会一路庚随的", "2010-09-15 21:15:10", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "1")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728253", "0", "False", "0", "1", "0", "庚庚加油", "2010-09-15 23:14:17", "114.243.*.*", "60061488", "北京市石景山区", "0", "False", "", "网易", "0")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8722463", "0", "True", "0", "1", "0", "这支MV真是大赞，动感的舞曲配上韩庚超群的舞技一下就能打动人。<br>各种表情，各种气势，韩庚都演绎的很到位。<br>可以看出专辑的制作和韩庚的团队，还有韩庚本人真的都是超级用心了在做这张专辑的。<br>韩同学，我们等待你给我们更多的惊喜。", "2010-09-15 13:07:04", "202.106.*.*", "0", "北京市", "0", "False", "", "网易", "118")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8729189", "0", "True", "0", "1", "0", "韩庚，好瘦···<br>记得，要好好照顾身体！<br>你说过的，健康最重要。我们都要健健康康的，一直走下去。", "2010-09-15 22:05:15", "unknown", "0", "火星", "0", "False", "", "网易", "0")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727344", "0", "True", "0", "1", "0", "韩庚，我们一直都在！永远爱你！", "2010-09-15 19:43:47", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "2")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727587", "0", "True", "0", "1", "0", "韩庚加油~", "2010-09-15 20:33:04", "119.184.*.*", "0", "山东省日照", "0", "False", "", "网易", "2")
+2018-02-03 22:34:56 [stdout] INFO: Comment!!!
+2018-02-03 22:34:56 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727358", "0", "True", "0", "1", "0", "女皇，太好听了！", "2010-09-15 19:46:37", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "1")
+2018-02-03 22:34:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://info.2012.163.com/team/home/0005000DBETE.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 1 | delay:  384 ms (+180) | latency: 3846 ms | size: 12996 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  431 ms (+126) | latency: 4310 ms | size: 14956 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: sports.163.com | conc: 3 | delay:  748 ms (+424) | latency: 7487 ms | size: 12830 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 2 | delay:  491 ms (+269) | latency: 4915 ms | size:    55 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 2 | delay:  437 ms (+134) | latency: 4377 ms | size:    67 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: news.163.com | conc: 1 | delay:  390 ms (+191) | latency: 3907 ms | size: 12076 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 2 | delay:  438 ms (+123) | latency: 4382 ms | size: 42748 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 2 | delay:  432 ms (+205) | latency: 4324 ms | size:  9641 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 3 | delay:  727 ms (+147) | latency: 7272 ms | size:  7548 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: gd.news.163.com | conc: 1 | delay:  889 ms (+639) | latency: 8894 ms | size:  1812 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: sports.163.com | conc: 2 | delay:  603 ms (-145) | latency: 4584 ms | size: 43644 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 2 | delay:  439 ms (+132) | latency: 4395 ms | size: 10104 bytes
+2018-02-03 22:35:00 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 2 | delay:  433 ms (+205) | latency: 4335 ms | size:  9645 bytes
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896554", "0", "True", "0", "1", "0", "庚哥恨你厉害嘛，期待你的电影哦，加油！！！！！", "2010-09-26 23:36:48", "220.175.*.*", "0", "江西省南昌", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9893399", "0", "False", "0", "1", "0", "韩庚的演技越来越进步了！！<br>让人一边心疼一边傻笑~~", "2010-09-26 20:12:29", "59.33.*.*", "66343348", "广东省中山", "0", "False", "", "网易", "1")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9894317", "0", "False", "0", "1", "0", "韩庚，期待你的大萤幕作品", "2010-09-26 22:47:24", "123.128.*.*", "67882492", "山东省威海", "0", "False", "", "网易", "0")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9894342", "0", "True", "0", "1", "0", "韩庚同学真不错啊，歌舞俱佳，单飞的你，压力反而更大啊！<br>加油吧！还要好好保重身体！！<br>回来真好！", "2010-09-26 23:00:45", "218.82.*.*", "0", "上海市浦东新区", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895313", "0", "False", "0", "1", "0", "加油庚宝，你的努力没有白费！！！", "2010-09-26 22:59:38", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895387", "0", "True", "0", "1", "0", "太棒了！！庚加油！", "2010-09-26 23:22:13", "unknown", "0", "火星", "0", "False", "", "网易", "7")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896526", "0", "False", "0", "1", "0", "韩庚，快点拍电影吧", "2010-09-26 23:34:07", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "3")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034088", "0", "True", "0", "1", "0", "反恐车真好", "2008-04-30 13:23:57", "60.4.*.*", "0", "河北省保定", "0", "False", "", "网易", "1")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034054", "0", "True", "0", "1", "0", "噢运快到了还有一百天", "2008-04-30 13:22:38", "60.4.*.*", "0", "河北省保定", "0", "False", "", "网易", "1")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9030990", "1", "False", "0", "1", "0", "{'2':{'f':'','b':'回扣五辆奔驰','p':'4APAVNNL0001125G_4APFOK50'},'1':{'f':'网易广东广州网友(58.248.*.*) 的原贴：','b':'回扣三辆奔驰','p':'4APAVNNL0001125G_4APE321L'}}", "2008-04-30 13:02:48", "58.61.*.*", "174114", "广东省深圳", "0", "False", "", "网易", "32")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034015", "4", "True", "0", "1", "0", "看来重庆很不安全,要配备这么级反恐设备,用的着吗?不过重庆很喜欢好大喜功,", "2008-04-30 13:12:59", "218.205.*.*", "0", "四川省成都", "0", "False", "", "网易", "18")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034750", "0", "True", "0", "1", "0", "{'2':{'f':'','b':'靠!拉登不来访华了!','p':'4APAVNNL0001125G_4APQNJE3'},'1':{'f':'网易河北唐山网友 [zzg_981212] 的原贴：','b':'只想知道这些车对我们国家有用吗？》？？？？？？','p':'4APAVNNL0001125G_4APDQ46J'}}", "2008-04-30 16:14:29", "222.66.*.*", "0", "上海市浦东新区", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9032487", "1", "True", "0", "1", "0", "还不如直接买tank", "2008-04-30 15:11:56", "125.123.*.*", "0", "浙江省嘉兴", "0", "False", "", "网易", "5")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9031947", "0", "True", "0", "1", "0", "无语", "2008-04-30 12:47:05", "58.44.*.*", "0", "湖南省湘西土家族苗族自治州", "0", "False", "", "网易", "13")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9032618", "0", "True", "0", "1", "0", "拉登兄......什么时候来啊？？大伙等着你呢", "2008-04-30 15:28:24", "202.109.*.*", "0", "江西省赣州", "0", "False", "", "网易", "3")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8729183", "0", "True", "0", "1", "0", "韩庚，大爱啊", "2010-09-15 22:00:41", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "0")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727928", "0", "False", "0", "1", "0", "赞，国际化的舞蹈，加油韩庚", "2010-09-16 00:07:24", "220.243.*.*", "55710446", "广东省", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728208", "0", "True", "0", "1", "0", "庚宝最棒", "2010-09-15 21:33:38", "117.95.*.*", "0", "江苏省宿迁", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728165", "0", "False", "0", "1", "0", "帅到不行~韩庚加油哦~", "2010-09-15 21:09:47", "123.149.*.*", "63318823", "河南省郑州", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728008", "0", "True", "0", "1", "0", "韩庚，我们一直都在！女皇", "2010-09-15 19:53:59", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "3")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726743", "0", "True", "0", "1", "0", "咩咩太帅了！被秒杀到了！", "2010-09-15 20:18:04", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "2")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726783", "0", "False", "0", "1", "0", "一直努力的人值得被尊重，相信他能走出自己的一番天地，至于那些没事儿只会在网上骂人耍嘴皮子的，就当它们是笑话看吧~~因为除了眼红，这些人什么都做不了~~", "2010-09-15 20:32:33", "222.209.*.*", "66627320", "四川省成都", "0", "False", "", "网易", "4")
+2018-02-03 22:35:00 [stdout] INFO: Comment!!!
+2018-02-03 22:35:00 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726808", "0", "True", "0", "1", "0", "韩庚", "2010-09-15 20:36:18", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://gd.news.163.com/09/0104/16/4UR17CTO00360088.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 3 | delay:  718 ms (-9) | latency: 7090 ms | size:  7418 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: post2.news.163.com | conc: 5 | delay:  943 ms (+396) | latency: 9434 ms | size:   176 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: comment.sports.163.com | conc: 4 | delay:  754 ms (+239) | latency: 7546 ms | size: 18099 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: post2.news.163.com | conc: 4 | delay:  943 ms (+0) | latency: 7171 ms | size:   176 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: post2.news.163.com | conc: 3 | delay: 1162 ms (+218) | latency:11624 ms | size:   176 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 2 | delay:  446 ms (+128) | latency: 4469 ms | size: 18781 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 2 | delay:  452 ms (+258) | latency: 4526 ms | size: 18913 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 2 | delay:  570 ms (-148) | latency: 4219 ms | size:  7611 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 2 | delay:  485 ms (+289) | latency: 4859 ms | size: 36947 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 2 | delay:  458 ms (-33) | latency: 4247 ms | size:    55 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  399 ms (-31) | latency: 3674 ms | size: 17974 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 2 | delay:  407 ms (-24) | latency: 3833 ms | size: 11127 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 2 | delay:  412 ms (-25) | latency: 3867 ms | size: 43268 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 2 | delay:  417 ms (-22) | latency: 3945 ms | size: 12642 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 2 | delay:  413 ms (-20) | latency: 3926 ms | size:  9598 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 2 | delay:  410 ms (-27) | latency: 3824 ms | size:    67 bytes
+2018-02-03 22:35:02 [scrapy.extensions.throttle] INFO: slot: data.sports.163.com | conc: 4 | delay:  818 ms (+310) | latency: 8185 ms | size:   774 bytes
+2018-02-03 22:35:02 [stdout] INFO: News!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_news(article_id, url, path_text, path_href, date_time, source, title, keywords, author, description, copyright, editor, content, picture_url, video_url, comment_ids) VALUES ("091224085R9N3PI100031H2L", "http://ent.163.com/09/1224/08/5R9N3PI100031H2L.html", "网易娱乐; 明星", "http://ent.163.com/; http://ent.163.com/star/", "2009-12-24 08:52:32", "四川新闻网-成都晚报", "韩庚首度回应解约事件 健康受损收入不公是主因_网易娱乐", "韩庚 解约", "网易", "韩庚首度回应解约事件 健康受损收入不公是主因 韩庚 解约", "网易版权所有", "王晓易_NE0011", "韩庚通过律师就解约事件做出回应。 （资料图）四川新闻网-成都晚报12月24日报道“失踪”几日的韩庚终于露面了！昨日，陷入“解约门”的韩庚终于通过律师就解约事件做出回应。韩庚表示，SM公司长久以来不合理的活动安排，使自己的身体长期承受压力，胃和肾患上了不同程度的疾病。另外，对于收入分配的规定也非常不公平，因此才提出解约。", "http://img1.cache.netease.com/catchpic/E/E8/E8C20F245B6B481A3DDAB177D085FE4D.jpg;http://static.ws.126.net/cnews/css13/img/end_ent.png", "", "9824482;9824496;9824467;9821609;9824462;9824522;9824511;9824485;9821602;9824501;9824474;9824471;")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896263", "0", "False", "0", "1", "0", "韩庚加油", "2010-09-26 22:04:37", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9893765", "0", "True", "0", "1", "0", "很美的剧情，忧伤的旋律，好看！！", "2010-09-26 23:24:37", "222.180.*.*", "0", "重庆市", "0", "False", "", "网易", "3")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895138", "0", "False", "0", "1", "0", "感觉真好~", "2010-09-26 19:46:16", "219.216.*.*", "67012586", "辽宁省大连", "0", "False", "", "网易", "1")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896041", "0", "True", "0", "1", "0", "细腻的演技<br>韩庚，你的眼神很有内容<br>我相信演员韩庚绝对令人惊艳，期待你的大银屏", "2010-09-26 19:22:39", "221.130.*.*", "0", "江苏省南京", "0", "False", "", "网易", "3")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9894281", "0", "False", "0", "1", "0", "期待庚心的豪华版", "2010-09-26 22:18:41", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "4")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896237", "0", "False", "0", "1", "0", "没说的，好!\(^o^)/~", "2010-09-26 21:36:49", "202.196.*.*", "67156889", "河南省郑州", "0", "False", "", "网易", "6")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896029", "0", "False", "0", "1", "0", "韩庚太棒了，期待你的电影！", "2010-09-26 19:00:21", "61.184.*.*", "67567903", "湖北省恩施土家族苗族自治州", "0", "False", "", "网易", "6")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9893406", "0", "False", "0", "1", "0", "为什么看完莫名的伤感 莫名的心疼呢  T T", "2010-09-26 20:14:36", "118.239.*.*", "2707594", "湖南省永州", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034677", "1", "True", "0", "1", "0", "这是件费力费钱，不好看不好用的废物巴了..，不然查它的实用率吧？", "2008-04-30 15:50:46", "210.34.*.*", "0", "福建省厦门", "0", "False", "", "网易", "0")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9033319", "1", "True", "0", "1", "0", "自我树敌 实在可笑<br>民脂民膏 来之太易", "2008-04-30 14:29:02", "221.206.*.*", "0", "黑龙江省牡丹江", "0", "False", "", "网易", "5")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9034611", "1", "True", "0", "1", "0", "笨重的原始垃圾", "2008-04-30 15:27:10", "222.163.*.*", "0", "吉林省白城", "0", "False", "", "网易", "1")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9029634", "0", "True", "0", "1", "0", "牛b啊", "2008-04-30 11:59:31", "125.70.*.*", "0", "四川省成都", "0", "False", "", "网易", "0")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9031864", "1", "True", "0", "1", "0", "反正不是赚的钱，不心疼", "2008-04-30 12:34:50", "221.4.*.*", "0", "广东省惠州", "0", "False", "", "网易", "27")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728072", "0", "False", "0", "1", "0", "啊啊 啊啊 啊啊啊   太好看了！！！！<br>大爱女皇啊！！！！<br>好喜欢啊！！！！ 太棒了！！！", "2010-09-15 20:27:37", "125.34.*.*", "63547345", "北京市朝阳区", "0", "False", "", "网易", "1")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8729176", "0", "False", "0", "1", "0", "帅！！！！！", "2010-09-15 21:52:19", "unknown", "61874442", "火星", "0", "False", "", "网易", "0")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726753", "0", "True", "0", "1", "0", "女皇，很棒啊！！！爱啊", "2010-09-15 20:20:26", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726885", "0", "True", "0", "1", "0", "庚宝好帅啊！！舞技一流！！越来越厉害了！！妞们支持你，你总是给我们好多惊喜，相信你可以做的越来越好滴！！", "2010-09-15 21:26:04", "117.95.*.*", "0", "江苏省宿迁", "0", "False", "", "网易", "0")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727704", "0", "True", "0", "1", "0", "怎么能这么帅呢？韩庚", "2010-09-15 21:17:24", "59.78.*.*", "0", "上海市", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726759", "0", "True", "0", "1", "0", "\\(^o^)/~韩庚最棒！", "2010-09-15 20:23:07", "123.6.*.*", "0", "河南省郑州", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8726961", "0", "True", "0", "1", "0", "实在是太帅啦~", "2010-09-15 22:23:24", "114.82.*.*", "0", "上海市嘉定区", "0", "False", "", "网易", "0")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8727841", "0", "True", "0", "1", "0", "这个不得不说托很多啊 别的网站都没这么删帖的就网易你这麽删明眼人一下就能看出来明星也不能靠这样就能红啊网易你到底收了他们多少钱啊说个数呗", "2010-09-15 23:21:09", "110.52.*.*", "0", "湖南省岳阳", "0", "False", "", "网易", "3")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8728028", "0", "True", "0", "1", "0", "我的个天呐，韩庚你还让不让我们活了啊！帅到无法形容了啊！超爱《女皇》的舞蹈啊！那歌曲与舞蹈配起来就是极致嘛！", "2010-09-15 20:02:11", "unknown", "0", "火星", "0", "False", "", "网易", "2")
+2018-02-03 22:35:02 [stdout] INFO: Comment!!!
+2018-02-03 22:35:02 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("8725829", "0", "True", "0", "1", "0", "太帅了，受不了啊", "2010-09-15 19:41:29", "122.96.*.*", "0", "江苏省盐城", "0", "False", "", "网易", "3")
+2018-02-03 22:35:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://info.2012.163.com/team/home/0005000DBETS.html>: HTTP status code is not handled or not allowed
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: history.news.163.com | conc: 2 | delay:  428 ms (+16) | latency: 4286 ms | size: 44332 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: vote.sports.163.com | conc: 1 | delay:  570 ms (+0) | latency: 4026 ms | size:     0 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: comment.sports.163.com | conc: 4 | delay:  738 ms (-16) | latency: 7225 ms | size: 18098 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: post2.news.163.com | conc: 3 | delay: 1162 ms (+0) | latency: 7675 ms | size:   166 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: war.163.com | conc: 2 | delay:  403 ms (+3) | latency: 4031 ms | size: 15179 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: edu.163.com | conc: 2 | delay:  505 ms (+19) | latency: 5053 ms | size: 37543 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: news.163.com | conc: 2 | delay:  538 ms (+147) | latency: 5385 ms | size:  9955 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: ent.163.com | conc: 2 | delay:  538 ms (+153) | latency: 5384 ms | size: 12992 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: goal.sports.163.com | conc: 5 | delay: 1171 ms (+986) | latency:11715 ms | size:  8893 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: v.sports.163.com | conc: 2 | delay:  497 ms (+44) | latency: 4973 ms | size: 19026 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: v.ent.163.com | conc: 2 | delay:  411 ms (+3) | latency: 4115 ms | size:  9871 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: sports.163.com | conc: 3 | delay:  519 ms (-83) | latency: 4360 ms | size: 42119 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: data.sports.163.com | conc: 3 | delay:  990 ms (+172) | latency: 9905 ms | size:   774 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: comment.api.163.com | conc: 2 | delay:  479 ms (+21) | latency: 4791 ms | size:    55 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: comment.news.163.com | conc: 2 | delay:  408 ms (-1) | latency: 4063 ms | size:    67 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: cs.sports.163.com | conc: 5 | delay: 1173 ms (+990) | latency:11736 ms | size:  2188 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: v.news.163.com | conc: 2 | delay:  489 ms (+42) | latency: 4890 ms | size: 18810 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: cba.sports.163.com | conc: 2 | delay:  445 ms (+32) | latency: 4454 ms | size:  9873 bytes
+2018-02-03 22:35:05 [scrapy.extensions.throttle] INFO: slot: weleague.sports.163.com | conc: 2 | delay:  442 ms (+25) | latency: 4429 ms | size: 12650 bytes
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896147", "0", "True", "0", "1", "0", "韩庚，快点拍电影吧！无限期待期待期待期待期待期待！", "2010-09-26 20:05:41", "unknown", "0", "火星", "0", "False", "", "网易", "9")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895275", "0", "True", "0", "1", "0", "哎呀，太唯美了，哈哈！", "2010-09-26 22:22:22", "114.104.*.*", "0", "安徽省六安", "0", "False", "", "网易", "3")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895124", "0", "True", "0", "1", "0", "很好呢，掉拖鞋那一幕好好笑，不过表演的超好的~~加油~~支持！！", "2010-09-26 19:42:41", "218.106.*.*", "0", "福建省福州", "0", "False", "", "网易", "8")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895300", "0", "False", "0", "1", "0", "加油，加油！！", "2010-09-26 22:53:26", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "1")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9895371", "0", "False", "0", "1", "0", "期待韩庚的大荧幕作品", "2010-09-26 23:20:49", "119.6.*.*", "66697727", "四川省绵阳", "0", "False", "", "网易", "2")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9894304", "0", "False", "0", "1", "0", "支持你", "2010-09-26 22:27:48", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "0")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9894532", "0", "True", "0", "1", "0", "心疼你伤的深", "2010-09-26 23:25:44", "unknown", "0", "火星", "0", "False", "", "网易", "2")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9896123", "0", "True", "0", "1", "0", "很好看，韩庚，期待你的大银屏！", "2010-09-26 19:55:00", "221.11.*.*", "0", "陕西省西安", "0", "False", "", "网易", "0")
+2018-02-03 22:35:05 [stdout] INFO: Comment!!!
+2018-02-03 22:35:05 [stdout] INFO: Sql : INSERT INTO wy163_comment(comment_id, against, anonymous, favCount, buildLevel, firstBuildLevelID, content, createTime, ip, user_id, location, shareCount, isDel, source, siteName, vote) VALUES ("9894273", "0", "False", "0", "1", "0", "韩庚的演技好厉害", "2010-09-26 22:16:07", "98.88.*.*", "1267819", "美国", "0", "False", "", "网易", "5")
+2018-02-03 22:35:17 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: wy163Spider)
+2018-02-03 22:35:17 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-03 22:35:17 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'wy163Spider', 'CONCURRENT_ITEMS': 3000, 'CONCURRENT_REQUESTS': 5000, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'wy163Spider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'wy163Spider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['wy163Spider.spiders'], 'USER_AGENT': ''}
+2018-02-03 22:35:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-03 22:35:17 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-03 22:35:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'wy163Spider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-03 22:35:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-03 22:35:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'wy163Spider.pipelines.SaveToMysqlPipeline']
+2018-02-03 22:35:18 [scrapy.core.engine] INFO: Spider opened
+2018-02-03 22:35:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)

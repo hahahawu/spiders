@@ -1,0 +1,101 @@
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: download-error
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: empty-content
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: download-error
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/python3.4/lib/python3.4/logging/__init__.py", line 978, in emit
+    msg = self.format(record)
+  File "/usr/local/python3.4/lib/python3.4/logging/__init__.py", line 828, in format
+    return fmt.format(record)
+  File "/usr/local/python3.4/lib/python3.4/logging/__init__.py", line 565, in format
+    record.message = record.getMessage()
+  File "/usr/local/python3.4/lib/python3.4/logging/__init__.py", line 328, in getMessage
+    msg = msg % self.args
+  File "/hbasestorage/spider/spider_source/peopleSpider/peopleSpider/items.py", line 47, in __str__
+    return json.dumps(r, sort_keys=True, indent=4, separators=(',', ': '))
+  File "/usr/local/python3.4/lib/python3.4/json/__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "/usr/local/python3.4/lib/python3.4/json/encoder.py", line 194, in encode
+    chunks = list(chunks)
+  File "/usr/local/python3.4/lib/python3.4/json/encoder.py", line 422, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/local/python3.4/lib/python3.4/json/encoder.py", line 396, in _iterencode_dict
+    yield from chunks
+  File "/usr/local/python3.4/lib/python3.4/json/encoder.py", line 345, in _iterencode_dict
+    items = sorted(dct.items(), key=lambda kv: kv[0])
+TypeError: unorderable types: NoneType() < str()
+Call stack:
+  File "/usr/local/python3.4/bin/scrapy", line 11, in <module>
+    sys.exit(execute())
+  File "/usr/local/python3.4/lib/python3.4/site-packages/scrapy/cmdline.py", line 142, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/scrapy/cmdline.py", line 88, in _run_print_help
+    func(*a, **kw)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/scrapy/cmdline.py", line 149, in _run_command
+    cmd.run(args, opts)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/scrapy/commands/crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "/usr/local/python3.4/lib/python3.4/site-packages/scrapy/crawler.py", line 280, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/base.py", line 1194, in run
+    self.mainLoop()
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/base.py", line 1203, in mainLoop
+    self.runUntilCurrent()
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/base.py", line 825, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 393, in callback
+    self._startRunCallbacks(result)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 501, in _startRunCallbacks
+    self._runCallbacks()
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 393, in callback
+    self._startRunCallbacks(result)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 501, in _startRunCallbacks
+    self._runCallbacks()
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 859, in _cbDeferred
+    self.callback(self.resultList)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 393, in callback
+    self._startRunCallbacks(result)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 501, in _startRunCallbacks
+    self._runCallbacks()
+  File "/usr/local/python3.4/lib/python3.4/site-packages/Twisted-16.3.1-py3.4.egg/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/usr/local/python3.4/lib/python3.4/site-packages/scrapy/core/scraper.py", line 234, in _itemproc_finished
+    extra={'spider': spider})
+Unable to print the message and arguments - possible formatting error.
+Use the traceback above to help find the error.
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: download-error
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: download-error
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: download-error
+Unhandled error in Deferred:
+
+
+Traceback (most recent call last):
+Failure: scrapy.pipelines.files.FileException: download-error

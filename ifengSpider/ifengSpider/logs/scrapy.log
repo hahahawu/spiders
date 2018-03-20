@@ -1,0 +1,663 @@
+2018-02-03 22:29:13 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: ifengSpider)
+2018-02-03 22:29:13 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-03 22:29:13 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'ifengSpider', 'CONCURRENT_ITEMS': 1000, 'CONCURRENT_REQUESTS': 1024, 'CONCURRENT_REQUESTS_PER_DOMAIN': 512, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'ifengSpider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'ifengSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['ifengSpider.spiders']}
+2018-02-03 22:29:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-03 22:29:13 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-03 22:29:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'ifengSpider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-03 22:29:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-03 22:29:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'ifengSpider.pipelines.SaveToMysqlPipeline']
+2018-02-03 22:29:14 [scrapy.core.engine] INFO: Spider opened
+2018-02-03 22:29:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: live.sports.ifeng.com | conc: 1 | delay:  186 ms (-63) | latency: 1231 ms | size:  5269 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 2 | delay:  130 ms (-119) | latency:  107 ms | size:   256 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: survey.news.ifeng.com | conc: 1 | delay:  134 ms (-115) | latency:  192 ms | size:    25 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 1 | delay:  133 ms (+3) | latency: 1338 ms | size:   256 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  131 ms (-118) | latency:  127 ms | size:  3993 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  191 ms (-58) | latency: 1331 ms | size:  4305 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  131 ms (-118) | latency:  137 ms | size: 15292 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 1 | delay:  137 ms (+6) | latency: 1376 ms | size: 14499 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  200 ms (-49) | latency: 1517 ms | size: 10977 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 1 | delay:   74 ms (-58) | latency:  160 ms | size:   256 bytes
+2018-02-03 22:29:16 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  116 ms (-84) | latency:  317 ms | size: 10564 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  115 ms (-75) | latency:  402 ms | size:  4488 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   88 ms (-28) | latency:  599 ms | size: 17461 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  124 ms (+8) | latency: 1242 ms | size:  5345 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 4 | delay:  180 ms (-69) | latency: 1107 ms | size:  9643 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  245 ms (+65) | latency: 2456 ms | size:  3993 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  237 ms (+105) | latency: 2374 ms | size: 19243 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:   90 ms (+15) | latency:  905 ms | size:   256 bytes
+2018-02-03 22:29:17 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   64 ms (-23) | latency:  414 ms | size: 16620 bytes
+2018-02-03 22:29:18 [stdout] INFO: Excepion : time data '2017年11月30日 17:32' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:18 [stdout] INFO: docUrl : http://sn.ifeng.com/a/20171130/6195023_0.shtml
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:   79 ms (-10) | latency:  692 ms | size:   256 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   55 ms (-8) | latency:  468 ms | size: 16059 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  152 ms (-92) | latency:  598 ms | size:  3993 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  150 ms (-87) | latency:  630 ms | size: 15623 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:   90 ms (-62) | latency:  275 ms | size:  3993 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 4 | delay:  124 ms (+0) | latency:  714 ms | size:     0 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   52 ms (-3) | latency:  484 ms | size: 16694 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:   76 ms (-3) | latency:  727 ms | size:   256 bytes
+2018-02-03 22:29:18 [stdout] INFO: Excepion : time data '2017年11月30日 17:32' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:18 [stdout] INFO: docUrl : http://sn.ifeng.com/a/20171130/6195023_1.shtml
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  178 ms (+28) | latency: 1789 ms | size: 15381 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 4 | delay:  179 ms (+42) | latency: 1799 ms | size: 10892 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  183 ms (+92) | latency: 1830 ms | size:  3993 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   48 ms (-3) | latency:  455 ms | size: 17892 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  139 ms (-40) | latency:  985 ms | size:  3993 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  133 ms (+9) | latency: 1335 ms | size:  4455 bytes
+2018-02-03 22:29:18 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  113 ms (-65) | latency:  475 ms | size: 14818 bytes
+2018-02-03 22:29:19 [stdout] INFO: Excepion : time data '2017年11月30日 17:32' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:19 [stdout] INFO: docUrl : http://sn.ifeng.com/a/20171130/6195023_2.shtml
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   47 ms (-1) | latency:  453 ms | size: 17920 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  132 ms (+56) | latency: 1326 ms | size:   256 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  143 ms (+29) | latency: 1430 ms | size: 15396 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  167 ms (+28) | latency: 1678 ms | size: 11240 bytes
+2018-02-03 22:29:19 [stdout] INFO: Excepion : time data '2017年12月01日 11:20' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:19 [stdout] INFO: docUrl : http://sn.ifeng.com/a/20171201/6196714_0.shtml
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  115 ms (-27) | latency:  885 ms | size: 16201 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 4 | delay:  181 ms (+48) | latency: 1819 ms | size: 29219 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  150 ms (+18) | latency: 1506 ms | size:   256 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:   54 ms (+7) | latency:  549 ms | size: 18657 bytes
+2018-02-03 22:29:19 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  135 ms (-46) | latency:  885 ms | size: 12898 bytes
+2018-02-03 22:29:20 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  158 ms (+8) | latency: 1589 ms | size:   256 bytes
+2018-02-03 22:29:20 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 3 | delay:  229 ms (-20) | latency: 2091 ms | size:    65 bytes
+2018-02-03 22:29:20 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  184 ms (+1) | latency: 1848 ms | size:  8123 bytes
+2018-02-03 22:29:20 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  117 ms (-50) | latency:  671 ms | size:  3993 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  215 ms (+97) | latency: 2152 ms | size: 12017 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  135 ms (+0) | latency:  729 ms | size:     0 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  155 ms (-29) | latency: 1259 ms | size: 23767 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 3 | delay:  223 ms (-6) | latency: 2165 ms | size:    65 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  119 ms (+65) | latency: 1199 ms | size: 17665 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  276 ms (+61) | latency: 2768 ms | size:  8709 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  194 ms (+38) | latency: 1941 ms | size:  3993 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  138 ms (+3) | latency: 1387 ms | size: 35596 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  140 ms (+24) | latency: 1408 ms | size: 15484 bytes
+2018-02-03 22:29:21 [stdout] INFO: Excepion : time data '2015年06月16日 04:01' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:21 [stdout] INFO: docUrl : http://news.ifeng.com/a/20150616/43981874_0.shtml
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  360 ms (+221) | latency: 3601 ms | size:  9789 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  132 ms (+12) | latency: 1324 ms | size: 19508 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  275 ms (+116) | latency: 2755 ms | size:   256 bytes
+2018-02-03 22:29:21 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  230 ms (+7) | latency: 2306 ms | size:    65 bytes
+2018-02-03 22:29:22 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  190 ms (-3) | latency: 1877 ms | size:  3993 bytes
+2018-02-03 22:29:22 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  282 ms (+6) | latency: 2823 ms | size:   256 bytes
+2018-02-03 22:29:22 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  109 ms (-23) | latency:  857 ms | size: 17807 bytes
+2018-02-03 22:29:22 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  231 ms (+91) | latency: 2319 ms | size: 15264 bytes
+2018-02-03 22:29:22 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  240 ms (-36) | latency: 2040 ms | size: 14804 bytes
+2018-02-03 22:29:22 [stdout] INFO: Excepion : time data '2014年07月12日 07:06' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:22 [stdout] INFO: docUrl : http://culture.ifeng.com/a/20140712/41128689_0.shtml
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  220 ms (-11) | latency: 2084 ms | size: 15329 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  292 ms (+10) | latency: 2928 ms | size:   256 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  251 ms (-108) | latency: 1434 ms | size:  6960 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  182 ms (-8) | latency: 1735 ms | size:  3993 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  103 ms (-5) | latency:  978 ms | size: 17547 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  251 ms (+0) | latency: 2509 ms | size:  5968 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  209 ms (-30) | latency: 1787 ms | size: 13946 bytes
+2018-02-03 22:29:23 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 3 | delay:  296 ms (+66) | latency: 2969 ms | size:    65 bytes
+2018-02-03 22:29:23 [stdout] INFO: News!!!
+2018-02-03 22:29:23 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("201711306195023", "http://sn.ifeng.com/a/20171130/6195023_0.shtml", "资讯; 凤观陕西", "http://sn.ifeng.com/zixun/; http://sn.ifeng.com/listpage/2690/1/list.shtml", "", "我们都知道秦始皇为阻止匈奴入侵修建了万里长城，而且这还只是一个被动的防御体系。历史上不少人都质疑其是否能够真正抵挡匈奴铁骑南下。其实，在秦始皇暴亡之前，秦始皇一直在建造一个攻击性的防御工程。这到底是怎样的一个工程？可惜它的身影一直被湮没在历史的烟尘里、掩藏在万里长城的光环后。", "秦直道——古代秦始皇攻打匈奴的一把利剑", "凤凰网陕西综合", "", "[王薇]", "1970-01-01 00:00:00", "我们都知道秦始皇为阻止匈奴入侵修建了万里长城，而且这还只是一个被动的防御体系。历史上不少人都质疑其是否能够真正抵挡匈奴铁骑南下。其实，在秦始皇暴亡之前，秦始皇一直在建造一个攻击性的防御工程。这到底是怎样的一个工程？可惜它的身影一直被湮没在历史的烟尘里、掩藏在万里长城的光环后。2011年新年伊始，陕西省考古学者在秦直道进行考察。从地理上看，秦直道北上必须通过洛河，而很多人都认为秦直道要过洛河应当是间接架桥而过，而且河岸的圣马桥处留存有秦时的引桥桥墩。如果秦直道是直线过河而去，似乎也符合常理。但是考古证实秦直道是围绕圣马桥墩台下坡并转弯180度后从下游过河。这是中国考古史上发现最早的交通环岛。交通环岛是现代高速公路用于疏导交通的圆形工程。为什么当时的人们就已经很熟练地运用交通环岛？为什么秦直道会选择这样的方式迂回过河，而不是直接过河？这一连串的疑问，更让人觉得，秦直道明显不同于长城，这是一个设计超前的巨型工程。秦直道——这一中华文明遗产，跟长城、兵马俑、阿房宫同为大秦帝国产物，秦直道是一把利剑，长城是盾，兵马俑则是兵卒，阿房宫象征着中央的王权，四者是密不可分的代表一个强盛王朝。凭借这一通道，秦始皇的铁甲骑兵，从咸阳附近的林光宫屯兵地出发，粮食和军辎可以源源不断地北运，三天三夜就可抵达阴山脚下，摧城拔地所向披靡，从此匈奴“不敢南下牧马，士不敢弯弓报怨”，只能远遁大漠戈壁深处，数十年不敢露头。但是这样一条利剑一样的道路，为何在后来渐渐湮没无闻？其实，秦直道在后来的历史中也渐渐地隐现，甚至发挥着惊人的作用，只是没有被人注意。秦始皇修建秦直道'除了用以突击匈IQQ外'他还想完成巡游国土疆域的宏愿。然而他却在南巡途中的沙丘暴亡，只有他的尸首循着部分秦直道运回咸阳。之所以要迂回地从秦直道回咸阳，也是为了欺瞒始皇暴亡的消息，以稳固人心。汉文帝北征刘恒是秦代以后最早驱车走过秦直道的汉代皇帝。西汉初年，匈奴贵族势力曾两度试图进犯关中。《史记·孝文本纪》载：“汉文帝三年(前177年)五月，匈奴入北地，居河南为寇。帝初幸甘泉”。这时，被蒙恬赶到阴山以北的匈奴又杀回到河套地区。六月，“辛卯，帝自甘泉之高奴，因幸太原，见过群臣，皆赐之”。高奴在今延安一带，汉文帝从林光宫（当时甘泉宫还未建造）到延安前去慰问前线军队，走的就是秦直道。其中一次是汉文帝三年（公元前177年），曾经被蒙恬赶到阴山以北的匈奴又杀回到河套区域。虽然匈奴暂时控制了河套地区，却不敢长期盘踞，不久又撤走，就是惧怕汉朝军队从秦直道直指其老巢。高奴在今延安一带，汉文帝从林光宫（当时甘泉宫还未建造）到延安走的就是秦直道。", "", "", "0", "0")
+2018-02-03 22:29:24 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  147 ms (-35) | latency: 1120 ms | size: 20507 bytes
+2018-02-03 22:29:24 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  149 ms (-70) | latency:  783 ms | size: 16189 bytes
+2018-02-03 22:29:24 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 1 | delay:  184 ms (+35) | latency: 1848 ms | size: 15614 bytes
+2018-02-03 22:29:24 [stdout] INFO: News!!!
+2018-02-03 22:29:24 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("201711306195023", "http://sn.ifeng.com/a/20171130/6195023_1.shtml", "资讯; 凤观陕西", "http://sn.ifeng.com/zixun/; http://sn.ifeng.com/listpage/2690/1/list.shtml", "", "我们都知道秦始皇为阻止匈奴入侵修建了万里长城，而且这还只是一个被动的防御体系。历史上不少人都质疑其是否能够真正抵挡匈奴铁骑南下。其实，在秦始皇暴亡之前，秦始皇一直在建造一个攻击性的防御工程。这到底是怎样的一个工程？可惜它的身影一直被湮没在历史的烟尘里、掩藏在万里长城的光环后。", "秦直道——古代秦始皇攻打匈奴的一把利剑", "凤凰网陕西综合", "", "[王薇]", "1970-01-01 00:00:00", "汉武帝北征汉武帝刘彻也多次亲率大军，沿直道北巡，震慑匈奴。据《史记·孝武本纪》记载，武帝在元封元月(前110年)的一则巡边诏令中说：“朕将巡边陲，择兵振旅，躬秉武节，置十二部将军，亲率师焉。行自云阳，北历上郡、西河、五原，出长城，北登单于台，至朔方，临北河。勒兵十八万骑，旌旗径千余里，威震匈奴……”“但使龙城飞将在，不教胡马度阴山”。著名的飞将军李广从直道进军，杀得敌人闻风丧胆。可见，秦直道到了西汉时，已发挥着极其重要的军事作用。正是有了这条秦直道，汉王朝的大军才从天而降一样，突然出现在匈奴骑兵面前，让他们措手不及。“但使龙城飞将在，不教胡马度阴山。”有名的飞将军李广就曾从直道进军，让匈奴人闻风丧胆。可以说正是因为秦直道的护卫，才让汉朝暂时稳固了江山。元封元年（公元前110年），汉武帝曾经北巡疆土，从辽西一直到现在的内蒙古，就途经了北方的秦直道。公元前127年，汉骠骑大将军卫青兵分几路，齐头并进，重创匈奴，从此解除匈奴对北部边界的威胁。史学家司马迁就跟随着汉武帝，沿着秦直道来到现在的内蒙古地区，见到了秦筑长城和鄂尔多斯的草原，他在《史记》中对于秦朝开辟秦直道的利弊也有总结。", "", "", "0", "0")
+2018-02-03 22:29:24 [stdout] INFO: INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("201711306195023", "http://sn.ifeng.com/a/20171130/6195023_1.shtml", "资讯; 凤观陕西", "http://sn.ifeng.com/zixun/; http://sn.ifeng.com/listpage/2690/1/list.shtml", "", "我们都知道秦始皇为阻止匈奴入侵修建了万里长城，而且这还只是一个被动的防御体系。历史上不少人都质疑其是否能够真正抵挡匈奴铁骑南下。其实，在秦始皇暴亡之前，秦始皇一直在建造一个攻击性的防御工程。这到底是怎样的一个工程？可惜它的身影一直被湮没在历史的烟尘里、掩藏在万里长城的光环后。", "秦直道——古代秦始皇攻打匈奴的一把利剑", "凤凰网陕西综合", "", "[王薇]", "1970-01-01 00:00:00", "汉武帝北征汉武帝刘彻也多次亲率大军，沿直道北巡，震慑匈奴。据《史记·孝武本纪》记载，武帝在元封元月(前110年)的一则巡边诏令中说：“朕将巡边陲，择兵振旅，躬秉武节，置十二部将军，亲率师焉。行自云阳，北历上郡、西河、五原，出长城，北登单于台，至朔方，临北河。勒兵十八万骑，旌旗径千余里，威震匈奴……”“但使龙城飞将在，不教胡马度阴山”。著名的飞将军李广从直道进军，杀得敌人闻风丧胆。可见，秦直道到了西汉时，已发挥着极其重要的军事作用。正是有了这条秦直道，汉王朝的大军才从天而降一样，突然出现在匈奴骑兵面前，让他们措手不及。“但使龙城飞将在，不教胡马度阴山。”有名的飞将军李广就曾从直道进军，让匈奴人闻风丧胆。可以说正是因为秦直道的护卫，才让汉朝暂时稳固了江山。元封元年（公元前110年），汉武帝曾经北巡疆土，从辽西一直到现在的内蒙古，就途经了北方的秦直道。公元前127年，汉骠骑大将军卫青兵分几路，齐头并进，重创匈奴，从此解除匈奴对北部边界的威胁。史学家司马迁就跟随着汉武帝，沿着秦直道来到现在的内蒙古地区，见到了秦筑长城和鄂尔多斯的草原，他在《史记》中对于秦朝开辟秦直道的利弊也有总结。", "", "", "0", "0")
+2018-02-03 22:29:24 [stdout] INFO: 发生异常
+2018-02-03 22:29:24 [stdout] INFO: (1062, "Duplicate entry '201711306195023' for key 'PRIMARY'")
+2018-02-03 22:29:24 [stdout] INFO: News!!!
+2018-02-03 22:29:24 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("201711306195023", "http://sn.ifeng.com/a/20171130/6195023_2.shtml", "资讯; 凤观陕西", "http://sn.ifeng.com/zixun/; http://sn.ifeng.com/listpage/2690/1/list.shtml", "", "我们都知道秦始皇为阻止匈奴入侵修建了万里长城，而且这还只是一个被动的防御体系。历史上不少人都质疑其是否能够真正抵挡匈奴铁骑南下。其实，在秦始皇暴亡之前，秦始皇一直在建造一个攻击性的防御工程。这到底是怎样的一个工程？可惜它的身影一直被湮没在历史的烟尘里、掩藏在万里长城的光环后。", "秦直道——古代秦始皇攻打匈奴的一把利剑", "凤凰网陕西综合", "", "[王薇]", "1970-01-01 00:00:00", "唐宋战突厥唐朝，李世民征突厥时多次走秦直道，秦直道在此时的战争中也起到了重要作用。宋朝，古道大战不断。1038年10月11日，李元昊经鏖战在兴庆府建立了大夏，后人称为西夏。清朝末年，捻军一部沿秦直道同清军作战。现代发生在这一条古道上的最著名的一次战役当属直罗镇战役了。它是红军长征到达陕北的第一仗。从某种意义上说，直罗镇战役奠定了中国革命胜利的军事基础。", "", "", "0", "0")
+2018-02-03 22:29:24 [stdout] INFO: INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("201711306195023", "http://sn.ifeng.com/a/20171130/6195023_2.shtml", "资讯; 凤观陕西", "http://sn.ifeng.com/zixun/; http://sn.ifeng.com/listpage/2690/1/list.shtml", "", "我们都知道秦始皇为阻止匈奴入侵修建了万里长城，而且这还只是一个被动的防御体系。历史上不少人都质疑其是否能够真正抵挡匈奴铁骑南下。其实，在秦始皇暴亡之前，秦始皇一直在建造一个攻击性的防御工程。这到底是怎样的一个工程？可惜它的身影一直被湮没在历史的烟尘里、掩藏在万里长城的光环后。", "秦直道——古代秦始皇攻打匈奴的一把利剑", "凤凰网陕西综合", "", "[王薇]", "1970-01-01 00:00:00", "唐宋战突厥唐朝，李世民征突厥时多次走秦直道，秦直道在此时的战争中也起到了重要作用。宋朝，古道大战不断。1038年10月11日，李元昊经鏖战在兴庆府建立了大夏，后人称为西夏。清朝末年，捻军一部沿秦直道同清军作战。现代发生在这一条古道上的最著名的一次战役当属直罗镇战役了。它是红军长征到达陕北的第一仗。从某种意义上说，直罗镇战役奠定了中国革命胜利的军事基础。", "", "", "0", "0")
+2018-02-03 22:29:24 [stdout] INFO: 发生异常
+2018-02-03 22:29:24 [stdout] INFO: (1062, "Duplicate entry '201711306195023' for key 'PRIMARY'")
+2018-02-03 22:29:25 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  246 ms (+37) | latency: 2469 ms | size: 11093 bytes
+2018-02-03 22:29:25 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  141 ms (+37) | latency: 1410 ms | size: 17752 bytes
+2018-02-03 22:29:25 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 1 | delay:  121 ms (-25) | latency:  952 ms | size: 22296 bytes
+2018-02-03 22:29:25 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  208 ms (-43) | latency: 1650 ms | size:  6592 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  280 ms (-15) | latency: 2649 ms | size:    65 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  340 ms (+47) | latency: 3407 ms | size:   256 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 1 | delay:  407 ms (+126) | latency: 4070 ms | size:  5186 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  122 ms (-18) | latency: 1036 ms | size: 17863 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  237 ms (-9) | latency: 2271 ms | size: 10329 bytes
+2018-02-03 22:29:26 [stdout] INFO: News!!!
+2018-02-03 22:29:26 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("201712016196714", "http://sn.ifeng.com/a/20171201/6196714_0.shtml", "资讯; 凤观陕西", "http://sn.ifeng.com/zixun/; http://sn.ifeng.com/listpage/2690/1/list.shtml", "", "“今天我们依旧能在秦直道上看到无以数计的和市遗迹，如‘白马驿’、‘车路梁’、‘百户店’等，都是历年来商贸往来的见证。", "秦直道——古商道凝聚昔日繁华", "凤凰网陕西综合", "", "[王薇]", "1970-01-01 00:00:00", "“今天我们依旧能在秦直道上看到无以数计的和市遗迹，如‘白马驿’、‘车路梁’、‘百户店’等，都是历年来商贸往来的见证。有些‘和市’至今都保留着当初的原貌，它在向所有考察者讲述着一些古老的、鲜为人知的或血腥的、或祥和的故事。”徐伊丽说。战争带来的不仅仅是杀戮，还有不同地域的物品交换和风俗文化的融合，所以每一次的战争同时会成就一些商贸繁荣之地。在秦直道上曾经发生过的无数次战争里，粮食、布匹交，马匹得到交换。铁器、铜器、陶器、缯絮、绢帛、食品、金银器皿、生产工具等北入匈奴地区；骑射技术、生活习俗也慢慢传入了中原地区。秦直道是中国劳动人民在距今2200年前，用落后的生产工具，沿着山岭和沙漠草原修筑出的长达700余公里、宽50米左右的车马大道。而且仅用两年半时间，就完成了选线、改线、施工、建筑驿站、邮亭等任务，其速度之快，工程之艰巨，在中国乃至世界筑路史上可谓奇迹！直道修成以后，除在军事上收到威慑的效果以外，对于南北政令统一、经济开发和文化交流，也起到极为有益的作用。据《文物考古工作三十年》一书中的《统一多民族国家的历史见证》一文称，1973年至1974年对内蒙古奈曼旗沙巴营子古城进行清理发掘时，发现刻有秦始皇统一度量衡的诏书铭文陶量器残片，字体系秦隶。内蒙古赤峰市蜘蛛山遗址也出土有印着秦始皇统一度量衡诏书的陶量器、衡器，赤峰寺三眼井和敖汉旗老虎山出土有秦代铁权，重量在30公斤以上，三眼井铁权并有秦始皇诏书铸文。证明秦统一度量衡、统一货币的政策，通过秦直道，也强力推行于秦长城沿边的郡县。", "", "", "0", "0")
+2018-02-03 22:29:26 [scrapy.core.scraper] ERROR: Spider error processing <GET http://culture.ifeng.com/a/20161013/50096569_0.shtml> (referer: http://culture.ifeng.com/renwu/special/2016nobel/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 87, in parse_article
+    raise ValueError('Page style isn\'t defined : ' + str(response.url))
+ValueError: Page style isn't defined : http://culture.ifeng.com/a/20161013/50096569_0.shtml
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  170 ms (-14) | latency: 1555 ms | size: 16194 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  208 ms (+0) | latency: 1553 ms | size:     0 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:   89 ms (-33) | latency:  558 ms | size: 17975 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  340 ms (+0) | latency: 2644 ms | size:   191 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 1 | delay:  114 ms (-55) | latency:  585 ms | size: 15355 bytes
+2018-02-03 22:29:26 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  197 ms (-39) | latency: 1583 ms | size: 28549 bytes
+2018-02-03 22:29:27 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  213 ms (+92) | latency: 2139 ms | size: 21879 bytes
+2018-02-03 22:29:27 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  170 ms (-43) | latency: 1279 ms | size: 28137 bytes
+2018-02-03 22:29:28 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  310 ms (-30) | latency: 2795 ms | size:    20 bytes
+2018-02-03 22:29:28 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  131 ms (-65) | latency:  657 ms | size: 24905 bytes
+2018-02-03 22:29:28 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  208 ms (+0) | latency: 1817 ms | size:     0 bytes
+2018-02-03 22:29:28 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   85 ms (-3) | latency:  825 ms | size: 19020 bytes
+2018-02-03 22:29:28 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 1 | delay:  208 ms (+0) | latency:  603 ms | size:     0 bytes
+2018-02-03 22:29:28 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 1 | delay:  198 ms (+66) | latency: 1980 ms | size: 21277 bytes
+2018-02-03 22:29:28 [stdout] INFO: News!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("2014071241128689", "http://culture.ifeng.com/a/20140712/41128689_0.shtml", "", "", "", "岳麓书院位于湖南省长沙市湘江西岸秀丽的岳麓山下，湖南大学校园之中，为我国著名的“四大书院”之一。它自北宋创始，历宋、元、明、清各代，兴学不变。随着清末改革学制，废书院，办学堂，", "千年学府岳麓书院简介", "凤凰网文化", "", "[杨海亮]", "1970-01-01 00:00:00", "岳麓书院位于湖南省长沙市湘江西岸秀丽的岳麓山下，湖南大学校园之中，为我国著名的“四大书院”之一。它自北宋创始，历宋、元、明、清各代，兴学不变。随着清末改革学制，废书院，办学堂，辛亥革命后改高等学校等，直至湖南大学，均因旧址扩建，千余年来都是湖南高等学府所在，反映了祖国文教事业的悠久历史，是十分可贵的文物史迹。自上世纪八十年岳麓书院经由湖南大学管理和修复以来，书院延续了千年的教育办学和学术研究传统，成为了全国书院中承继其传统功能的典型代表，被外界誉为“千年学府”。北宋开宝九年（公元976年）潭州太守朱洞创建岳麓书院于岳麓山抱黄洞下，初设“讲堂五间斋序五十二间”。由此奠定了书院讲学部分的基础。咸平二年（公元999年）州守李允则扩建，书院建筑的讲学、藏书、供祀三个组成部分的基本规制形成。北宋大中祥符八年（公元1015年）宋真宗召见山长（即院长）周式，并颁书赐额，“于是书院之称闻天下”。南宋乾道元年（公元1165年）安抚使刘珙因旧址复建，保持了原有规制。刘珙延请张栻主持教事。随后朱熹自闽专程来访，与张栻论学，首开书院会讲先河。至绍兴五年朱熹出任湖南安抚使，书院“更建于爽垲之地，规制一新”。其时，“学徒千余人，食田五十顷”。谚曰：“道林三百众，书院一千徒”，书院规模有了很大发展。元明一代屡有兴废，阳明心学和明代实学相继发扬于书院。据志载元明大小修建活动达廿多次。明廷几次令毁书院，尚未受直接影响。其中修建规模较大而有所发展的：正德年间守道吴世忠重新规划，“以风水未美，迁正学基”，更书院向，迁大成殿于书院左，并形庙制，拆毁道林寺，以其材修建书院。“因此形成了现存书院前部的基本布局。清代两百多年间，修建更密，志载大小修建活动达数十次之多，且多有朴学大师掌院，传书院经世致用之风。其中较为突出或有所创建的：康熙七年（公元1668年）巡抚周召南倡修，基本承明遗制。康熙廿三年（公元1684年）巡抚丁思孔再修，次年得康熙御书”学达性天“额及十三经等赐书十六种，便成现存书院中轴后部规制。乾隆年间对环境风景建设又多有所创。院长罗典辟院旁隙地为园池，栽花木，标以”八景“。清代最后一次大规模修建是在同治七年（公元1868年），巡抚刘昆重振书院，留下书院的最后形制规模，现存书院古建亦多经此次重修或重建。清光绪廿八年(公元1902年)清政府实行”新政“，改革学制，诏谕各省”于省城市改设大学堂“，因此次年废书院，改为湖南高等学堂。学堂仍以此为校舍，仅将”东西斋舍悉改新式“，而自大门以上，讲堂，文昌阁、藏书楼及周程朱张等祠堂，保留不变。民国元年（公元1912年）废学堂，乃迁入湖南优级师范学堂，改名湖南高等师范学校。民国六年（公元1917年）高师停办，又迁入湖南工业专门学校，仍就书院基址扩建，并创辟实习工厂（今址），从此麓山开始了工科教育建设。1926年2月1日省立湖南大学（1937年改国立）在书院正式成立。上世纪七十年代，湖南省委托湖南大学管理、修复岳麓书院。湖南大学于1979年开始着手岳麓书院的修复工作，并于1984年成立岳麓书院文化研究所，设理学、书院、文物和古建筑四个研究室，组成了一支由历史学家、建筑师和文物保护工作者相结合的教学科研与文物保护队伍。1986年修复工作陆续完成，正式对外开放，吸引了国内外各界人士的关注。2005年湖南大学改岳麓书院文化研究所为岳麓书院，下设中国哲学研究所、历史研究所、中国思想文化研究所、中国书院研究中心和中国软实力文化研究中心等多个部门。2009年岳麓书院批准招收历史学本科生。至此，书院学科从本科、硕士研究生、博士研究生到博士后科研流动站的格局已经基本完备。从岳麓书院到湖南大学的千年建设历史中，在这个优美的校园里，倾注了多少劳动血汗和聪明才智，演现了各种不同时代的文化学术思想和复杂斗争，反映了祖国文教事业的历史进程，它所遗留的文物史迹，都是生动的历史见证，是书院文化精神的见证。书院精神是在书院的发展历程中形成的，经过千余?的传承与创新，形成?独具特色的价值取向、思维方式和?为规范的精神。", "", "", "0", "0")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("490998221", "6810428", "40", "183.230.16.*", "2015/06/16 07:00:00", "安倍这话就是战争信号，参考珍珠港事件。", "53564472", "岁月无声", "http://myimg.ifeng.com/217/254/fe2833247ae32480/1418523913/fe2833247ae32480_1.jpg", "重庆市", "2088", "pc", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491002354", "6810428", "40", "112.12.41.*", "2015/06/16 07:14:00", "这个二战的余孽是在安抚国内国际压力，安保法一通过后立马变脸。可不要相信鳄鱼的眼泪。", "56360478", "wsx825969", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "浙江省杭州市", "2771", "pc", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491002285", "6810428", "40", "117.136.11.*", "2015/06/16 07:14:00", "信它母猪可以上树、", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "北京市", "419", "ucweb", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491001986", "6810428", "40", "182.120.25.*", "2015/06/16 07:13:00", "鬼才相信无耻下流的鬼子在释放善意", "4012072", "遇见有缘", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "河南省郑州市", "418", "pc", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491002210", "6810428", "40", "113.65.105.*", "2015/06/16 07:14:00", "反悔多少次了，尤其是他的内阁成员", "9285394", "summitsound", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "广东省广州市", "284", "pc", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491002292", "6810428", "40", "222.209.36.*", "2015/06/16 07:14:00", "你信吗！我不信！", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "四川省达州市", "113", "Mozilla%2F5.0+%28Linux%3B+U%3B+Android+4.4.4%3B+zh-cn%3B+MI+4LTE+Build%2FKTU84P%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F39.0.0.0+Mobile+Safari%2F537.36+XiaoMi%2FMiuiBrowser%2F2.1.1", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018445", "6810428", "40", "222.88.119.*", "2015/06/16 07:59:00", "就当安倍放了个屁。", "60736732", "9c541f47-28fb-49e7-807b-", "http://my.ifengimg.com/167/59/10528dab0155d7c3/1433462527/10528dab0155d7c3_1.jpg", "河南省濮阳市", "101", "pc", ";")
+2018-02-03 22:29:28 [stdout] INFO: Comment!!!
+2018-02-03 22:29:28 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018399", "6810428", "40", "223.96.144.*", "2015/06/16 07:59:00", "纯属屁话，还需要再观察吗？", "1053338", "齐逸农", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "北京市", "93", "pc", ";")
+2018-02-03 22:29:29 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  167 ms (+53) | latency: 1677 ms | size: 16260 bytes
+2018-02-03 22:29:29 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  201 ms (+30) | latency: 2013 ms | size:  9964 bytes
+2018-02-03 22:29:29 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  141 ms (+55) | latency: 1412 ms | size: 19834 bytes
+2018-02-03 22:29:29 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  269 ms (+101) | latency: 2694 ms | size: 15995 bytes
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018204", "6810428", "40", "223.104.11.*", "2015/06/16 07:58:00", "安倍上任以来干的都是两面三刀的事情，作者也太傻，居然觉得他在释放善意！！！", "52873129", "清茶微醉", "http://y3.ifengimg.com/ifengimcp/pic/20141127/79f1e0739e27dbe2e818_size67_w170_h170.png", "河南省郑州市", "666", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("490998225", "6810428", "40", "114.111.167.*", "2015/06/16 07:00:00", "对安倍不要心存什么幻象，只有坚决斗争！", "58802432", "北斗星", "http://my.ifengimg.com/237/176/ba2f691474d0c0a0/1430052183/ba2f691474d0c0a0_1.jpg", "北京市", "1682", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("490998874", "6810428", "40", "183.198.28.*", "2015/06/16 07:01:00", "采访的目的是给安倍美言，我感到我们现在的中日关系是让安倍牵着走。", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "其它地区其它", "1061", "ucweb", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("490990948", "6810428", "40", "27.8.29.*", "2015/06/16 06:28:00", "西方政治家的话信不得。", "3092687", "找牛骑", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "重庆市", "871", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491115376", "6810428", "40", "140.206.244.*", "2015/06/16 10:59:00", "安倍这个军国主义分子的话能信吗？从它所做所为，已经明显看出，小日本从执意修改和平宪法，到与美国等勾结在南海等问题已经可以看出它正朝着军国主义道路走去。它在国际上在中国周边，进行围堵和敌视中国的动作。这是实实在在对中国的挑衅。还要如何观察呢？", "41083967", "djxrbgz", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "上海市", "67", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018271", "6810428", "40", "115.52.186.*", "2015/06/16 07:59:00", "这样跳梁小丑还信他？真是蠢到家了！！", "53617497", "香烟有毒", "http://myimg.ifeng.com/15/121/19a3cc205beae86f/1418724622/19a3cc205beae86f_1.jpg", "河南省郑州市", "68", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018504", "6810428", "40", "218.26.54.*", "2015/06/16 07:59:00", "我相信，他的话肯定有人相信", "50238393", "春天春子", "http://myimg.ifeng.com/10/31/56c56e43a725257c/1411291474/56c56e43a725257c_1.jpg", "山西省晋城市", "77", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018482", "6810428", "40", "10.41.132.*", "2015/06/16 07:59:00", "我来说两句猪啊这是猪脑还要观察", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "外星", "82", "qq", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018357", "6810428", "40", "119.187.70.*", "2015/06/16 07:59:00", "且行且注意！低制日货！", "51300857", "一生平安", "http://myimg.ifeng.com/96/107/0874612231c2ccbb/1414040891/0874612231c2ccbb_1.jpg", "山东省济南市", "64", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491039879", "6810428", "40", "117.136.41.*", "2015/06/16 08:43:00", "🐶能改掉吃屎的习惯吗？", "56367678", "客户端用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "北京市", "64", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491039879", "6810428", "40", "117.136.41.*", "2015/06/16 08:43:00", "🐶能改掉吃屎的习惯吗？", "56367678", "客户端用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "北京市", "64", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: 发生异常
+2018-02-03 22:29:29 [stdout] INFO: (1366, "Incorrect string value: '\\xF0\\x9F\\x90\\xB6\\xE8\\x83...' for column 'content' at row 1")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018496", "6810428", "40", "223.104.10.*", "2015/06/16 07:59:00", "我来说两句对安倍不能不防", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "河南省郑州市", "90", "ucweb", ";")
+2018-02-03 22:29:29 [stdout] INFO: Comment!!!
+2018-02-03 22:29:29 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491056416", "6810428", "40", "222.243.213.*", "2015/06/16 09:14:00", "信安倍话的人肯定脑子进水了。安倍杂毛玩的是技俩，把中国人当猴耍呢!", "50252850", "千言万语", "http://myimg.ifeng.com/150/154/92d34a87d3b57ef1/1411315931/92d34a87d3b57ef1_1.jpg", "湖南省永州市", "402", "pc", ";")
+2018-02-03 22:29:29 [stdout] INFO: Excepion : time data '2014年07月24日 07:16' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:29 [stdout] INFO: docUrl : http://ent.ifeng.com/a/20140724/40196972_0.shtml
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  125 ms (-15) | latency: 1092 ms | size: 20538 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  167 ms (-33) | latency: 1334 ms | size: 35357 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  200 ms (-69) | latency: 1310 ms | size: 16158 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  146 ms (-21) | latency: 1248 ms | size:  3993 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   95 ms (-29) | latency:  658 ms | size: 18417 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  192 ms (-5) | latency: 1875 ms | size: 33066 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  223 ms (+15) | latency: 2234 ms | size:     0 bytes
+2018-02-03 22:29:30 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  133 ms (-59) | latency:  744 ms | size: 33205 bytes
+2018-02-03 22:29:31 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  185 ms (-14) | latency: 1715 ms | size: 15824 bytes
+2018-02-03 22:29:31 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  223 ms (+0) | latency: 1936 ms | size:     0 bytes
+2018-02-03 22:29:31 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  108 ms (+12) | latency: 1084 ms | size: 18387 bytes
+2018-02-03 22:29:31 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 1 | delay:  145 ms (-40) | latency: 1049 ms | size: 16141 bytes
+2018-02-03 22:29:31 [stdout] INFO: Excepion : time data '2013年06月08日 14:22' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:31 [stdout] INFO: docUrl : http://culture.ifeng.com/a/20130608/26250142_0.shtml
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 3 | delay:  360 ms (-46) | latency: 3142 ms | size:  5856 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  154 ms (+21) | latency: 1549 ms | size: 33659 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  223 ms (+0) | latency: 1774 ms | size:     0 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  191 ms (+45) | latency: 1918 ms | size:  3993 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 1 | delay:  223 ms (+0) | latency:  617 ms | size:     0 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 6 | delay:  266 ms (-43) | latency: 2229 ms | size:   256 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  177 ms (-14) | latency: 1627 ms | size: 21151 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  307 ms (-53) | latency: 2538 ms | size:   538 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  131 ms (+22) | latency: 1312 ms | size: 18037 bytes
+2018-02-03 22:29:32 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 1 | delay:  133 ms (-44) | latency:  886 ms | size:  3993 bytes
+2018-02-03 22:29:33 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   99 ms (-31) | latency:  684 ms | size:  5048 bytes
+2018-02-03 22:29:33 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  110 ms (-44) | latency:  666 ms | size: 21383 bytes
+2018-02-03 22:29:33 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  174 ms (+64) | latency: 1748 ms | size: 16065 bytes
+2018-02-03 22:29:33 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 7 | delay:  245 ms (-21) | latency: 2239 ms | size:   256 bytes
+2018-02-03 22:29:33 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  174 ms (+28) | latency: 1743 ms | size: 16405 bytes
+2018-02-03 22:29:34 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  165 ms (-8) | latency: 1574 ms | size: 14859 bytes
+2018-02-03 22:29:34 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  128 ms (-4) | latency: 1239 ms | size: 34282 bytes
+2018-02-03 22:29:34 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  271 ms (-36) | latency: 2349 ms | size:    65 bytes
+2018-02-03 22:29:34 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  100 ms (+0) | latency: 1001 ms | size: 17350 bytes
+2018-02-03 22:29:34 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  199 ms (-24) | latency: 1752 ms | size:  3993 bytes
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491037463", "6810428", "40", "222.246.232.*", "2015/06/16 08:40:00", "跟美国人学的：一手拿着胡罗卜、一手拿着大棒，而我们某些人只记得胡罗卜美“美味”，而看不见悬在头顶上的大棒！", "60456178", "小草", "http://my.ifengimg.com/138/175/c57ba2021876962a/1432774504/c57ba2021876962a_1.jpg", "湖南省长沙市", "57", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491017101", "6810428", "40", "218.95.124.*", "2015/06/16 07:56:00", "不停挑衅然后缓和，再挑衅再缓和，安倍晋三用这种方法来麻痹中国人呢，为什么中国不一以贯之地揭露，反而一起来蒙国人？真是百思不得其解。", "2925538", "wusy1976", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "江西省赣州市", "45", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491180340", "6810428", "40", "117.87.34.*", "2015/06/16 12:35:00", "相信安倍，就是世界上最愚蠢的傻逼。这边安抚中国，那边抓紧修宪，准备再次侵略。这是他们100年来惯用的伎俩。", "53291487", "高速度上岗", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "江苏省苏州市", "54", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018111", "6810428", "40", "106.4.76.*", "2015/06/16 07:58:00", "安屁鸡三是个骗子，中国不能上它的当。更不能让倭国入常！！！", "50366187", "天马行空！", "http://myimg.ifeng.com/206/65/d4f3dd2a1548f972/1411639081/d4f3dd2a1548f972_1.jpg", "江西省南昌市", "46", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018173", "6810428", "40", "110.179.208.*", "2015/06/16 07:58:00", "安信的话不能信，谁信请吃亏", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "山西省太原市", "41", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018342", "6810428", "40", "119.131.23.*", "2015/06/16 07:59:00", "安狗说的话你信吗？我就不信。", "60084792", "客户端用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "广东省广州市", "48", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491113330", "6810428", "40", "60.8.17.*", "2015/06/16 10:56:00", "对安倍首相，是司马氏之心，路人皆知乎！他访美的态度，他打压亚投行，他恶意联络东盟，挑起南海事端。不承认战争犯罪，不向战争受害国道歉，试图修改安保法等等。这说明了什么？他自己都承认，政治基因继承外公的多。岸信介是日本的何等人物？对安倍的相信，一定是吃错药了。", "4898828", "闲话人士", "http://ucimg.ifeng.com/upload/7/206/cdf595bd45da8196_1.jpg", "河北省张家口市", "44", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491069437", "6810428", "40", "112.96.115.*", "2015/06/16 09:38:00", "我来说两句安狗出尔反尔，他的话你信吗？反正我不信。", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "广东省广州市", "38", "ucweb", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491007932", "6810428", "40", "117.91.111.*", "2015/06/16 07:32:00", "日本政治家的话是鬼话，人信服吗", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "江苏省苏州市", "40", "ucweb", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491214841", "6810428", "40", "119.177.89.*", "2015/06/16 13:51:00", "凤凰的新闻被汉奸左右或把持着，看着多想想，自己是中国人。", "54179210", "客户端用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "山东省潍坊市", "35", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491007931", "6810428", "40", "118.117.14.*", "2015/06/16 07:32:00", "日本畜生的话可信不？", "2", "手机用户", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "四川省成都市", "37", "Mozilla%2F5.0+%28Linux%3B+U%3B+Android+4.3%3B+zh-cn%3B+SM-G7109+Build%2FJLS36C%29+AppleWebKit%2F534.24+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Mobile+Safari%2F534.24+T5%2F2.0+baiduboxapp%2F6.5+%28Baidu%3B+P1+4.3%29", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("498048894", "6810428", "40", "60.208.164.*", "2015/06/29 16:11:00", "无须且行且观察，安倍的本性是不会改变的，言是行非、言善行恶是一贯的，在历史、在钓魚岛主权、在南海、在G7会上、在亚投行……的所作所为就足以证明其本质，他绝不会放下屠刀立地成佛。对待化装成慈善家的魔鬼只能斗争。", "2352418", "abcdexyz", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "山东省济南市", "38", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491115318", "6810428", "40", "36.248.143.*", "2015/06/16 10:59:00", "安倍是非常狡猾的政客，中国如还是用善良心去跟这样的人交往是要吃大亏的。", "7703102", "gg191919", "http://ucimg.ifeng.com/upload/218/163/b4ca0f2bd244b5ce_1.jpg", "福建省福州市", "37", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018358", "6810428", "40", "117.177.240.*", "2015/06/16 07:59:00", "这厮心里有鬼", "49925690", "東馳", "http://my.ifengimg.com/81/192/1e63d031298150cf/1423614474/1e63d031298150cf_1.jpg", "北京市", "41", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("498111549", "6810428", "40", "182.105.6.*", "2015/06/29 18:51:00", "真是可笑得很，恶狼说好话来了！", "3582327", "liuhuawen111", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "江西省南昌市", "34", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491002091", "6810428", "40", "220.168.12.*", "2015/06/16 07:13:00", "杀人犯还会说自己无辜呢，能信不？不要看他偶尔说什么，要看他一直怎么做！", "58738441", "Xflash", "http://my.ifengimg.com/47/176/067fdba7d1486a4b/1429937123/067fdba7d1486a4b_1.jpg", "湖南省长沙市", "35", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("498210936", "6810428", "40", "101.71.89.*", "2015/06/29 23:01:00", "鬼子放个屁！！国内汉奸文人又在兴风作浪蒙蔽国人；；；；；；；", "17487173", "重庆黄老邪", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "浙江省杭州市", "40", "pc", ";")
+2018-02-03 22:29:34 [stdout] INFO: Comment!!!
+2018-02-03 22:29:34 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018590", "6810428", "40", "221.192.180.*", "2015/06/16 08:00:00", "东郭先生与狼.农夫与蛇", "53358876", "凤凰网友", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "河北省石家庄市", "0", "pc", ";")
+2018-02-03 22:29:34 [scrapy.core.scraper] ERROR: Spider error processing <GET http://culture.ifeng.com/a/20150426/43636369_0.shtml> (referer: http://culture.ifeng.com/renwu/special/wangguozhen/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 87, in parse_article
+    raise ValueError('Page style isn\'t defined : ' + str(response.url))
+ValueError: Page style isn't defined : http://culture.ifeng.com/a/20150426/43636369_0.shtml
+2018-02-03 22:29:34 [stdout] INFO: 解析json数据出错 ：'useragent'
+2018-02-03 22:29:34 [stdout] INFO: Traceback (most recent call last):
+2018-02-03 22:29:34 [stdout] INFO:   File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 119, in get_comment_list
+2018-02-03 22:29:34 [stdout] INFO:     comment_item = get_comment_item(comment)
+2018-02-03 22:29:34 [stdout] INFO:   File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 25, in get_comment_item
+2018-02-03 22:29:34 [stdout] INFO:     comment_item['useragent'] = check_value(comment['useragent'])
+2018-02-03 22:29:34 [stdout] INFO: KeyError: 'useragent'
+2018-02-03 22:29:35 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 7 | delay:  324 ms (+79) | latency: 3249 ms | size:   256 bytes
+2018-02-03 22:29:35 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  196 ms (-3) | latency: 1929 ms | size:  7309 bytes
+2018-02-03 22:29:35 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  119 ms (-9) | latency: 1104 ms | size: 18587 bytes
+2018-02-03 22:29:35 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  101 ms (+1) | latency: 1013 ms | size: 18269 bytes
+2018-02-03 22:29:35 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  195 ms (+20) | latency: 1957 ms | size: 21400 bytes
+2018-02-03 22:29:35 [stdout] INFO: Comment!!!
+2018-02-03 22:29:35 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491067722", "6810428", "40", "58.213.47.*", "2015/06/16 09:33:00", "释放善意？这纯的是在放烟幕弹嘛！！你看看它干的事，哪一件不是对着中国，不是要跟中国开战的前奏？你信它，你不是纯的要被狗咬嘛，而且是疯狗，咬着就死定了！！！", "13719925", "dewongrass", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "江苏省苏州市", "41", "pc", ";")
+2018-02-03 22:29:35 [stdout] INFO: Comment!!!
+2018-02-03 22:29:35 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("491018183", "6810428", "40", "119.125.160.*", "2015/06/16 07:58:00", "狗叼，别善意放在美日菲越等国的言行上，没有一次是言行一致的。", "856979", "any_lotto", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "广东省中山市", "47", "pc", ";")
+2018-02-03 22:29:36 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  182 ms (-13) | latency: 1696 ms | size: 27897 bytes
+2018-02-03 22:29:36 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  130 ms (+29) | latency: 1306 ms | size: 10971 bytes
+2018-02-03 22:29:36 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 7 | delay:  316 ms (-8) | latency: 3089 ms | size:   256 bytes
+2018-02-03 22:29:36 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  281 ms (+115) | latency: 2810 ms | size: 14783 bytes
+2018-02-03 22:29:36 [stdout] INFO: News!!!
+2018-02-03 22:29:36 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("2013060826250142", "http://culture.ifeng.com/a/20130608/26250142_0.shtml", "节日; 2013年端午节", "javascript:void(0);; javascript:void(0);", "", "大凡任何一种习俗风尚，其最初产生，都必定十分简单。此后因社会进化以及风土不同的关系，开始渐渐繁复，再加以种种附会，与原意就更加大相径庭了。", "端午旧俗", "凤凰网文化综合", "", "[杨海亮
+2018-02-03 22:29:36 [stdout] INFO: 
+2018-02-03 22:29:36 [stdout] INFO: ", "1970-01-01 00:00:00", "在室内烧苍术、白芷、艾叶，或者除虫菊。用雄黄酒、艾茎酒、石灰水喷洒屋舍墙壁。用瓶插养蜀葵、榴花、菖蒲、或者各种草花，称之为“五毒花”。床前放置艾人网蒜，门上插放艾草。儿童胸前或衣襟上，系老虎头，老虎肚兜，雄黄荷包，樟脑囊，臂上缠五龟线，成纹圈状，男左女右，称之为“长命缕”。妇女戴老虎花，石榴花，或者艾叶。医生捉蛤蟆，制取蟾酥，采集百草，制药。药店、酒馆用雄黄、芷术、烧酒馈赠主顾。中午准备角黍，饮菖蒲雄黄酒，吃苋菜、大蒜、灰蛋、黄鱼、雄黄豆，阖家团聚。了解屈原、伍子胥、曹娥的故事。用泽兰、菖蒲或者用百草煎汤沐浴。举行龙舟比赛，优胜者，由地方长官奖励。举办射击比赛，表演百步穿杨之技。【定端午】农历五月初五为端午，按照夏历以建寅之月（即后世常说的阴历正月）为岁首的计时方法，五月为午，因此五日也称午日。明代俞安期的《类函》引用《风土记》中的记载道：“仲夏端午，端，始也，谓五月初五日也。”也称之为“重午”，又名“端阳”，取阳气开始旺盛之意，也称作“蒲节”。《事物原始》引用《荆楚岁时记》道：“五月五日为端阳，一云蒲节，一云重午。”重午又称作“端午”。《清嘉録》引用《荆楚岁时记》称京师将五月一日称为端一，二日为端二，三日为端三，四日为端四，五日为端五。【贴符像】旧俗端午有贴天师符、天师像、五雷符、钟馗图、钟馗嫁妹图、韦陀镇凶图，或者悬挂吊屏，上面描画着天师或者仙子仙女执剑降毒的故事。或者悬挂五龟桃，也就是彩符，描画姜太公、财神、聚宝盆、摇钱树等，称可以驱邪魅，镇毒恶。凡是厅堂梁上、门窗帐屏，都有粘贴符像的。烧送的时间，一个月或者半年不等，大概原本在汉代五月初五用五龟作为门上的装饰，大多荒诞而无从考证。【净空气】旧俗在端午之日，无论贫富，必要购买苍术、白芷，在室内焚燃，据说可以预防疾疫，驱除魔邪，杀灭蛇虫。因为二者都禀性辛温，气味峻烈而芬芳，最能祛风燥湿，生阳气化郁结，尤其善于驱除空气中的秽恶之气。而且此类药品，价格低廉，易于购买，遇到流行病时，更可以消除病毒。焚烧时还可掺入大黄、降香、雄黄、砒石等。定好消毒的地点和所用时间，将室内门窗封闭严实，熏燃适当的时间，等烟雾消散，火焰熄灭，才可以进入室内居住。此种洁净空气的方法，费用节省，操作简便，而又功效显著，可以称得上是一种别具一格的消毒方式。【燃艾叶】艾，性纯阳，能温气血，驱寒湿，止诸血，除腹痛。有舒解强壮的功效。可杀虫，能散发强烈的芬芳之气。能通窍辟恶，取太阳真火，有起死回生之功效。故而医家用艾灸百病。我国有针灸一科。患者经脉腧穴，或者用针刺，或者用艾灸，来进行治疗，效果都十分神奇。黄帝有《针灸经》篇，扁鹊有《针灸玉龙赋》，唐代有《明皇针灸图》，宋朝有《铜人腧穴针灸图》，可见针灸在医药上的功用很大。我国用针灸方法治疗疾病很早，远在战国时期，就已经盛行。孟子所说的“七年之病，求三年之艾”就是说应用艾灸的功效。因为艾可以治病，时间久而效果更为显著，因此“艾”字从“入”。端午时节，阳气渐盛，各种含有毒质的气体物体，最容易侵袭人体，因此此日我国民间大举施用艾叶，的确是极为科学之举。用艾来熏燃屋宇，和用苍术、白芷的功用相同。【喷艾酒】艾茎干后，浸染麻油，再引火点燃灸炷，会起到滋润的功效，灸疮时，直至治愈也不感疼痛。艾茎也可制作筷子、鞭子和烛心。端午将艾茎泡到酒里，成为“艾茎酒”，也称为“艾酒”。《玉烛宝典》载：“洛阳人家，端午造术羹艾酒，研雄黄末和酒，谓之雄黄酒。”湖北监利县此日流行用艾茎酒，山东惠明，湖南宁远，陕西凤翔，江苏嘉定、清河以及浙江吴兴等处，则用雄黄酒来辟恶，遍喷屋舍门墙，大概都是取其气味醇厚，燥湿除虫，具有足阳明经、破除幽暗、舒散结滞，通行气血，可去邪恶的特点。【植花木】蜀葵，颜色有红、紫、白多种，十分美丽。蜀葵的根茎都可入药，能治疗疝气、淋病、痢疾以及一切疮疥等。古人称蜀葵疏茎密叶，翠萼艳花，金粉檀心。榴花，颜色有红、黄、白各种，红榴花艳丽可爱，人们多有种植，尤其被产区外的人所看重。唐代韩愈有诗句道：“五月榴花照眼明。”菖蒲中叶子细长的，叫作“石菖蒲”。用瓦盆栽种，设在案头，可供玩赏。书斋中多有放置，可数十年不枯。最纤细的，叶子仅有三四寸长，芳香清洌，苍翠可爱。能振动中气，鼓舞清阳，辟除四时秽浊不正之气，又可收烟明目。农历端午，榴花与菖蒲、蜀葵，都是人们室内应时的点缀品。或作为盆景，或作为瓶插。杭州旧俗，此日家家购买蜀葵、石榴、菖蒲、艾草，植于堂中，并衬上五色花纸。北平五月，居民往往将葵、榴、蒲、艾和夹竹桃罗列在中庭，以作为清赏之物。榴竹之间，必用鱼缸相配。红鱼数条，游乐其中，几乎家家如此，有“天蓬鱼缸石榴树”的谚语。", "", "", "0", "0")
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  247 ms (+51) | latency: 2474 ms | size: 15390 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  214 ms (+95) | latency: 2148 ms | size:  9669 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  114 ms (-15) | latency:  988 ms | size: 10807 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  265 ms (-16) | latency: 2490 ms | size: 13950 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 1 | delay:  278 ms (+7) | latency: 2783 ms | size:  5171 bytes
+2018-02-03 22:29:37 [scrapy.core.scraper] ERROR: Spider error processing <GET http://culture.ifeng.com/a/20160429/48632766_0.shtml> (referer: http://culture.ifeng.com/renwu/special/chenzhongshi/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 87, in parse_article
+    raise ValueError('Page style isn\'t defined : ' + str(response.url))
+ValueError: Page style isn't defined : http://culture.ifeng.com/a/20160429/48632766_0.shtml
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  208 ms (-38) | latency: 1701 ms | size: 17519 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  219 ms (-45) | latency: 1748 ms | size: 14210 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 7 | delay:  310 ms (-6) | latency: 3038 ms | size:   256 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  129 ms (-85) | latency:  441 ms | size:  7602 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  179 ms (-2) | latency: 1772 ms | size: 18145 bytes
+2018-02-03 22:29:37 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 1 | delay:  142 ms (+13) | latency: 1428 ms | size:  8212 bytes
+2018-02-03 22:29:37 [stdout] INFO: Excepion : time data '2015年07月11日 08:51' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:37 [stdout] INFO: docUrl : http://ent.ifeng.com/a/20150711/42451196_0.shtml
+2018-02-03 22:29:41 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: ifengSpider)
+2018-02-03 22:29:41 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-03 22:29:41 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'ifengSpider', 'CONCURRENT_ITEMS': 1000, 'CONCURRENT_REQUESTS': 1024, 'CONCURRENT_REQUESTS_PER_DOMAIN': 512, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'ifengSpider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'ifengSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['ifengSpider.spiders']}
+2018-02-03 22:29:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-03 22:29:41 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-03 22:29:42 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'ifengSpider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-03 22:29:42 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-03 22:29:42 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'ifengSpider.pipelines.SaveToMysqlPipeline']
+2018-02-03 22:29:42 [scrapy.core.engine] INFO: Spider opened
+2018-02-03 22:29:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 2 | delay:  128 ms (-121) | latency:   73 ms | size:   256 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 1 | delay:  167 ms (-82) | latency:  853 ms | size:    65 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 1 | delay:  106 ms (-22) | latency:  836 ms | size:   256 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  169 ms (-80) | latency:  891 ms | size: 11717 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: guoxue.ifeng.com | conc: 2 | delay:  138 ms (-111) | latency:  277 ms | size: 15491 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  170 ms (-79) | latency:  909 ms | size: 14235 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: d.ent.ifeng.com | conc: 1 | delay:  153 ms (-96) | latency:  574 ms | size:  8739 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  132 ms (-117) | latency:  153 ms | size: 16212 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  133 ms (-116) | latency:  172 ms | size:  3227 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 1 | delay:   92 ms (-77) | latency:  154 ms | size: 17335 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  113 ms (-20) | latency:  929 ms | size:  5241 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  171 ms (-78) | latency:  926 ms | size: 13527 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 1 | delay:   96 ms (-72) | latency:  242 ms | size: 10589 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 1 | delay:  112 ms (-19) | latency:  928 ms | size: 17015 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: d.news.ifeng.com | conc: 1 | delay:  146 ms (-103) | latency:  432 ms | size: 10607 bytes
+2018-02-03 22:29:44 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 2 | delay:   80 ms (-25) | latency:  541 ms | size:   256 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:   84 ms (-8) | latency:  757 ms | size:  3993 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  149 ms (-21) | latency: 1274 ms | size: 13531 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  100 ms (-12) | latency:  881 ms | size:  4299 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:   85 ms (-27) | latency:  587 ms | size: 15402 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  127 ms (+41) | latency: 1275 ms | size: 13770 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:   68 ms (-15) | latency:  536 ms | size: 24337 bytes
+2018-02-03 22:29:45 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   77 ms (-23) | latency:  546 ms | size:  4963 bytes
+2018-02-03 22:29:45 [stdout] INFO: News!!!
+2018-02-03 22:29:45 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("2015071142451196", "http://ent.ifeng.com/a/20150711/42451196_0.shtml", "演出; 演出资讯", "http://ent.ifeng.com/live/; http://ent.ifeng.com/listpage/1392/1/list.shtml", "", "2015年7月10日下午，大型“成长系列”经典儿童剧《警犬汉克历险记》在北京天坛饭店召开新闻发布会，宣布儿童剧《警犬汉克历险记》全国巡演正式启动。据悉，今年的儿童", "儿童剧《警犬汉克历险记》巡演在即 真正的寓教于乐", "凤凰娱乐", "", "[张园园]", "1970-01-01 00:00:00", "启动仪式2015年7月10日下午，大型“成长系列”经典儿童剧《警犬汉克历险记》在北京天坛饭店召开新闻发布会，宣布儿童剧《警犬汉克历险记》全国巡演正式启动。据悉，今年的儿童节，大型“成长系列”经典儿童剧《警犬汉克历险记》在兰州演出后，获得了观众巨大的反响和好评。主创团队带着纯正的“美国乡村”的儿童故事，即将在北京朝阳九剧场连演四场，为北京的小朋友们带来一场其乐无穷的趣味历险。主持人经典儿童剧《警犬汉克历险记》改编自美国作家约翰R.埃里克森的同名儿童读物，它位居美国儿童读物百名榜并畅销20多个国家，被翻译成多种语言出版发行，受到全世界少年儿童的喜爱。剧目讲述了以牧场最高治安长官自居的牛仔犬汉克，在卷入了一起鸡舍案件后，带着助手卓沃尔不分昼夜寻找线索，与郊狼斗智斗勇的故事。陌生的环境、新的友谊、奇趣的冒险，随着故事情节的推进纷纷接踵而来，而汉克将在舞台上告诉小朋友们它自己的选择。嘉宾据制作人宋娟介绍，《警犬汉克历险记》最早是做了一版广播剧，影响非常好，《警犬汉克历险记》与其他儿童剧最大的区别在于，它以寓教于乐的方式引导孩子们的人生观，用儿童的视角挖掘人性深处的真、善、美。通过剧中的美式文化体现、人物肢体表现、趣味台词对话、现实与童趣相结合的场景等吸引并锻炼少年儿童独立思考的能力，帮助少年儿童树立正确的价值观。她还特别提到，《警犬汉克历险记》不仅仅可以影响到孩子，还同样可以影响到大人，所以此次特别搬上舞台，希望更多人看到这部优秀的儿童剧。制作人宋娟她还介绍到，此次《警犬汉克历险记》的制作团队及演员们全部来自于中国国家话剧院，我们还特别邀请到中国著名的优秀编舞田劲老师为警犬汉克历险记量身打造了很多戏剧舞蹈，田劲老师也是2008年北京奥运会开幕式编导，四届春晚的舞蹈编导还邀请了小朋友们非常喜爱的央视少儿频道动画梦工厂跳跳龙的扮演者、著名配音演员张云龙客串表演，在优秀演员、导演郭犇，舞美设计姜雪婷，化妆设计李婵以及英国优秀设计师吴京陶等制作团队的精心打造下，《警犬汉克历险记》必将成为一部经典之作。嘉宾主创合影此外导演郭犇现场介绍《警犬汉克历险记》里面的角色不会说是坏人就是纯粹的坏人，而是每个人都有他向上有益的一面，例如警犬汉克被秃鹰父子欺骗了，虽然汉克被欺骗了，但是他也学会了不能轻易相信别人的道理。嘉宾主创合影被誉为“中国人的心灵读本”的畅销文学期刊——《读者》，针对该剧进行了深入分析和讨论，不论是剧中人物体现出的思想性、知识性、趣味性，还是该剧强大的主创团队，都是《读者》十分认可的。据悉，儿童剧将于7月18号、19号两天在北京朝阳9剧场上演，届时一场欢声笑语并带着浓浓美式牛仔风味儿的《警犬汉克历险记》将会和小朋友们不见不散。演出地点：北京朝阳9剧场——切CHE行动剧场演出时间：7月18日14:30，19:307月19日14:30，19:30演出票价：100元，180元，280元，380元，580元（套票有优惠）订票电话：4006103721", "http://y3.ifengimg.com/cmpp/2015/07/11/08/a39d195e-ee6c-4a6b-8210-1fc4b989fee5_size109_w500_h332.jpg;http://y3.ifengimg.com/cmpp/2015/07/11/08/8fa0f4f5-5631-4917-aab5-8ff185305794_size100_w500_h332.jpg;http://y1.ifengimg.com/cmpp/2015/07/11/08/03899bd3-cde5-4f2e-8f17-91cef6be2053_size108_w500_h332.jpg;http://y0.ifengimg.com/cmpp/2015/07/11/08/2190fb79-4c9a-42d3-8752-f2b94f7a8bfb_size113_w500_h752.jpg;http://y3.ifengimg.com/cmpp/2015/07/11/08/9b8cae29-9ff8-482b-8a4b-06af4656cf07_size106_w500_h332.jpg;http://y3.ifengimg.com/cmpp/2015/07/11/08/a6343649-3544-4020-90a5-02f9e64e4477_size105_w500_h332.jpg", "", "0", "0")
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  158 ms (+78) | latency: 1586 ms | size:   256 bytes
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:   67 ms (-1) | latency:  656 ms | size: 23823 bytes
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  149 ms (+0) | latency: 1498 ms | size: 13534 bytes
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  152 ms (+55) | latency: 1522 ms | size: 10113 bytes
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   73 ms (-3) | latency:  697 ms | size: 20291 bytes
+2018-02-03 22:29:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://sports.ifeng.com/a/20140909/41911840_0.shtml> (referer: http://sports.ifeng.com/zonghe/special/liuxiangjiehun/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 87, in parse_article
+    raise ValueError('Page style isn\'t defined : ' + str(response.url))
+ValueError: Page style isn't defined : http://sports.ifeng.com/a/20140909/41911840_0.shtml
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:   57 ms (-9) | latency:  478 ms | size: 27351 bytes
+2018-02-03 22:29:46 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   60 ms (-12) | latency:  477 ms | size: 21886 bytes
+2018-02-03 22:29:46 [stdout] INFO: Excepion : time data '2014年05月30日 04:49' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:46 [stdout] INFO: docUrl : http://ent.ifeng.com/a/20140530/40094087_0.shtml
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  174 ms (+15) | latency: 1744 ms | size:   256 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 4 | delay:  170 ms (+20) | latency: 1701 ms | size: 13536 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:   99 ms (-52) | latency:  475 ms | size: 22987 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:   55 ms (-5) | latency:  492 ms | size: 20264 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  174 ms (+74) | latency: 1745 ms | size: 14178 bytes
+2018-02-03 22:29:47 [stdout] INFO: Excepion : time data '2014年06月27日 05:24' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:47 [stdout] INFO: docUrl : http://ent.ifeng.com/a/20140627/40144420_0.shtml
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 4 | delay:  393 ms (+143) | latency: 3932 ms | size: 11055 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 4 | delay:  150 ms (+23) | latency: 1506 ms | size:  7939 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  161 ms (-12) | latency: 1492 ms | size: 23544 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  177 ms (+7) | latency: 1773 ms | size: 13531 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 3 | delay:  322 ms (-71) | latency: 2508 ms | size:  4007 bytes
+2018-02-03 22:29:47 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 2 | delay:  355 ms (+33) | latency: 3559 ms | size: 10489 bytes
+2018-02-03 22:29:47 [stdout] INFO: Excepion : time data '2014年12月18日 11:26' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:47 [stdout] INFO: docUrl : http://ent.ifeng.com/a/20141218/42108824_0.shtml
+2018-02-03 22:29:48 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  160 ms (+102) | latency: 1602 ms | size: 22614 bytes
+2018-02-03 22:29:48 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  171 ms (-2) | latency: 1691 ms | size:    20 bytes
+2018-02-03 22:29:48 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  133 ms (-26) | latency: 1077 ms | size: 13956 bytes
+2018-02-03 22:29:48 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  105 ms (+50) | latency: 1056 ms | size:  5367 bytes
+2018-02-03 22:29:48 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  173 ms (-3) | latency: 1699 ms | size: 13526 bytes
+2018-02-03 22:29:48 [scrapy.core.scraper] ERROR: Spider error processing <GET http://culture.ifeng.com/a/20151202/46478960_0.shtml> (referer: http://culture.ifeng.com/huodong/special/shpf/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 87, in parse_article
+    raise ValueError('Page style isn\'t defined : ' + str(response.url))
+ValueError: Page style isn't defined : http://culture.ifeng.com/a/20151202/46478960_0.shtml
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 1 | delay:  458 ms (+102) | latency: 4581 ms | size:  9493 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 4 | delay:  230 ms (+79) | latency: 2305 ms | size: 15874 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 4 | delay:  319 ms (+147) | latency: 3190 ms | size:    20 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   99 ms (-6) | latency:  936 ms | size: 16881 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  118 ms (-42) | latency:  759 ms | size: 31289 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  274 ms (-44) | latency: 2305 ms | size:   256 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  104 ms (-29) | latency:  742 ms | size:  5813 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  168 ms (-5) | latency: 1635 ms | size: 13530 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 4 | delay:  179 ms (-51) | latency: 1279 ms | size: 17652 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 3 | delay:  241 ms (+74) | latency: 2417 ms | size:  1786 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:   81 ms (-18) | latency:  628 ms | size: 16137 bytes
+2018-02-03 22:29:49 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  116 ms (-52) | latency:  634 ms | size: 13526 bytes
+2018-02-03 22:29:50 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  240 ms (-1) | latency: 2390 ms | size:  1413 bytes
+2018-02-03 22:29:50 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  118 ms (+0) | latency: 1184 ms | size: 29456 bytes
+2018-02-03 22:29:50 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  299 ms (+120) | latency: 2997 ms | size: 14733 bytes
+2018-02-03 22:29:50 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  258 ms (+154) | latency: 2585 ms | size: 33636 bytes
+2018-02-03 22:29:50 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  256 ms (-18) | latency: 2382 ms | size:    20 bytes
+2018-02-03 22:29:51 [stdout] INFO: Excepion : time data '2017年12月01日 11:20' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:51 [stdout] INFO: docUrl : http://sn.ifeng.com/a/20171201/6196714_1.shtml
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  241 ms (-58) | latency: 1827 ms | size: 13549 bytes
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:  240 ms (-16) | latency: 2235 ms | size:    20 bytes
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  212 ms (-45) | latency: 1667 ms | size: 24196 bytes
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  243 ms (+127) | latency: 2437 ms | size: 13529 bytes
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  234 ms (-6) | latency: 2280 ms | size:    67 bytes
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  163 ms (+82) | latency: 1639 ms | size:  3410 bytes
+2018-02-03 22:29:51 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  101 ms (-16) | latency:  850 ms | size: 31995 bytes
+2018-02-03 22:29:51 [stdout] INFO: 解析json数据出错 ：'useragent'
+2018-02-03 22:29:51 [stdout] INFO: Traceback (most recent call last):
+2018-02-03 22:29:51 [stdout] INFO:   File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 119, in get_comment_list
+2018-02-03 22:29:51 [stdout] INFO:     comment_item = get_comment_item(comment)
+2018-02-03 22:29:51 [stdout] INFO:   File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 25, in get_comment_item
+2018-02-03 22:29:51 [stdout] INFO:     comment_item['useragent'] = check_value(comment['useragent'])
+2018-02-03 22:29:51 [stdout] INFO: KeyError: 'useragent'
+2018-02-03 22:29:51 [stdout] INFO: Excepion : time data '2017年12月01日 11:52' does not match format '%Y年%m月%d日 %H:%M:%S'
+2018-02-03 22:29:51 [stdout] INFO: docUrl : http://sn.ifeng.com/a/20171201/6196865_1.shtml
+2018-02-03 22:29:52 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  184 ms (-56) | latency: 1285 ms | size:  7644 bytes
+2018-02-03 22:29:52 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  146 ms (-17) | latency: 1291 ms | size:  3396 bytes
+2018-02-03 22:29:52 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  219 ms (-24) | latency: 1945 ms | size: 13519 bytes
+2018-02-03 22:29:52 [stdout] INFO: 解析json数据出错 ：'useragent'
+2018-02-03 22:29:52 [stdout] INFO: Traceback (most recent call last):
+2018-02-03 22:29:52 [stdout] INFO:   File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 119, in get_comment_list
+2018-02-03 22:29:52 [stdout] INFO:     comment_item = get_comment_item(comment)
+2018-02-03 22:29:52 [stdout] INFO:   File "C:\Users\hahah\Desktop\ifengSpider\ifengSpider\spiders\spider.py", line 25, in get_comment_item
+2018-02-03 22:29:52 [stdout] INFO:     comment_item['useragent'] = check_value(comment['useragent'])
+2018-02-03 22:29:52 [stdout] INFO: KeyError: 'useragent'
+2018-02-04 13:41:05 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: ifengSpider)
+2018-02-04 13:41:05 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-04 13:41:05 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'ifengSpider', 'CONCURRENT_ITEMS': 1000, 'CONCURRENT_REQUESTS': 1024, 'CONCURRENT_REQUESTS_PER_DOMAIN': 512, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'ifengSpider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'ifengSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['ifengSpider.spiders']}
+2018-02-04 13:41:05 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-04 13:41:05 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-04 13:41:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'ifengSpider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-04 13:41:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-04 13:41:06 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'ifengSpider.pipelines.SaveToMysqlPipeline']
+2018-02-04 13:41:06 [scrapy.core.engine] INFO: Spider opened
+2018-02-04 13:41:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-04 13:41:13 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 2 | delay:  127 ms (-122) | latency:   55 ms | size:   256 bytes
+2018-02-04 13:41:13 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 1 | delay:  104 ms (-23) | latency:  814 ms | size:   256 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 1 | delay:   56 ms (-48) | latency:   83 ms | size:   256 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  136 ms (-113) | latency:  235 ms | size:  2860 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  137 ms (-112) | latency:  242 ms | size:  2545 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 1 | delay:  700 ms (+563) | latency: 7002 ms | size:  2180 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  706 ms (+569) | latency: 7064 ms | size:  4863 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  704 ms (+454) | latency: 7041 ms | size: 16826 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: guoxue.ifeng.com | conc: 3 | delay:  138 ms (-111) | latency:  266 ms | size: 30891 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  139 ms (-110) | latency:  295 ms | size: 29373 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  362 ms (-344) | latency:  178 ms | size:  5254 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:   39 ms (-17) | latency:  215 ms | size:    20 bytes
+2018-02-04 13:41:14 [stdout] INFO: docUrl : http://guoxue.ifeng.com/a/20151011/44814165_0.shtml
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 4 | delay:  142 ms (-107) | latency:  354 ms | size: 15089 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  369 ms (-334) | latency:  353 ms | size: 10350 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: guoxue.ifeng.com | conc: 2 | delay:   86 ms (-51) | latency:  353 ms | size: 34851 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:   96 ms (-43) | latency:  525 ms | size: 42183 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:   45 ms (+6) | latency:  459 ms | size:    20 bytes
+2018-02-04 13:41:14 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 3 | delay:   51 ms (+5) | latency:  510 ms | size:    20 bytes
+2018-02-04 13:41:15 [stdout] INFO: docUrl : http://guoxue.ifeng.com/a/20151011/44814135_0.shtml
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 5 | delay:   91 ms (-51) | latency:  395 ms | size: 12379 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 4 | delay:  813 ms (+722) | latency: 8132 ms | size: 14563 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  476 ms (-336) | latency: 1398 ms | size: 13510 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  815 ms (+719) | latency: 8155 ms | size: 29521 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  255 ms (-114) | latency: 1410 ms | size: 22859 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: guoxue.ifeng.com | conc: 1 | delay:  191 ms (+104) | latency: 1912 ms | size: 29999 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  421 ms (-393) | latency:  283 ms | size: 31146 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  283 ms (-193) | latency:  897 ms | size: 12770 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 1 | delay:  229 ms (-192) | latency:  366 ms | size: 29141 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  174 ms (-75) | latency:  990 ms | size:   724 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  255 ms (+0) | latency:  321 ms | size:   194 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  417 ms (-282) | latency: 1356 ms | size:  2572 bytes
+2018-02-04 13:41:15 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  205 ms (-156) | latency:  498 ms | size:  3147 bytes
+2018-02-04 13:41:15 [stdout] INFO: docUrl : http://guoxue.ifeng.com/a/20150926/44743370_0.shtml
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 6 | delay:  113 ms (+62) | latency: 1133 ms | size:   256 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  216 ms (-38) | latency: 1782 ms | size:  8428 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  143 ms (-31) | latency: 1124 ms | size:    65 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 6 | delay:  117 ms (+4) | latency: 1177 ms | size:   256 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  187 ms (-95) | latency:  921 ms | size: 15092 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  235 ms (-182) | latency:  527 ms | size:  5831 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 1 | delay:  183 ms (-52) | latency: 1310 ms | size:  2850 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  112 ms (-74) | latency:  380 ms | size: 13242 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 5 | delay:  116 ms (-1) | latency: 1153 ms | size:    20 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  137 ms (-68) | latency:  685 ms | size:  4388 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 1 | delay:  151 ms (+38) | latency: 1514 ms | size: 11833 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  161 ms (-68) | latency:  927 ms | size:  3993 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 5 | delay:  101 ms (-15) | latency:  856 ms | size:    20 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  151 ms (-9) | latency: 1417 ms | size: 31452 bytes
+2018-02-04 13:41:16 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 2 | delay:  115 ms (-28) | latency:  867 ms | size:    65 bytes
+2018-02-04 13:41:17 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  115 ms (-21) | latency:  945 ms | size:  3175 bytes
+2018-02-04 13:41:17 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 8 | delay:  329 ms (+79) | latency: 3296 ms | size:  7530 bytes
+2018-02-04 13:41:17 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  111 ms (-39) | latency:  717 ms | size: 13170 bytes
+2018-02-04 13:41:17 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 7 | delay: 1035 ms (+705) | latency:10354 ms | size:  7542 bytes
+2018-02-04 13:41:17 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 6 | delay:  698 ms (-337) | latency: 3611 ms | size:  7540 bytes
+2018-02-04 13:41:17 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  110 ms (-41) | latency:  687 ms | size: 31216 bytes
+2018-02-04 13:41:17 [stdout] INFO: Comment!!!
+2018-02-04 13:41:17 [stdout] INFO: Sql : INSERT INTO ifeng_comment(comment_id, comment_key, article_id, channel_id, client_ip, create_time, content, user_id, username, avatar_url, ip_from, uptimes, useragent, parent_comment_ids) VALUES ("572243350", "572243350_ifeng_comment", "8585024", "0", "112.90.150.*", "2015/11/20 15:40:00", "《麻姑仙坛记》原石久佚，存世宋拓本仅两本(分别藏于故宫博物院和上海博物馆)。", "65258094", "苦荞花", "http://ucimg.ifeng.com/upload/default_headPortrait_1.jpg", "广东省广州市", "0", "pc", ";")
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 4 | delay:  175 ms (-41) | latency: 1340 ms | size: 12189 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  173 ms (-1) | latency: 1715 ms | size: 12574 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  183 ms (+0) | latency:  536 ms | size:     0 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:   87 ms (-28) | latency:  590 ms | size: 19227 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: comment.ifeng.com | conc: 1 | delay:  151 ms (+36) | latency: 1519 ms | size:    64 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 5 | delay:  489 ms (-209) | latency: 2800 ms | size:  4052 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 4 | delay:  352 ms (-136) | latency: 2166 ms | size:  4052 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:   90 ms (-19) | latency:  701 ms | size: 30388 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:  124 ms (+37) | latency: 1245 ms | size:  9120 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  243 ms (+70) | latency: 2436 ms | size: 11597 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 6 | delay:  174 ms (+73) | latency: 1744 ms | size:    20 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:   96 ms (-15) | latency:  815 ms | size: 12928 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 5 | delay:  157 ms (-16) | latency: 1410 ms | size:    20 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  175 ms (+85) | latency: 1752 ms | size: 30734 bytes
+2018-02-04 13:41:18 [stdout] INFO: News!!!
+2018-02-04 13:41:18 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, article_key, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("2015092644743370", "2015092644743370_ifeng_article", "http://guoxue.ifeng.com/a/20150926/44743370_0.shtml", "专题; 祭孔大典", "javascript:void(0);; http://guoxue.ifeng.com/listpage/70536/1/list.shtml", "", "南京夫子庙，即南京孔庙、南京文庙，位于南京市秦淮区秦淮河北岸贡院街，江南贡院西边，为供奉祭祀孔子之地，是中国四大文庙，现为夫子庙秦淮风光带组成部分。", "天下文枢：南京夫子庙", "凤凰网综合", "", "[李志明]", "2015-09-26 17:34:00", "夫子庙习礼亭南京夫子庙，即南京孔庙、南京文庙，位于南京市秦淮区秦淮河北岸贡院街，江南贡院西边，为供奉祭祀孔子之地，是中国四大文庙，现为夫子庙秦淮风光带组成部分。夫子庙是一组规模宏大的古建筑群，主要由孔庙、学宫、贡院三大建筑群组成，占地极大。有照壁、泮池、牌坊、聚星亭、魁星阁、棂星门、大成殿、明德堂、尊经阁等建筑。夫子庙被誉为秦淮名胜而成为古都南京的特色景观区，也是蜚声中外的旅游胜地，是中国最大的传统古街市，与上海城隍庙、苏州玄妙观和北京天桥为中国四大闹市。位于南京秦淮河畔的夫子庙，始建于东晋成帝司马衍咸康三年（337年），根据王导提议“治国以培育人材为重”，立太学于秦淮河南岸。当年只有学宫，并未建孔庙。孔庙是宋仁宗景祐元年（1034年）就东晋学宫扩建而成的。因为祭奉的是孔夫子，故又称夫子庙。在学宫的前面建孔庙，目的是在于希望士子遵循先圣先贤之道，接受封建教化。自六朝至明清，十里秦淮的繁华景象和特有的风貌，曾被历代文人所讴歌。 夫子庙位于秦淮河北岸，原是祀奉孔子的地方，始建于宋代景祐元年（1034年），是就东晋学宫旧址扩建而成。建炎年间，夫子庙毁于兵火。绍兴年间重建为建康府学，庙学合一。学宫在大成殿后街的北面，门前立有木牌坊，上书“东南第一学”，宫内有“志道、据德、依仁、游艺”四个书斋，另有明德堂、尊经阁。乾道四年（1168）在夫子庙东北利涉和文德两桥间区域内兴建贡院。元代改为集庆路学。明初为国学，后作应天府学。省学和上元、江宁两县学也设于此区域。清代对贡院、学宫进一步扩充，建科举考试的号舍两万零四百余间，是当时全国最大的省级乡试考场。也是江南的文化和商业中心。明清时期，每逢乡试大比之年，江南地区的学子就会云集夫子庙，而为举子、商贾服务的歌楼、酒店、茶室、客栈、商店等则应运而生，由此形成了这一地区庙市合一，文商交融的格局，这在中国孔庙发展史上是孤例。即历史上南京夫子庙有两个合一；一是“庙学”合一，二是“庙市”合一。夫子庙主要建筑夫子庙已成为富有明清建筑风格的十里秦淮风光带上的一个重要景点。它以大成殿为中心，南北成一轴线，左右建筑对称，占地约26300平方米。现已列为市级文物保护单位。夫子庙位于市中心偏南，秦淮河北岸的贡院街旁。是由文教中心演变而成的繁华闹市，人们通常所说的夫子庙，实际包括夫子庙、学宫和贡院主大建筑群。学宫学宫位于大成殿后街北，原有“东南第一学”门坊，包括明德堂、尊经阁、青云楼、崇圣祠等古建筑。明德堂是学宫的主体建筑，科举时代秀才每月逢朔望都到这里听训导宣讲。中国的学宫都称“明伦堂”，而夫子庙的学宫独称“明德堂”，据说是宋代文天祥题写的“明德堂”匾额之故。1986年明德堂维修时又修复了两旁的“志道”、“据德”、“依仁”、“游艺”四斋。大成门进入棂星门，迎面便是大成门。孔子对中国古代文化做了集大成的工作，此门因名“大成”。门前石狮雄踞，门左右辟角门。门内两侧分列四块古碑。《孔子问礼图碑》，一说为南朝齐永明二年（484年）遗物，《集庆孔子庙碑》，元至顺元年（1330年）刻成，《封至圣夫人碑》，元至顺二年（1331年）刻成，《封四氏碑》元至顺二年刻成。大成殿大成殿是夫子庙的主殿，高16.22米，阔28.1米，深21.7米。殿内正中悬挂一幅全国最大的孔子画像，高6.50米、宽3.15米。殿内陈设仿制2500年前的编钟、编磬等十五种古代祭孔乐器，定期进行古曲、雅乐演奏，演出反映明人祭孔礼仪的大型明代祭孔乐舞，使观众听到春秋时代的钟鼓之乐、琴瑟之声，展现二千多年前另古乐风貌。大殿四周是孔子业绩图壁画，形神并具。庙院被两庑碑廊环抱，墙上镶有三十块由赵朴初、林散之、沈鹏、武中奇等著名书法家撰写的墨宝真迹碑刻。碑廊里陈列着被誉为“中华一绝”的雨花石展览。泮池孔庙前的水池一般称为“泮池”。鲁国学宫设于泮水之畔，周朝时“天子之学为雍，诸侯之学为泮”，以后相沿成习。夫子庙建庙前将流经广场的秦淮河一段河道改造为泮池，从而使夫子庙成为中国孔庙中仅有的一座用天然活水作泮池的庙宇。照壁夫子庙照壁位于秦淮河南岸，建于明万历三年（1575年），高大雄伟，全长110米，为全国照壁之最。与全国各地孔庙显著不同的，它以秦淮河自然河流为泮池。江南贡院江南贡院是夫子庙地区主要建筑群之一，秦淮河畔也因贡院、夫子庙的存在而一度繁荣起来，是中国最大的科举考场。其鼎盛时期仅考试的号舍就拥有20644间，加上官房、膳房、库房、杂役兵房等数百间，占地超过30万平方米，其规模之大、占地之广居全国各省贡院之冠，创造了古代科举考场中国之最。贡院中的南京市江南贡院历史陈列馆是中国唯一的一座以反映中国科举考试制度为内容的专业性博物馆。", "", "", "0", "0")
+2018-02-04 13:41:18 [stdout] INFO: News!!!
+2018-02-04 13:41:18 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, article_key, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("2015101144814135", "2015101144814135_ifeng_article", "http://guoxue.ifeng.com/a/20151011/44814135_0.shtml", "专题; 精彩汇编", "javascript:void(0);; http://guoxue.ifeng.com/listpage/70544/1/list.shtml", "", "你写的这篇字挂在墙上，你自己先看得过去，不至于自己先看着不敢给人家看，人家拿眼睛看，我自己捂着眼睛躲在一边，这个就行了。尤其是要人家认得，我也认得，这样子就是好。", "启功口述：我被神话迷惑大半辈子", "凤凰网综合", "启功", "[丁梦钰]", "2015-10-11 16:35:00", "中华书局版《启功给你讲书法》有人说：你说了半天应该怎么写字，破除那些个迷信的说法，不切实际的说法，那么你说怎么才算写好了呢?我认为这个“好”的标准又有又没有。有人说，那个笔画是方的，刀斩斧齐的那就是好；有人说，揉了多少球然后描出来的圆疙瘩这就是好。那都是误解，是碑帖上刻出来的效果，误解为那些个现象。怎么叫好?你写的这篇字挂在墙上，你自己先看得过去，不至于自己先看着不敢给人家看，人家拿眼睛看，我自己捂着眼睛躲在一边，这个就行了。尤其是要人家认得，我也认得，这样子就是好。宋朝有个人叫张商英。他做到丞相的官(这官很大了)，他起草写了文稿，让家里的子、侄去抄，或者让秘书帮他抄写誊清。谁知抄写的人第二天拿来问他，说这个字念什么?他瞧了半天，一拍桌子：“早不来问，你要早来问我，我还没忘，我写完了，交给你们抄去了，我也忘了是什么字了。早来问我，我还没忘。”这样的情况现在也不是没有。有一位老前辈，我也不提是谁了，写出字来就是不大好认。他的稿子有人就怕认。他写一条幅给人，我们看了不认得是什么，据说有时候他也不大认得。这样的事情也有。总而言之，我们写出字来，第一先要自己能认识，让抄写的人过一天再来问你也不算太晚，自己也还认得，别人也还认得，这是最好的、最起码的条件。第二如果再加上有特殊的美感，使人看起来，说怎么那么好看呀，这个就是好。这好比我们看见一个人，不管是男的是女的，是老的是少的，老年人也有很美的，比如说，胡子头发都白了，挺长的白胡子，可很精神。那你会说这老头儿很漂亮。说一个妇女年轻的时候怎么怎么样，就是老太太了她精神十足，不管是多大岁数，你看这老太太慈眉善目的，也让人尊敬，让人觉得可亲近。你要问，说这个人美观，他美观在哪点上，恐怕不大好说。我们看梅兰芳演红，演旦角，大家都说他演得好。你说他这人长相好不好看?你说他眼睛好，我就专门画他这两只眼睛，与他的鼻子嘴全不配合，你说这眼睛好不好看?那也不好看。说这个鼻子好，就单画他的鼻子，说这鼻子怎么好法，我得照这样找别人的鼻子去。要是这样，不就成了笑谈吗?那么好在哪，某一个人的美观、好看，不管这人是雄伟的好看，还是柔媚的好看，他总有他相配合的整体，有一个好看的整体。绝不能挖出个局部来，说这眼睛好，这鼻子好，那嘴好看。说梅兰芳好看，据说，他两个耳朵比较冲前(我见过梅兰芳，可我没注意)。耳朵比较往前掮，俗称掮风耳，我也没注意。那么梅兰芳什么都好，就是耳朵不太好，往前掮着，这可怎么看?先看鼻子眼睛，注意到耳朵的还是很少。所以我觉得美不美、好不好，是在整体。我把每一个帖上的字，一笔一笔的挖下来。这是一个“天”，我从王羲之那儿拉下一横，从颜真卿那儿拉下第二横，从褚遂良那儿挖下一撇，然后从柳公权那儿挖下一个捺。这四笔我都给它贴在一起， 组合个天字， 你看这个字还像个什么样?好看好看就不言而喻了。你要是明白这个道理， 就可以理解我所认为写字的好， 它是整体的， 尤其是要让人认识的。不管写草书、写行书， 草书有草书的法度、规则。有个《草字汇》， 还有编草书的许多书； 你看合乎那个大家公认的标准的写法， 那就是大家公认的好的。如果偏写那随便造出来的字， 也不管《草字汇》还是《草韵辨体》是怎么讲草书的书， 说我跟他们完全不一样， 那你也甭想让人认得。还有一个问题， 是没有百分之百的好作品。王羲之写的字， 我们要给他对比起来看， 也有这个帖上这个字， 比那个帖上那个字(同是那个字)写得好看。那么可见甲帖王羲之写的这一个字就不如他乙帖上写的那个同一个字好。所以名家、书圣， 他也有写糟了的时候。米元章写过一个帖， 他在夹缝里， 自己批上“ 三四次写， 问有一两字好，信书亦一难事” 。这是米元章亲自写的一个帖。这个帖呢， 写了三四次， 是一首七言绝句， 四七二十八个字。就算他写四次， 二十八个字乘以四， 一百一十二个字， 米元章总算是高手， 你写一百一十二个字之后自己看起来， 间或有一两字好， 可信写字也是一件难事。那么你就知道， 我们不是说自卑， 不如米元章， 但是我也不相信自己准比米元章写得好。你也写三四次， 看你有没有惭愧的心呐。所以说， 自己写的字好不好， 还是用这个办法，你把它贴在墙上对比一下，就可以看出来了。启功先生书法作品曹丕说过： “ 虽在父兄， 不能以移子弟。” 可见在魏(汉朝末年)， 曹操的儿子， 他都说过， 有许多事， 写文章父兄写得好， 儿子不一定能够都跟父兄写得一样的好。我们也不能太着急，说我几儿就超过我的父亲，超过我的哥哥，超过我的老师。志愿不可没有哇，可我今天拿起笔来一写就可以比老师比父兄写得都好吗?恐怕没有功夫不行。从前说铁杵磨成针，功到自然成。你功夫不到，如何就想一写就好?我听过一个青年说，说起来谁谁谁写得好，那算什么!我写三天就比他好。那好，这话我觉得他有志愿。这个志愿是好，只这个性子太急了。他三天，咱们一块写完三天，我看你好在哪儿，你写得之后怎么样子就高于那一个人。这是说急性子，想我一句话就超过某个高明的人。这是不容易的。有这么一个故事，说这鸟呀，在乌鸦喜鹊的窝里头都有一根草。它有这根草，别人就看不见它窝里有鸟没有鸟了。说在树上，人看不见，也掏不着它。这都是哄小孩的。因为小孩他想爬到树上够那鸟，到窝里掏那鸟。大人告诉说不成，你看不见鸟，鸟都有一根隐身的草，所以你爬上去看不见窝里有鸟没鸟。有这么一个傻子，他就拆了许多鸟窝，拿着一根根草挨个让家里人看，说你看得见我看不见我?人人都说看得见。这个人呢，挺有耐心，换着个试。有一天，这个人问他的妻子，你看见我没有?他的妻子真腻烦了，就说看不见了。这人以为真看不见了，就拿着这根草，以为街上人也看不见他，走到街上铺子里、摊子上抢东西，拿东西，结果就让人给捉住了，送到衙门里去治罪了。他说你们都看不见我。看不见你怎么逮着你呢?这种东西，要是自己骗自己，说我写的这个一学就像，那你就等于是拿着那个隐身草。想学谁的字，其实谁也写不像，张三写不了李四的字。在旧社会，不会写字的人他怎么办呢?他画个十字。你瞧那些个旧的契约，多少人作保，每个人都画个十字。这是一般农民、市民不认字，就画个十字。这画个十字也有区别。说我跟人定个契约，请你担保，人人都得画上。在公堂上办案，办完找来证人签字。那不容他一人画，每个人都得画。所以我们一看就知道不是一个人画的十字。仔细看，用笔的轻重长短，这一竖搭在横上是偏左，是偏右，这竖是上头长，还是底下长，不一样；有的下笔轻，驻笔重，有的下笔驻笔都轻；有的斜度不一样；细看总是不一样。所以我就说不要自欺。自己说大志可以，大志不能没有，可也别自己真信：说我三天就出精品，比那人好多了。那就跟拿一根隐身草到街上去拿东西一个样，自己骗自己。还有一种，写得老不像怎么办。不一定要像，要学的是他的方法。他的办法，我们吸取了没有?借鉴了没有?我们要借鉴，要按他的办法，就省事；我们不按他的办法，就费事。就是这么点东西。写出来不就是自己看着比较满意，然后再请别人来看，自己把好的贴在墙上，然后有客人来了，请你看我这怎么样。从前我有一个同学，他自己爱哂画。画得之后给人看：“你看总有一点进步吧?”我告诉他：“你没有一点进步。”他说：“为什么?”我说：“你自己觉得进步了，这个想法就是退步。”有一回我住医院，有一个年轻人到医院看望我，他拿一张字让我看，问写得好不好。我说“不好”。为什么我要这样说，你要告诉他好了，他就特别骄傲，所以我就给他泼冷水。这是成全他，我说不好，你还得努力。他挺不服气地说：“某某老先生说自愧不如。”我说：“我看这位老先生是恭维你呢，还是说反话呢?什么叫反话，你明白不?他都不如你写的好，这不是挖苦你吗?你连人家说反话都听不出来，你还问什么叫好坏呢。”这个人走了，同病房的人说：“哪有你这样说话的?”我说：“我们教书的人哪，职业病，对学生就得负责。你恭维他，对他没好处。”所以我现在郑重其事地奉告诸位，要学就有四个字：“破除迷信。”别把那些个玄妙的、神奇的、造谣的、胡说八道的、捏造的、故神其说的话拿来当作教条，当作圣人的指导，否则那就真的上当了。我这次所谈的这些题目还没有想得很好。我的意思，是想敬告想学书法的朋友不要听那些故神其说的话，我是和想学书法的朋友谈谈心，谈我个人的看法，个人的理解，也可以说个人的经验吧。我已经被那些故神其说的话迷惑了多半辈子。我今年已经八十四周岁了，就算再活也是一与九之比了，所以让那些个迷惑的神奇说法蒙了大半辈子，今天我说些良心话。现在说完了，就是这一共十三章。现在的时间是一九九六年七月一日中午十二点。这些话，将来有机会还要把它变成文字。(本文节选自启功先生著作《启功给你讲书法》。书稿文字内容由启功先生口述，秦永龙先生记录整理。)", "", "", "0", "0")
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 3 | delay:  409 ms (+56) | latency: 4097 ms | size:  7522 bytes
+2018-02-04 13:41:18 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 1 | delay:  120 ms (-55) | latency:  651 ms | size:  9839 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 3 | delay:  185 ms (-58) | latency: 1271 ms | size: 20379 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  173 ms (+76) | latency: 1731 ms | size: 12838 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 3 | delay:  266 ms (+83) | latency: 2662 ms | size:  6125 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 2 | delay:  355 ms (-54) | latency: 3008 ms | size:  4060 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  135 ms (+10) | latency: 1351 ms | size: 20285 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: tieba.news.ifeng.com | conc: 1 | delay:  461 ms (+106) | latency: 4614 ms | size:  7523 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 5 | delay:  211 ms (+54) | latency: 2117 ms | size:    20 bytes
+2018-02-04 13:41:19 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 2 | delay:  207 ms (+22) | latency: 2075 ms | size: 15288 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: culture.ifeng.com | conc: 1 | delay:  137 ms (-70) | latency:  669 ms | size: 19153 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: news.ifeng.com | conc: 2 | delay:  266 ms (+0) | latency: 1871 ms | size:     0 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 3 | delay:  176 ms (+3) | latency: 1762 ms | size: 13554 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 2 | delay:  102 ms (-32) | latency:  703 ms | size: 19070 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 2 | delay:  122 ms (-53) | latency:  696 ms | size: 12260 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: app.ent.ifeng.com | conc: 5 | delay:  210 ms (-1) | latency: 2094 ms | size:    20 bytes
+2018-02-04 13:41:20 [stdout] INFO: News!!!
+2018-02-04 13:41:20 [stdout] INFO: Sql : INSERT INTO ifeng_news(article_id, article_key, url, path_text, path_href, keywords, description, title, source, author, editor, date_time, content, picture_url, comment_ids, join_count, reply_count) VALUES ("2015101144814165", "2015101144814165_ifeng_article", "http://guoxue.ifeng.com/a/20151011/44814165_0.shtml", "专题; 精彩汇编", "javascript:void(0);; http://guoxue.ifeng.com/listpage/70544/1/list.shtml", "", "颜真卿家学渊博，六世祖颜之推是北齐著名学者，著有《颜氏家训》。颜真卿拜师张旭，学得其书法，又吸取了初唐四家各自的特点，创立了雄浑、气势磅礴的“颜体”", "气象格局之门：从颜真卿书法看门道", "凤凰网综合", "刘雪", "[丁梦钰]", "2015-10-11 17:00:00", "颜真卿家学渊博，六世祖颜之推是北齐著名学者，著有《颜氏家训》。颜真卿拜师张旭，学得其书法，又吸取了初唐四家各自的特点，创立了雄浑、气势磅礴的“颜体”，能够为后世书写的模版，“颜体”区别于唐朝初期的书法风格，借助篆书的入笔方式，体现刚劲的写法，在雄浑中体现妖娆，结构方正圆润，气势恢宏，字里行间透露着一种傲气，端庄雄伟。本文就颜真卿的书法作品进行赏析，初步总结归纳出颜真卿书法特征。 一、颜真卿书法作品赏析1.《祭侄文稿》这是颜真卿行草书的代表作。当时正值颜真卿半百。书法界有说字如其人。颜真卿出生忠烈之家，为人大气凛然，这种精神同样寄托于书法作品中。从建稿起，经过后期修文改善，正反映出颜真卿行文构思特点，详尽交代文路始末，将情怀完全抒于行文，文笔神采飞扬，走笔雄浑，凸显特色，舒畅写实，将所有的运笔和收线都做到恰到好处。全篇运用圆润强健的笔法，秉承篆书的流转神采，从开头到结尾，撰文中虽然实在毛笔的墨汁干枯时再醮墨，导致墨色因停顿有新墨开始，墨汁有浓有淡，变化万千，但是整篇文章一笔完工，行文流畅。此帖被后世书法界赞誉为“天下第二行书”。 2.《麻姑仙坛记》 颜真卿曾游览于南城县麻姑山一座古坛时，在土壤里中发现螺蚌壳化石。他便有感而发，为此著作《抚州南城麻姑山仙坛记》。这并不单是为了记叙这件事情，而是当时心情的真实写照。这个碑文行文庄重严厉、雄浑娟秀，深受历代书法家的推崇，成为颜真卿六十多岁时的又一力作。这部作品是颜真卿楷书风格已经有所造诣的时候的作品，后期欧阳修评价这部作品时说道，这幅碑文俊秀雄浑，运笔精悍，笔画强劲有力，后世常常赞叹此副字碑为“天下第二书”。3.《东方朔画像赞》《东方朔画像赞》是颜真卿楷书的力作，碑文记载汉朝名士东方先生画像，当时颜真卿正值46岁。苏轼曾高度评价这幅碑文，指出在颜真卿所有的作品当中，只有这部作品显示了清俊与雄浑的风格。字里行间不乏清晰与深渊，与其他版本截然不同，但都不如颜真卿这部作品深刻、隽永。明朝更有人赞誉这部作品的书法峻峭力拔、奋笔求张，认为这确实是颜真卿的又一力作。 4.《颜勤礼碑》 本部作品的全称为《唐故秘书省著作郎夔州都督府长史护军颜君神道碑》，这幅碑帖是颜真卿在71岁的时候为他的曾祖父颜勤礼所作的神道碑，主要用于古人墓前开阔道路所用，修建石柱来作为标志，将这个标志称为神道，就是所说的墓碑。碑文的内容主要是记录颜氏祖辈们所做的生前功德，并记载颜家后世子孙的丰功伟绩，现在这副碑文已经被定为国家级重点保护文物。5.《多宝塔碑》全称是《大唐西京千福寺多宝塔感应碑》，这幅碑文就是颜真卿早期的得意之作，书写严谨真实，承接虞、褚的风格，同时借鉴唐人当时的书法风格而作，这显示出颜真卿在虚心求教的同时，有特别注重汲取民间艺术的优势特征，将整篇碑文构造严密结构，字里行间雄浑娟秀，收笔饱满，字正方园，入笔苍劲有力又活灵活现，这是他继承传统书法风格的代表作。 二、颜真卿书法特征分析颜真卿创造了“颜体”，这种体在书法史上是一种特立于其他学派的书学境界。颜真卿的书法风格既具有超群的情感与灵性，行文的思想显得自然又奇特，不仅将自己的情感寄托在其中，所描绘的思想境界自然、雄浑、刚健，而且阐述了很多人生感悟，思想境界宏大开阔。 1.入笔坚实，行文刚劲，但也不缺雄浑与妖娆“颜体”的初步形成阶段是在颜真卿50岁以前。这时候的作品如《多宝塔》等，从行文中可以看出，颜真卿主要风格是用笔稳健、雄厚，入笔坚实，行文刚劲，笔墨浓厚，而且字的结构凸显紧实、刚正、稳健，将文字写的天圆地方，字里行间不乏清晰、深远之特色。颜真卿还力求雄浑与妖娆的相结合的境界，每次入笔都刚劲有力，运笔尽显妖娆。他最主要的作品还是以真书、草书为主，偶尔涉猎隶书、篆书之类的作品，但为数不多。颜真卿从初唐开始，但又超脱初唐的旧有风格，自立“颜体”，这是受张旭的影响颇深。 2.精准把握字体书写，体现磅礴字体“颜体”形神兼具且走向成熟实在颜真卿从50岁后至65岁，这段时间颜真卿将所有情感寄托于书法，反复推敲“颜体”，要求自己的书法要有形有神，反复操练，终于取得成就。从这段时期的作品中可以看出，他加大腕部的力量，中锋运笔，采用篆籀的手法，圆转藏锋，犹如印泥版字体。笔画形成园头细尾，直画凸显待发弓箭的气势。每一个字都遵照横细竖粗的书写方法，在钩捺的尾端都将笔锋转细，凸显刚劲之势。在写捺的时候，则采用一波三折的运笔原则，将每一种转钩都写得饱满、霸气，弧度均匀，饱满有力。颜真卿在书写折笔的时候，则采用提笔和暗转的风格。从字的构造来看，字正大气，入笔平实稳健，字形严谨。书法上的成就已经到了不可多得的境界，颜真卿已然摒弃了之前的楷书风貌，创立出变法新意，雄浑妖娆的“颜体”。 3.书法主题凸显哲理，寓情于书法当中在颜真卿晚年的作品如《颜勤礼碑》《颜家庙碑》等典型碑刻中，颜真卿主要注重将鲜活的生机寄托于老辣的行文中，使行文充满活力，使行文疏中有密、密中显梳，将炉火纯青的书写功力彰显无遗，在雄浑园厚的书法风格中透露自己的豪爽不羁。颜真卿晚年更多的是将对生命的感悟和体会彰显于书法作品中，并将生命哲学与书法连贯汇通，运用笔墨的动势生命哲学活灵活现的表达出来，使行文彰显着盎然的生机与活力。（本文来源《大众文艺》2013年04期 原标题：颜真卿书法作品赏析与其特征分析）", "http://y3.ifengimg.com/a/2015_42/18839ec27c23a92.jpg;http://y1.ifengimg.com/a/2015_42/70a8022e73df554.jpg", "572243350;", "1", "1")
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: sn.ifeng.com | conc: 1 | delay:   84 ms (-18) | latency:  662 ms | size: 18973 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: sports.ifeng.com | conc: 1 | delay:   94 ms (-27) | latency:  669 ms | size: 12935 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 3 | delay:  211 ms (+91) | latency: 2115 ms | size: 12022 bytes
+2018-02-04 13:41:20 [scrapy.extensions.throttle] INFO: slot: ent.ifeng.com | conc: 2 | delay:  159 ms (-52) | latency: 1065 ms | size: 11871 bytes

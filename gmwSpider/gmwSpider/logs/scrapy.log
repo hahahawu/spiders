@@ -1,0 +1,634 @@
+2018-02-03 22:32:17 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: gmwSpider)
+2018-02-03 22:32:17 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-03 22:32:17 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'gmwSpider', 'CONCURRENT_ITEMS': 3000, 'CONCURRENT_REQUESTS': 5000, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'gmwSpider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'gmwSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['gmwSpider.spiders'], 'USER_AGENT': ''}
+2018-02-03 22:32:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-03 22:32:17 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-03 22:32:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'gmwSpider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-03 22:32:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-03 22:32:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'gmwSpider.pipelines.SaveToMysqlPipeline']
+2018-02-03 22:32:18 [scrapy.core.engine] INFO: Spider opened
+2018-02-03 22:32:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 2 | delay: 1091 ms (+841) | latency:10918 ms | size: 35076 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 2 | delay: 1153 ms (+903) | latency:11538 ms | size:  2678 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 2 | delay: 1065 ms (+815) | latency:10657 ms | size: 10507 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: djzsjs.gmw.cn | conc: 2 | delay: 1044 ms (+794) | latency:10449 ms | size:  4802 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 2 | delay: 1176 ms (+926) | latency:11767 ms | size: 11136 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 2 | delay: 1018 ms (+768) | latency:10186 ms | size: 11307 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 2 | delay: 1192 ms (+942) | latency:11921 ms | size: 10495 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency: 2141 ms | size:  1798 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 1 | delay:  586 ms (-567) | latency:  183 ms | size:  4230 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 2 | delay: 1193 ms (+943) | latency:11930 ms | size:  6517 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 2 | delay:  134 ms (-115) | latency:  199 ms | size:  4585 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 2 | delay: 1185 ms (+935) | latency:11857 ms | size:  1717 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 2 | delay: 1190 ms (+940) | latency:11908 ms | size: 33367 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 2 | delay: 1201 ms (+951) | latency:12013 ms | size: 10289 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 1 | delay:  250 ms (+0) | latency:  348 ms | size:  1798 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 2 | delay:  142 ms (-107) | latency:  357 ms | size:  7976 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 2 | delay:  143 ms (-106) | latency:  363 ms | size:  6564 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 1 | delay:  527 ms (-491) | latency:  365 ms | size: 12581 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 2 | delay:  131 ms (-118) | latency:  123 ms | size: 37714 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency: 2433 ms | size:   123 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 2 | delay:  144 ms (-105) | latency:  394 ms | size:  7225 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 2 | delay:  145 ms (-104) | latency:  406 ms | size:  9242 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 1 | delay: 1185 ms (+0) | latency:  403 ms | size:  1717 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 2 | delay:  133 ms (-116) | latency:  174 ms | size: 34718 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 1 | delay:  616 ms (-573) | latency:  429 ms | size: 10175 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 2 | delay: 1065 ms (+815) | latency:10659 ms | size:  1626 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 1 | delay:  602 ms (-590) | latency:  122 ms | size: 35737 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 2 | delay:  144 ms (-105) | latency:  398 ms | size: 10067 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 1 | delay:  609 ms (-567) | latency:  425 ms | size: 37395 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 2 | delay:  147 ms (-102) | latency:  441 ms | size:  9550 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 2 | delay:  145 ms (-104) | latency:  413 ms | size: 10140 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 1 | delay: 1206 ms (+1061) | latency:12063 ms | size:  9110 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 1 | delay:  146 ms (-103) | latency:  420 ms | size: 10330 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: junshi.gmw.cn | conc: 3 | delay:  132 ms (-117) | latency:  143 ms | size: 39305 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 1 | delay:  554 ms (-511) | latency:  433 ms | size:  6928 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency:  465 ms | size:  1569 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 1 | delay: 1065 ms (+923) | latency:10659 ms | size: 10262 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency:  445 ms | size:   123 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 2 | delay:  148 ms (-101) | latency:  464 ms | size:  7517 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay: 1219 ms (+969) | latency:12194 ms | size:  4360 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 1 | delay:  625 ms (-576) | latency:  488 ms | size:  8389 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 2 | delay:  148 ms (-101) | latency:  467 ms | size: 10516 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 2 | delay: 1223 ms (+973) | latency:12237 ms | size:  7073 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 1 | delay: 1078 ms (+934) | latency:10780 ms | size:  9102 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 2 | delay:  149 ms (-100) | latency:  496 ms | size:  7860 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 2 | delay: 1221 ms (+971) | latency:12217 ms | size: 12780 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 2 | delay:  133 ms (-116) | latency:  168 ms | size: 25824 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 1 | delay:  621 ms (-571) | latency:  499 ms | size:  9727 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 2 | delay: 1131 ms (+881) | latency:11310 ms | size:  1797 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 1 | delay: 1078 ms (+828) | latency:10780 ms | size:  7347 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 2 | delay: 1198 ms (+948) | latency:11988 ms | size: 10031 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 1 | delay: 1184 ms (+1034) | latency:11847 ms | size: 28648 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 1 | delay: 1053 ms (+908) | latency:10539 ms | size: 10147 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 2 | delay:  131 ms (-118) | latency:  124 ms | size: 31899 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay: 1193 ms (+943) | latency:11934 ms | size: 16166 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 1 | delay: 1200 ms (+1069) | latency:12004 ms | size:  9588 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 1 | delay: 1239 ms (+989) | latency:12391 ms | size: 15681 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 1 | delay: 1223 ms (+1088) | latency:12233 ms | size:  4784 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 1 | delay:  591 ms (-539) | latency:  528 ms | size:  7277 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 1 | delay: 1201 ms (+1068) | latency:12018 ms | size: 25847 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 2 | delay:  152 ms (-97) | latency:  541 ms | size:  6380 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: gmw.cn | conc: 1 | delay: 1125 ms (+875) | latency:11259 ms | size:  4360 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 1 | delay: 1195 ms (+1061) | latency:11956 ms | size: 34557 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 2 | delay:  130 ms (-119) | latency:  114 ms | size: 27480 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 1 | delay:  637 ms (-581) | latency:  555 ms | size:  8422 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: junshi.gmw.cn | conc: 2 | delay: 1201 ms (+1069) | latency:12013 ms | size: 40344 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 1 | delay:  640 ms (-582) | latency:  579 ms | size:  4496 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 1 | delay: 1230 ms (+1081) | latency:12301 ms | size:  8083 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 1 | delay:  639 ms (-582) | latency:  574 ms | size:  4154 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 1 | delay: 1033 ms (+888) | latency:10335 ms | size: 11971 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 1 | delay: 1199 ms (+1068) | latency:11997 ms | size: 37555 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 1 | delay: 1180 ms (+1035) | latency:11802 ms | size: 22875 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 1 | delay:  603 ms (-594) | latency:   89 ms | size: 32698 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 3 | delay:  154 ms (-95) | latency:  589 ms | size: 12720 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 1 | delay: 1193 ms (+1062) | latency:11930 ms | size: 25914 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 1 | delay: 1200 ms (+1048) | latency:12008 ms | size:  5994 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 1 | delay:  575 ms (-516) | latency:  590 ms | size: 34991 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 2 | delay: 1224 ms (+974) | latency:12240 ms | size: 13788 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 2 | delay: 1233 ms (+1079) | latency:12337 ms | size: 11207 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 1 | delay: 1193 ms (+1044) | latency:11932 ms | size: 11459 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 1 | delay: 1238 ms (+1091) | latency:12383 ms | size:  9952 bytes
+2018-02-03 22:32:31 [scrapy.extensions.throttle] INFO: slot: djzsjs.gmw.cn | conc: 1 | delay:  553 ms (-491) | latency:  610 ms | size:  4937 bytes
+2018-02-03 22:32:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://lady.gmw.cn/target=_blank>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://m.gmw.cn/%3CP%3Ehttps:/s.cloud.gmw.cn/2016/c/2017-02-09/698562.shtml%20%3C/P%3E>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://lady.gmw.cn/2013-12/09/content_9746231.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://e.gmw.cn/2012-05/01/content_4066544.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://m.gmw.cn/%3CP%3Ehttps:/s.cloud.gmw.cn/2016/c/2017-02-16/706061.shtml%20%3C/P%3E>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://sports.gmw.cn/node_104753.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://edu.gmw.cn/2014-01/02/content_9998477.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://it.gmw.cn/node_64454.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:35 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 1 | delay:  620 ms (-603) | latency:  171 ms | size: 32882 bytes
+2018-02-03 22:32:35 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay:  813 ms (-379) | latency: 4337 ms | size:  5378 bytes
+2018-02-03 22:32:35 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 4 | delay: 1228 ms (+978) | latency:12286 ms | size:  9101 bytes
+2018-02-03 22:32:35 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 3 | delay:  831 ms (-397) | latency: 4344 ms | size:  9173 bytes
+2018-02-03 22:32:35 [scrapy.extensions.throttle] INFO: slot: ku.theory.gmw.cn | conc: 1 | delay: 1178 ms (+928) | latency:11780 ms | size: 12476 bytes
+2018-02-03 22:32:35 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 2 | delay:  560 ms (-505) | latency:  551 ms | size: 11311 bytes
+2018-02-03 22:32:36 [stdout] INFO: article_count : 1
+2018-02-03 22:32:38 [stdout] INFO: article_count : 2
+2018-02-03 22:32:38 [scrapy.core.scraper] ERROR: Spider error processing <GET http://jyj.gmw.cn/2015-10/31/content_17559161.htm> (referer: http://jyj.gmw.cn/node_77693.htm)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://jyj.gmw.cn/2015-10/31/content_17559161.htm
+2018-02-03 22:32:38 [stdout] INFO: article_count : 3
+2018-02-03 22:32:38 [stdout] INFO: article_count : 4
+2018-02-03 22:32:38 [stdout] INFO: article_count : 5
+2018-02-03 22:32:38 [stdout] INFO: article_count : 6
+2018-02-03 22:32:38 [stdout] INFO: article_count : 7
+2018-02-03 22:32:39 [scrapy.core.scraper] ERROR: Spider error processing <GET http://jyj.gmw.cn/2017-11/21/content_26850411.htm> (referer: http://jyj.gmw.cn/node_77695.htm)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://jyj.gmw.cn/2017-11/21/content_26850411.htm
+2018-02-03 22:32:39 [scrapy.core.scraper] ERROR: Spider error processing <GET http://view.gmw.cn/2011-04/17/content_1846748.htm> (referer: http://view.gmw.cn/node_12014_9.htm)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://view.gmw.cn/2011-04/17/content_1846748.htm
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: junshi.gmw.cn | conc: 2 | delay: 1007 ms (-193) | latency: 8140 ms | size: 10907 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 2 | delay:  938 ms (-261) | latency: 6777 ms | size: 37451 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 2 | delay:  942 ms (-264) | latency: 6777 ms | size:  9186 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 2 | delay:  967 ms (-256) | latency: 7113 ms | size:  4576 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 2 | delay:  958 ms (-279) | latency: 6790 ms | size: 36270 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 2 | delay:  896 ms (-157) | latency: 7396 ms | size: 10263 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 2 | delay:  712 ms (+566) | latency: 7123 ms | size:   123 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 2 | delay:  763 ms (+208) | latency: 7630 ms | size:  1626 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay:  679 ms (+42) | latency: 6798 ms | size:  6859 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 2 | delay:  679 ms (+119) | latency: 6797 ms | size: 10666 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 2 | delay:  716 ms (+75) | latency: 7161 ms | size:  5508 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 2 | delay:  681 ms (+41) | latency: 6813 ms | size: 13152 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 2 | delay:  742 ms (+121) | latency: 7422 ms | size:  7733 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 2 | delay:  681 ms (+77) | latency: 6817 ms | size:  9949 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 2 | delay:  941 ms (-259) | latency: 6816 ms | size:  9408 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay:  748 ms (-65) | latency: 6826 ms | size:  9392 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 2 | delay:  677 ms (+149) | latency: 6774 ms | size: 12864 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 2 | delay:  683 ms (+91) | latency: 6832 ms | size:  1797 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 2 | delay:  942 ms (-258) | latency: 6835 ms | size:  6931 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 3 | delay: 1026 ms (-206) | latency: 8198 ms | size:  8191 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 2 | delay:  768 ms (+165) | latency: 7682 ms | size:  7347 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 3 | delay:  826 ms (-5) | latency: 8206 ms | size:  8886 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 2 | delay:  746 ms (+129) | latency: 7460 ms | size:  4591 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 2 | delay:  748 ms (+162) | latency: 7488 ms | size:  2780 bytes
+2018-02-03 22:32:39 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 2 | delay:  853 ms (-173) | latency: 6801 ms | size:  8857 bytes
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://liuxue.gmw.cn/2016-07/18/content_21016021.htm", "2016-0718c_21016021", "中国人上半年收入增速与GDP持平 法媒:加薪或将减缓", "中国国家统计方面负责人17日警告，尽管中国居民收入上半年与中国经济增长保持增长节奏，但很难保证居民收入一直保持这个增长节奏。", "白秭赫", "GDP", "7月18日报道法媒称，中国国家统计报告全国居民人均可支配收入在今年上半年增长6.5%，与国民经济增长的6.7%相持。不过官方警告，居民收入增长将不会保持持续增长的势头，与经济增长缓慢一样，有可能下降。据法国国际广播电台网站7月17日援引路透社报道，中国国家统计方面负责人17日警告，尽管中国居民收入上半年与中国经济增长保持增长节奏，但很难保证居民收入一直保持这个增长节奏。据官方解释，维持居民收入持续增长，必须有经济支持，但中国煤炭业和钢铁也产能过剩，以及农产品价格下降，将很难维护居民收入持续增长。根据官方统计，中国居民人均可支配收入上半年增长6.5%，同期国民经济总收入增长为6.7%。中国劳动人事部门近期透露，将减缓工资增长的速度，以维持中国企业的竞争力。", "http://img.gmw.cn/pic/content_logo.png ; ", "2016-07-18 17:00:00", "白秭赫", "", "光明留学网; 实用信息", "http://liuxue.gmw.cn/; http://liuxue.gmw.cn/node_47107.htm")
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://news.gmw.cn/2017-10/27/content_26617292.htm", "2017-1027c_26617292", "网（小说）", "网（小说）作者：汪伊凡（湖南长沙市南雅中学学生）长庚收鱼回来了。田二姑娘看着他网里那懒得蹦跶的两条老", "邱亭", "&nbsp", "作者：汪伊凡（湖南长沙市南雅中学学生）长庚收鱼回来了。田二姑娘看着他网里那懒得蹦跶的两条老鱼，努了努嘴。田二姑娘是长庚的媳妇儿，可能是村里唯一不曾嫌长庚蠢笨的人了，但如今连吃了三天的野菜，不高兴的神情也挂了一脸。瞟到媳妇儿那不满的嘴角，长庚默默踢踹着地上的渔网。“都怪这网。”长庚是梦泽湖边上一个普通的渔民。被他责怪的网叫底八扣。底八扣是种很原始的渔网。那呆头呆脑、毛毛糙糙的样子，像极了长庚。只有他自己知道，他不是傻，他只是怂，怂到用呆傻来掩盖自己是个旱鸭子，是个碰到水就怕自己会沉下去的怂蛋。因为如此，他只能缩在鱼迹罕至的小角落，扯弄着蠢笨的底八扣，眼巴巴地望着那些鱼嘲讽式地溜走。因为他没法下水，所以就不能像真正的爷们儿一样浮在水草缠绵的梦泽湖里，把油光水滑的渔网收束在脊背上，等着满满的渔网把脊背压出深深的沟壑。然后回到家，让家里的娘儿们恭恭敬敬地倒碗白酒，也可能是黄酒。但不管黄酒、白酒，只有爷们儿才能喝到。只有爷们儿才能优哉游哉地吧唧着嘴边的酒渍，指点着今天吃什么法子烹的鱼。长庚原以为这辈子就这样怂过去了，只盼着老婆生个不怂的娃，堂堂正正地过个晚年。长庚不知道，老天爷最不爱眷顾的，就是怂人的痴盼。他只知道，媳妇来湖边找他的那天，日头正高，把云晒得薄薄的，让人很想躺上去。他在船上晃晃悠悠，拽着异常沉的渔网。汗水流进了长庚的眼睛，他眨巴了两下，又疼又辣。眼泪水缝里头，忽然就渗出了他媳妇儿。他以为自己中暑了，仍死命地拖着渔网，或者说，是被渔网拖着。这么一拉一拽之间，小木船被斜成了个危险的角度。“长庚！”田二姑娘一声尖利的喊叫把长庚吓了个激灵。长庚这才猛地发现，碧绿的湖水就在自己的眼前了。没有风，湖面死寂沉沉的，像个大号的鼻涕虫。长庚浑身都僵了，他像根柴火似的杵着，暴露着自己怂蛋的本质。田二姑娘蹚下了水。谁能看着自家爷们儿在面前翻船呢？可田二姑娘还是太久没下过湖了，滩涂上的青苔滑腻地附在她的脚板上，她下意识地挣了挣，这是个致命的错误，和长庚的怂一样致命。青苔毫不留情地甩开田二姑娘。什么时候就躺在了水里？她再也没可能知道了。长庚被这一幕激红了眼睛，不管不顾地跳进了水里。轻柔的湖水携着些他从未冒出过的壮语灌入耳朵里，长庚觉得自己所有的感官都被湖水堵塞了。但这柔滑的水里，是什么那么粗粝？这广阔的梦泽中，是什么把他越缠越紧？长庚慌乱地扑腾着手脚，他竟没沉到水底，长庚惊得想给自己一耳光。早知道就早点下水了。早知道就不那么怂了。世间只恨“早知道”。底八扣也不喜欢这话。于是它紧紧地攀附着长庚的脊背，借着勾住的一把水草，牢牢箍住这悔到妄图回到过去的懦夫。长庚好想吼叫，想问田二姑娘无端端地来干吗？想问这底八扣为何缠上了自己的身？想问自己怎的就是挣不开这怂蛋的网，就是逃不脱这宿命的纠缠。没人听得见了，人们只能看到长庚夫妇两眼圆瞪，先后消失在了洞庭湖面。多少个人冲了过去，可太远了，也太迟了。为了掩盖自己的旱鸭，长庚选了个最僻静的角落。多好，多好，没人拆穿他。但没人能救他。都怪，那网。《光明日报》（ 2017年10月27日14版）", "https://img.gmw.cn/pic/content_logo.png ; ", "2017-10-27 05:50:00", "邱亭", "光明网-《光明日报》", "光明日报", "http://news.gmw.cn/node_4108.htm")
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://news.gmw.cn/2017-06/30/content_24937220.htm", "2017-0630c_24937220", "酒", "我第一次见父亲的时候，他醉醺醺的，像风中的烟从椅子上袅袅而起。他手指捏着喜酒杯，对着我笑。", "潘兴彪", "酒", "【校园风】作者：陈帅（北京师范大学文学院2015级硕士研究生）我第一次见父亲的时候，他醉醺醺的，像风中的烟从椅子上袅袅而起。他手指捏着喜酒杯，对着我笑。我耳边全是杂乱的撺掇声：“叫啊，快叫啊。”我的脸，嘴唇，舌头，牙齿，都在燃烧。父亲的手脚无处搁放，笑看左右，然后从桌上抓了一把油炸花生伸向我：“给，吃。”插图：郭红松“娃小，别为难娃。”他对别人说。我把花生塞进嘴中，那时，有个从天而降的父亲，花生变得格外好吃。来到家，父亲吃饭极少，一个馒头就可以让他在地里晒一天的太阳。锄头翻舞，他脸上的汗水闪烁着，我在他身后半百米的地方，手中捉着锄头虾米吃豆腐般干活。“我娃歇会，剩下的爸来。”他总是这么对我说。他喜欢忙完后喝一瓶冰镇啤酒，说：“舒爽，解乏，松泛身体。”“我给你买去。”“拿冰箱最角上的。”“好。”刚撒开步子，父亲就用声音拽住了我的腿。“回来，这次算了，下次买，今天不乏，省下。”“也就两块钱一瓶。”“下次买，下次买。”村上有喝酒的机会，父亲总不会错过。父亲酒量极好，可逮住机会总会喝醉。醉后，话泄了闸，总是缠着母亲说东说西，说钱，说气，说窝心，说泪。母亲脾气出了名的炸，一厌倦就要赶他走。“滚回你老家去，爱喝，就往死里喝。”有一次父亲已经打包好了行李——只是一包破烂的衣服。奶奶看着心酸，对他说：“你就是我儿子，啥时候都能来。”酒醒后的父亲，搓着头发，腆着脸又背着行李回到家，变着法讨好母亲。酒醒后的父亲，母亲怎么骂他，他都是笑着。母亲两个月没和他说一句话，他卖命在地里干活，我看着心酸。一年下大雪，我得了慢性病，要去十几里外的镇上看病、买药。一辆破旧的摩托车，突突突突的，父亲喝醉了，车在路上迈着酒步。雪在空中伸着手抓父亲的眼睛，我把伞给他撑着。“不，不，不用，给你撑，能看清，清。”他的呼吸裹挟着酒气哈达一样飘在我的脸上。腥臊，醉热，温情。车最后还是翻了，好在我们被一棵树拦了下来。随后，我们推着车继续走。父亲在我前面一边推，一边哭。来之前母亲刚骂了他。“把酒当尿喝啊，病不看了？我知道不是你亲生的……”“你妈说话太难听，啥叫不是亲生的？”他说。“你别往心里去。”“我不往心里去，你也知道我怎样待你，我大哥儿子结婚，我总不能不去，和你妈说了吃完席后去买药，时间能赶上。”“爸，我知道。”雪快要埋住我们两个人了，地平线上有几棵高低错落的树沉默着，风雪声起，我感觉像是树在唱歌。如果不喝酒，父亲总是笑着，见谁都笑，就是见了狗，他也要搂到怀里逗弄一番。他见人打招呼总喜欢微笑着高喊“hello”。地里忙活了一年的西瓜赔得血本无归，我回家时望着一地的西瓜皱眉。他笑着说：“这有啥，你在学校顾好你自己就好，明年，爸好好种，一定卖个好价钱。”“你今年也好好种了啊。”我说。“那怪我去年没说今年卖个好价钱的话。”我被他的幽默逗笑了。听母亲说，卖西瓜那段时间父亲抽了一条烟，滴酒未沾。“为啥不喝呢？”我问。“卖不出去，他哪来的脸。”母亲不懂父亲。在我拿到大学录取通知书的那个午后，父亲请村上所有的乡亲喝酒。大家伙从傍晚日薄西天一直喝到第二天太阳又从东边升起来。父亲没有醉，甚至是难得的清醒。“爸，你咋不喝？”“哈，光顾着灌别人了，我娃考上了，我就已经醉了。哈！”又一年冬天，我要赶早上五点去省城的班车。天气冷，哈气成霜。行李箱被冻得拖起来吱呀吱呀的，我怕吵醒了星星，吵醒了月亮，更怕吵醒了他们，起床时连客厅的灯都没开。前一晚和父亲小酌了几杯。“明天别送我了，你腰不好，起得早，风寒入骨。别让我给你们操心就行。”父亲和我碰了碰杯，猛灌了三杯。坐上车，冻僵的身体终于暖了过来。五点的班车，只有零零星星几个人，歪头俯身蜷缩在座椅上打鼾。我的心里袅袅升起了辛酸和失落。班车平稳启动后，越开越快。突然，车后面响起摩托车急切的喇叭声，我无意间往后看，是父亲！从不落泪的我，忍不住想流泪，只得把脸仰起来。“爸，快回去吧，天冷。”我强忍着泪意，声音在晃。“昨晚不该多喝那几杯的，睡过头了。”“都说了，别送，你腰疼，风雪那么大还开摩托车。”“到了那边，我娃记得打电话。”班车和父亲的距离，越来越远，喇叭声也几不可闻，我却还能看见黝黑冷清的公路上有一条笔直而又微弱的灯柱，车子一转弯，什么都消失了。第一次见父亲的时候，我小得就像个毛茸茸的猴子。父亲身上的肌肉，干活时紧绷而又闹腾。现在，父亲的头发白了，干活还硬撑着，依然像以前那样卖力。我给父亲买了烟，可他一抽烟就咳得像个堵塞的老烟囱。我给父亲买了酒，他喝了几盅，就对我摆摆手：“下回喝，省下。”“喝完了再买，省啥？”“哈，我娃不知道，现在不行了，一喝酒眉心就淤红发疼。”父亲喜欢喝酒，却从没怎么放开喝过。我从小就等着给父亲买酒，可如今，父亲已经老得喝不动了。《光明日报》（ 2017年06月30日15版）", "http://imgnews.gmw.cn/attachement/jpg/site2/20170630/eca86ba04bcc1abfb47a4a.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-06-30 04:15:00", "潘兴彪", "光明网-《光明日报》", "光明日报", "http://news.gmw.cn/node_4108.htm")
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://meiwen.gmw.cn/2017-04/24/content_24281295.htm", "2017-0424c_24281295", "约", "约天色已黄昏她左手攥着丝巾在人生的某个路口守候他的时候", "朱鹏璇", "", "天色已黄昏她左手攥着丝巾在人生的某个路口守候他的时候他右手持着勺子正在家中若无其事地做着 羹汤毋庸讳言他失约了只是不知为何——好端端的一个字儿居然要被人们 拆解得七零八落……", "https://img.gmw.cn/pic/content_logo.png ; ", "2017-04-24 09:57:00", "朱鹏璇", "光明文荟", "文荟频道; 读者天地", "http://meiwen.gmw.cn/; http://meiwen.gmw.cn/node_23769.htm")
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://view.gmw.cn/2012-04/24/content_4029412.htm", "2012-0424c_4029412", "限", "限", "张丽娜", "限 医保", "限 焦海洋图近期，北京一些医院比较集中出现保定患者住院治疗现象。医生称，这些患者病情并不复杂，有的只是常规住院治疗，根本无需来京求医。记者发现，他们多是保定当地职工医保患者，来京却是自费住院，“说出来都没人信，我们保定的医院，一听是职工医保，住院都不收。”多名患者家属说，反正都是自费，经济条件允许，还不如选医疗条件更好的北京医院。记者赴保定调查，在一种名为“总额预付制”医保新政下，出现医保中心给医院定指标，医院给科室定指标，医生限收职工医保病人，“超额得医生垫付”等情况。意在“减少医保基金流失”的政策，却出现公办医院限收职工医保病人，医患关系紧张；小型医院、民营医院放开收治，存在过度医疗、甚至是套保的嫌疑。", "http://img.gmw.cn/imgview/attachement/jpg/site2/20120424/14feb5e0d3951100627404.jpg ; ", "2012-04-24 11:24:00", "张丽娜", "", "", "")
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://e.gmw.cn/2018-01/23/content_27430997.htm", "2018-0123c_27430997", "大美鹿泉!第二届石家庄市旅发大会怎么宣传你说了算!", "2018年6月，第二届石家庄市旅发大会在鹿泉召开。此次征集活动的投稿电子邮箱(标题栏请注明：石家庄市第二届旅发大会征集活动)应征者可在刊登活动简章的网站下载报名表。", "张晓荣", "旅发 大会 石家庄旅游 大美 鹿泉", "第二届石家庄市旅发大会怎么宣传你说了算!2018年6月，第二届石家庄市旅发大会在鹿泉召开。为全力办好此次旅发大会，进一步提升石家庄旅游的新形象，提炼石家庄旅游的新内核，借旅发大会展现鹿泉的新形象，新风貌，以更为直观、简练和易记的方式，向海内外游客展现石家庄旅游，鹿泉旅游的独特魅力和丰富内涵，进而提高鹿泉旅游的知名度和影响力。第二届石家庄旅发大会面向社会公开征集大会Logo、宣传口号、吉祥物和漫画!宣传口号等你来定!大会logo等你来定!吉祥物鹿鹿、泉泉、游游萌死人的模样儿也等你来定!旅发大会的漫画也等你来定!此次征集活动由河北五方文化传媒承办，征集时间为2018年1月1日至2月28日，戳链接即可下载报名表!应征者须知：1月1日--2月28日为征集期，期间公开接受全社会投稿;3月 1日—3月 10日为评审期，由大会主办方、相关领域专家组成评审小组，对投稿作品进行集中研讨、评审，确定获奖作品;3月13日，大会主办方将正式对外公布评审结果及获奖名单。此次征集活动的投稿电子邮箱(标题栏请注明：石家庄市第二届旅发大会征集活动)应征者可在刊登活动简章的网站下载报名表。截稿日期为：2018 年 2月28日征集活动简介：征集活动的奖项类别为大会标志、大会主题宣传口号、大会吉祥物和大会漫画四个类别。奖金设置分为两个档，大会中标奖与入围奖。1、大会标志。设入围奖4名，各奖励人民币2000元，中标奖1名，奖励人民币10000元。2、主题宣传口号。设入围奖2条，每条各奖励人民币1000元;中标奖1条，奖励人民币5000元。3、吉祥物。设入围作品4件，各奖励人民币2000元;中标作品1件，奖励人民币20000元。4、漫画。设入围奖6名，各奖励人民币2000元，中标奖3名，奖励人民币5000元。对于最终获选的大会标志、主题宣传口号、吉祥物和漫画作品，主办方将分别给予丰厚奖金。请大家关注!请大家参与!八万奖金就等你来!诚邀您的参与!", "http://imge.gmw.cn/attachement/jpg/site2/20180123/f44d305ea4881bd1444008.jpg ; http://imge.gmw.cn/attachement/jpg/site2/20180123/f44d305ea4881bd1444009.jpg ; http://imge.gmw.cn/attachement/jpg/site2/20180123/f44d305ea4881bd144400a.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2018-01-23 17:25:00", "张晓荣", "燕赵晚报", "文娱频道; 大视野", "http://e.gmw.cn/; http://e.gmw.cn/node_110357.htm")
+2018-02-03 22:32:39 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://sports.gmw.cn/2017-12/07/content_27032089.htm", "2017-1207c_27032089", "C罗竖拇指洋溢微笑 马约拉尔腾空破门", "北京时间12月7日凌晨3点45分，2017-2018赛季欧洲足球冠军联赛小组赛第6轮迎来一场焦点之战，在H组中，卫冕冠军皇家马德里坐镇主场迎战德甲劲旅多特蒙德。C罗和马约拉尔各入1球，皇马两球领先却被奥巴梅杨梅开二度扳平，最终卢卡斯-巴斯克斯打进绝杀球，皇马3-2击败多特蒙德，最终以小组第二晋级欧冠淘汰赛，多特蒙德将打欧联杯。", "李超", "破门 马约拉尔 罗竖 皇马 冠军联赛小组赛", "北京时间12月7日凌晨3点45分，2017-2018赛季欧洲足球冠军联赛小组赛第6轮迎来一场焦点之战，在H组中，卫冕冠军皇家马德里坐镇主场迎战德甲劲旅多特蒙德。C罗和马约拉尔各入1球，皇马两球领先却被奥巴梅杨梅开二度扳平，最终卢卡斯-巴斯克斯打进绝杀球，皇马3-2击败多特蒙德，最终以小组第二晋级欧冠淘汰赛，多特蒙德将打欧联杯。C罗竖拇指庆祝打破纪录。", "http://imgsports.gmw.cn/attachement/jpg/site0/20171207/f44d305ea5951b92e6270c.jpg ; http://imgsports.gmw.cn/attachement/jpg/site0/20171207/f44d305ea5951b92e61402.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-12-07 10:02:00", "李超来源凤凰网201712071002", "凤凰网", "", "")
+2018-02-03 22:32:39 [scrapy.core.scraper] ERROR: Spider error processing <GET http://junshi.gmw.cn/2016-11/24/content_23084129.htm> (referer: http://junshi.gmw.cn/node_84914_6.htm)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://junshi.gmw.cn/2016-11/24/content_23084129.htm
+2018-02-03 22:32:39 [stdout] INFO: article_count : 8
+2018-02-03 22:32:39 [stdout] INFO: article_count : 9
+2018-02-03 22:32:40 [stdout] INFO: article_count : 10
+2018-02-03 22:32:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://e.gmw.cn/2015-02/15/content_14861299.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://sports.gmw.cn/node_52985.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://it.gmw.cn/node_54067.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 2 | delay:  767 ms (-298) | latency: 4689 ms | size:  8047 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 1 | delay:  570 ms (-177) | latency: 3926 ms | size:  9520 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 2 | delay:  776 ms (-302) | latency: 4739 ms | size:  5506 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 2 | delay:  550 ms (-126) | latency: 4244 ms | size: 10089 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 1 | delay:  821 ms (-358) | latency: 4633 ms | size:  7283 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 2 | delay:  825 ms (-370) | latency: 4555 ms | size: 34755 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 2 | delay:  605 ms (-140) | latency: 4642 ms | size:  7308 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 2 | delay:  614 ms (-153) | latency: 4611 ms | size:  7164 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 1 | delay:  749 ms (-284) | latency: 4650 ms | size: 11520 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 1 | delay:  669 ms (-272) | latency: 3971 ms | size:  9351 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: junshi.gmw.cn | conc: 1 | delay:  732 ms (-274) | latency: 4577 ms | size: 11329 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 2 | delay: 1239 ms (+0) | latency: 4801 ms | size:  1569 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 2 | delay:  846 ms (-383) | latency: 4636 ms | size: 31997 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 2 | delay:  536 ms (-38) | latency: 4984 ms | size: 35074 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 1 | delay:  827 ms (-366) | latency: 4610 ms | size: 10542 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 2 | delay:  550 ms (-59) | latency: 4912 ms | size: 37652 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 2 | delay:  832 ms (-352) | latency: 4804 ms | size: 28648 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 1 | delay:  835 ms (-366) | latency: 4685 ms | size: 25990 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 2 | delay:  601 ms (-140) | latency: 4604 ms | size: 33694 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 2 | delay:  771 ms (-306) | latency: 4656 ms | size: 12088 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 1 | delay:  671 ms (-225) | latency: 4458 ms | size: 10115 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 1 | delay:  682 ms (-258) | latency: 4234 ms | size:  8585 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 1 | delay:  684 ms (-282) | latency: 4018 ms | size:  4600 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 2 | delay:  614 ms (-211) | latency: 4022 ms | size: 11550 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay:  555 ms (-124) | latency: 4317 ms | size:  4567 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 2 | delay:  836 ms (-356) | latency: 4795 ms | size:  7249 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 2 | delay:  589 ms (-126) | latency: 4632 ms | size: 14048 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 2 | delay:  569 ms (-111) | latency: 4575 ms | size: 14238 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 1 | delay:  685 ms (-253) | latency: 4324 ms | size: 37418 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 2 | delay:  564 ms (-117) | latency: 4472 ms | size: 17636 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 1 | delay:  687 ms (-254) | latency: 4330 ms | size:  5257 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 2 | delay:  559 ms (-65) | latency: 4931 ms | size:  9822 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 2 | delay:  552 ms (-67) | latency: 4854 ms | size: 33397 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 1 | delay:  629 ms (-224) | latency: 4050 ms | size: 12679 bytes
+2018-02-03 22:32:42 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 1 | delay:  681 ms (-276) | latency: 4051 ms | size: 35076 bytes
+2018-02-03 22:32:42 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://photo.gmw.cn/2017-07/19/content_25124977.htm", "2017-0719c_25124977", "重庆动物园助动物“冰爽”度夏", "近日重庆连续高温，重庆动物园为帮助园内动物顺利度夏，根据不同动物的生活饮食习性，采取不同措施为动物们防暑降温。近日重庆连续高温，重庆动物园为帮助园内动物顺利度夏，根据不同动物的生活饮食习性，采取不同措施为动物们防暑降温。", "丛芳瑶", "度夏 冰爽 动物园 重庆 防暑降温", "7月18日，大熊猫抱着冰块消暑降温。近日重庆连续高温，重庆动物园为帮助园内动物顺利度夏，根据不同动物的生活饮食习性，采取不同措施为动物们防暑降温。 新华社记者唐奕 摄7月18日，两头河马在水中追逐一块冰块。近日重庆连续高温，重庆动物园为帮助园内动物顺利度夏，根据不同动物的生活饮食习性，采取不同措施为动物们防暑降温。 新华社记者唐奕 摄7月18日，一头大象通过喷淋消暑降温。近日重庆连续高温，重庆动物园为帮助园内动物顺利度夏，根据不同动物的生活饮食习性，采取不同措施为动物们防暑降温。 新华社记者唐奕 摄", "http://imgphoto.gmw.cn/attachement/jpg/site2/20170719/f44d305ea4db1ad8ec6f2f.jpg ; http://imgphoto.gmw.cn/attachement/jpg/site2/20170719/f44d305ea4db1ad8ec6f30.jpg ; http://imgphoto.gmw.cn/attachement/jpg/site2/20170719/f44d305ea4db1ad8ec6f31.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-07-19 08:25:00", "丛芳瑶来源新华社201707190825", "新华社", "", "")
+2018-02-03 22:32:42 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://meiwen.gmw.cn/2018-01/05/content_27275484.htm", "2018-0105c_27275484", "雪", "雪作者：赵长青这几年，雪好像不是冬天的标志了。有时候，天晴得湛湛；有时候，天阴", "宫辞", "1", "作者：赵长青这几年，雪好像不是冬天的标志了。有时候，天晴得湛湛；有时候，天阴得沉沉。雪呢，人们翘首而望，却徒然等待。一连数天，甚至一个冬天，竟不见一点雪从天而降。有时候，终于等来了，却是雨夹雪，或是雪的颗粒，落地即化，或是落地一会儿即化；不见洁白的雪装，只可厌地增加了几分泥泞。有时候，等得不再等了，雪却突然地下起来。大雪片子在空中拧成了团儿。地上的雪一层一层地往上长。踩到雪上，便陷进去，直到脚踝。就这样，下一阵儿，停一阵儿，停一阵儿，又下一阵儿，没清没了，像个泥头的女人。一连十几天啊。而这时已是正月，正是走亲访友的时候，人们却不能出门，只能在家里窝着。房上的雪，院中的雪，扫了又落，扫了又落。一生气，不扫了，由它去！雪总算停了，天却还是不肯开脸儿，总是恼乎乎的，不见一丝儿笑容。春将至，气温不知不觉地慢慢地升高起来。柏油路上的雪，每天中午化点儿，到晚上就结成了冰，再加上人踩车辗，柏油路整个儿成了明晃晃光溜溜的冰道。人走上去尚且打滑得不能驻足，更不用说骑车子了。不过，学总得上呀，班儿总得上呀，无论如何也得上路。有的战战兢兢地拣着路边歪歪扭扭地步行；有胆大的就骑着车子，顺着车辙沟小心翼翼地挪动。两眼绝不旁视，神情极为专注。那样儿仿佛是在表演杂技中的走钢丝儿节目。任你再提心吊胆，也顶不住这倒倒歪歪的路。一会儿，一个步行的滑了个四脚着地；一会儿，一个骑车的摔了个仰面朝天。你“啊呀”，他也“唉哟”；你咧嘴，他也苦笑。嘿，那个热闹。在土路上呢，不必担心跌倒，可脚下半化不化的冰雪和泥掺和在一起，踩下去“扑哧”，提起脚又“扑哧”。不像是冬末春初，倒像是夏秋的雨后。儿时的雪，却是极准时的。一入冬，就要不大不小地下一场，告诉人们：“冬天来了。”之后，隔三差五大大小小地还要下几场，一直持续到冬末。那时，人们总说：某年冬天下了几场雪。可见，这一场雪和那一场雪是截然可以分得清的。不像现在，或者不下，或者下起来就断不了线儿。每场雪，都给大地万物盖上一层或薄或厚的雪被。麦田里的雪，是越厚越好的。“冬天麦子盖雪被，来年枕着馒头睡”嘛。而房上的雪，院中的雪，甚至胡同里、大街上、小路上的雪却是非扫不可的。每次雪停后，你看吧。这家人上了房，那家人上了房，一个村子的人都上了房。拿着扫帚，拿着木锨。扫着，推着；推着，扫着。邻居们说着笑着。喜气洋洋的声音在半空中飘荡着。好像他们的世界已从地面搬到了房顶。房上的雪扫到房后或房左房右，或者就扫到院子里。房上的雪扫净了，便下来扫地上的雪。先是院子里，再是胡同里、大街上、小路上。雪扫成了堆儿，再用车推出去，倒入壕坑或渠沟中，或就倒在麦田边上。春暖雪化，化的水自然就流到了它们该去的地方。扫雪是大人们的事。我们孩子有时也帮点儿忙，可大多时候是干自己的事去。打雪仗呀，滚雪球呀，堆雪人呀，这类把戏百玩而不厌。在雪地里，一团雪投到身上，不疼。雪团攥得再紧也是松散散的，有时投到身上就散开了。也不脏。别说雪团投到身上，就是跌倒在雪地上，或就在雪地上打个滚儿，拍打拍打，雪块儿便簌簌而落，不化，也没有一星儿尘土。有的孩子看着雪，就想起了夏天的雪糕。那不也是冰凉冰凉的吗。想着想着，就俯身抓起一把雪送到嘴边一点儿一点儿地吃起来。虽然不如雪糕可口，却也冰凉冰凉，口感满不错的。往往正吃着，就被大人瞥见了，于是免不了挨一顿喊叫。可还是想吃。就趁大人不在偷偷地吃，或干脆到别处去吃。雪可到处都是啊。在雪地里，我们玩得痛快淋漓，不知疲倦，手被冻得通红通红竟茫然不觉。最有意思的，是跟着大人到雪地里去打猎。走出村口，一眼望去，万里一色。那无边的洁白的雪野真可称得上“茫茫”了。大人扛着土枪，挎着布包，身后跟着威风十足的家犬和我们一群小狗一样欢蹦乱跳的孩子。大人板着脸，不见笑容，不理我们，却也不赶我们，任我们在他身后叽叽喳喳着。厚厚的小靴子踩在雪上，吱吱响着，一步一个小窝。回头望去，可以清晰地辨出我们走过的路线。那是一溜大大小小的脚窝画出来的呀。忽然，发现了兔子的足迹。核桃大的浅浅的印儿这儿几个那儿几个地向前延伸着。大人向我们挥挥手，我们便不再出声。我们跟着大人屏声屏气地慢慢地循迹前行着。往往找来找去，那印儿就莫名其妙地不见了。于是，大人叹息，我们也叹息。我们这里的猎物就是野兔，可野兔也是数目寥寥，几乎不见。所以，转上半天，转上一天，常常是野兔的影儿也见不着，只好空手而归。我不记得我跟着大人去打猎时打到过一只野兔，可我总是愿去。我喜欢的是那种在雪野里漫游的乐趣。那时候，我也常想，长大了我一定也买一支土枪。每年冬天的雪后，整天整天地荷枪在雪野里漫游。带上一只家犬，也带上一群如我们一样的孩子。如今，我长大了，还在做着这样的美梦。可好梦难圆，愿望总是不能实现。我只能窝在小屋里，隔着窗玻璃望望院子里那可怜的一点点的薄雪。最多是走出院门，就站在门口，向白绿斑驳的原野望上几眼罢了。原野里，不见一个人影，仿佛一个空空的破灭的梦。只有寒风不解人意地游荡着，一直溜到我的身边。我只能一边打着寒噤，一边在心里长长地叹气。现在的雪，简直不成其为雪了。我怀念儿时的雪！", "https://img.gmw.cn/pic/content_logo.png ; ", "2018-01-05 10:54:00", "宫辞", "光明网", "文荟频道; 读者天地", "http://meiwen.gmw.cn/; http://meiwen.gmw.cn/node_23769.htm")
+2018-02-03 22:32:42 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://dangjian.gmw.cn/2018-01/16/content_27359191.htm", "2018-0116c_27359191", "建设一个新世界", "虽然遭遇了严重挫折和经济困难局面，却依然取得了很大的建设成就，这离不开全党持续不懈地探索和学习。", "康慧珍", "1950年 建设人才 建设新中国 建设社会主义 命令主义", "作者：中央文献研究室副研究员 高长武2013年7月，习近平总书记在革命圣地西柏坡同县乡村干部和群众座谈时郑重表示：“当年党中央离开西柏坡时，毛泽东同志说是‘进京赶考’。60多年过去了，我们取得了巨大进步，中国人民站起来了，富起来了，但我们面临的挑战和问题依然严峻复杂，应该说，党面临的‘赶考’远未结束。”新中国成立至今，我们党带领全国人民在“赶考”路上攻克一道道难关、取得一个个胜利，迈进了中国特色社会主义新时代，开启了中华民族伟大复兴的新征程。党的十九大报告要求，领导十三亿多人的社会主义大国，既要政治过硬，也要本领高强。赶考路上，如何依靠不断学习来提高执政本领？本版为此特别策划《“赶考”，远未结束》，共三期稿件，呈现中国共产党执政以来通过加强学习、增强本领，应对复杂局面的做法和经验，为党员干部提高执政本领提供参考。全国革命胜利后，我们党所面临的形势和任务将发生怎样的变化呢？早在1949年初，党中央和毛泽东就高瞻远瞩，对这一问题进行了科学分析和准确判断。党中央认为，随着全国革命的胜利，党的工作重心要由农村转移到城市，党的主要任务要由领导武装斗争、夺取全国政权，转变为全面管理和领导建设新国家。关于这一主要任务，毛泽东提出了一个著名论断：“我们不但善于破坏一个旧世界，我们还将善于建设一个新世界。”简而言之，全国革命胜利后，党面临的主要任务是领导全国人民建设一个新中国。当然，这只是一个总的概括，具体到不同的阶段，随着实践的推进，党面临的具体工作任务和重点又有所区别。而当时党的自身情况又如何呢？据统计，新中国成立之初有一半以上干部的文化程度在初中以下，不少干部“不怕枪，不怕炮，就怕写报告”；而且随着党成为在全国范围内的执政党，骄傲自满、功臣自居、贪图享乐等情绪滋长，官僚主义、经验主义、事务主义等现象不同程度存在。这些情况与党要领导人民建设一个新中国的艰巨任务显然是不匹配的。该怎么办？只能老老实实学习，勤于善于学习，以尽快提高党员干部的理论和知识水平，增强治国理政本领。正如毛泽东所说：“情况是在不断地变化，要使自己的思想适应新的情况，就得学习。”归纳起来，从新中国成立前后到20世纪60年代初，全党共进行了三次大规模学习活动。通过大规模的理论和知识学习，为国民经济的恢复和发展提供保障新中国成立之初，党面临着异常复杂的形势和艰巨任务。国民党政府留下来的是一个烂摊子：国民经济严重衰退，工厂倒闭，农业减产，物价飞涨，由此导致一些地方出现社会动荡。一时间，经济上的困难局面，与中国共产党在军事、政治上取得的巨大胜利，形成强烈对比。有些人对共产党管理经济的能力表示怀疑和否定，有的人甚至断言“共产党在军事上得了满分，在政治上是八十分，在经济上恐怕要得零分”。与此同时，国际上以美国为首的西方国家对新中国采取了不承认和封锁禁运政策，1950年朝鲜战争爆发后更是把战火烧到了鸭绿江边。在这样的严峻形势下，如何继续完成新民主主义革命的遗留任务，尽快恢复和发展国民经济，维持并巩固新生政权，就成为党的首要工作任务。党中央见事早、行动快。1949年3月召开的七届二中全会就向全党发出号召，要为建设新中国而学习，立即着手开展各项建设事业。为此，会议还专门列出了干部必读的《社会发展史》《政治经济学》《共产党宣言》《社会主义从空想到科学的发展》《国家与革命》《论列宁主义基础》《列宁斯大林论社会主义建设》《列宁斯大林论中国》《马恩列斯思想方法论》《共产主义运动中的“左派”幼稚病》《帝国主义是资本主义的最高阶段》《联共（布）党史》等马列主义著作12本。毛泽东在会上特别强调：面临新的任务和考验，全党必须努力和善于学习，“如果我们在生产工作上无知，不能很快地学会生产工作，不能使生产事业尽可能迅速地恢复和发展，获得确实的成绩”，“那我们就不能维持政权，我们就会站不住脚，我们就会要失败”。6月30日，毛泽东在《论人民民主专政》中再次强调：“严重的经济建设任务摆在我们面前”，“我们必须学会自己不懂的东西”。新中国成立后，党把干部学习作为治国理政的一个基本方针和施政纲领摆在突出位置，建立并形成了包括专门干部学校、普通高等学校、军事院校、少数民族干部院校以及各级党校在内的干部学习机构网，颁布和实施了《关于健全各级宣传机构和加强党的宣传教育工作的指示》《关于加强理论教育的决定（草案）》《关于举办工农速成中学和工农干部文化补习学校的指示》《关于在军队中实施文化教育的指示》等一系列加强干部学习的文件，要求全党全军有系统地学习理论和文化知识，不断提高马克思主义理论修养和文化程度，以克服把搞武装斗争的经验直接照搬到搞经济工作中的经验主义倾向，以及“官僚主义命令主义事务主义倾向以至功臣思想蜕化思想”。在这次学习热潮中，毛泽东把他1937年在延安抗日军政大学的讲课提纲修改补充成为一篇马克思主义哲学著作《实践论》，并发表在1950年12月19日《人民日报》上，在全国引起巨大反响，促进了学习活动的深入。通过大规模的理论和知识学习，党员干部的理论水平和文化程度得到明显提高，经济管理和领导能力得到增强，为国民经济的恢复和发展提供了保障。到1952年底，全国工农业主要产品的产量，都已超过历史最高水平，恢复国民经济的目标顺利实现，人民生活得到改善，人民政权得到巩固。中国共产党以实际行动和铁的事实有力回击了“共产党在经济上恐怕要得零分”的嘲讽。邓小平后来高度评价说：“全国胜利前夕，毛泽东同志号召全党重新学习。那一次我们学得不坏，进城以后，很快恢复了经济。”学习苏联先进经验，开展大规模经济建设在恢复国民经济的任务完成后，党的主要任务转变为开展大规模的经济建设，同时推动新民主主义社会向社会主义社会过渡，完成社会主义革命。中国是在经济文化落后、一穷二白的条件下开始进行社会主义革命和建设的。毛泽东曾概括说：“现在我们能造什么？能造桌子椅子，能造茶碗茶壶，能种粮食，还能磨成面粉，还能造纸，但是，一辆汽车、一架飞机、一辆坦克、一辆拖拉机都不能造”；“我们要进行伟大的国家建设，我们面前的工作是艰苦的，我们的经验是不够的。”要尽快改变这种局面，就要虚心学习外国的先进经验，在当时的客观条件下，只能是结合中国的实际需要，去学习、借鉴苏联社会主义的建设经验。1952年8月，周恩来、陈云率领中国政府代表团，带着我国“一五”计划轮廓草案赴苏联取经。毛泽东后来说：“苏联政府根据它30多年来的伟大社会主义建设的丰富经验，对于我国五年计划任务提出了各项原则的和具体的建议。这些建议将帮助我们在中国经济建设过程中尽可能地避免许多错误和少走许多弯路。”1952年底，党中央提出了以“一化三改造”为核心内容的党在过渡时期的总路线。1953年2月，毛泽东在全国政协一届四次会议上着重讲了向苏联学习的问题：“我们要在全国范围内掀起学习苏联的高潮，来建设我们的国家”，“要认真学习苏联的先进经验”，“把他们所有的长处都学来，不但学习马克思列宁主义的理论，而且学习他们先进的科学技术，一切我们用得着的，统统应该虚心地学习。”与此同时，中共中央发出《关于学习斯大林著作（苏联社会主义经济问题）的指示》《关于1953—1954年干部理论教育的指示》，要求全党干部理论学习的高级组和中级组在一年半时间内，学习“联共（布）党史”和列宁、斯大林论社会主义经济建设的部分著作。学习借鉴苏联经验，是为了提高我们自己的本领，培养大批建设人才，建设一个新中国。1953年，周恩来在一次会议上谈到“一五”计划的基本任务时着重指出：“现在，我们国家最需要的是建设人才”，“培养大批的建设人才，是我们现在最中心的问题。”同年12月，中央宣传部印发《关于党在过渡时期总路线的学习和宣传提纲》，号召全党学习经济建设的理论和政策，提高业务、文化水平。1955年3月，在中国共产党全国代表会议上，毛泽东再次强调学习理论和科学技术的重要性。他指出，我们进入了这样一个时期，就是我们现在所从事的、所思考的、所钻研的，是钻社会主义工业化，钻社会主义改造，钻现代化国防，并且要开始钻原子能这样的历史新时期。适合这种新情况钻进去，成为内行，这是我们的任务。他特别强调两方面的学习：一是学习马克思主义哲学，把思想和工作方法搞对头。哲学“这个东西没有学通，我们就没有共同的语言，没有共同的方法，扯了许多皮，还扯不清”。二是真正学懂经济建设的专业知识，成为工业化和经济建设的专家。关于这次大规模学习，毛泽东后来总结说：我们是“在学习苏联的先进经验和最新技术成就的努力之下，逐步地建立起自己的强大的重工业”，“这对于中国工业化，使中国逐步地过渡到社会主义”发挥了重要作用。学习、再学习，探索符合中国国情的社会主义建设道路随着1956年社会主义改造的基本完成，我国进入全面建设社会主义的时期。虽然经过此前几次大的学习活动，此时党员干部的理论和知识水平得到提高，党和国家建设取得显著成绩，但是要解答好在经济文化落后的农业大国领导全面建设社会主义这样一个崭新课题，党员干部已有的理论和知识水平是远远不够的。同时，1956年初召开的苏共二十大集中暴露出苏共执政和领导国家建设过程中的严重弊端，该如何“以苏为戒”，探索符合中国国情的社会主义建设道路，成为党必须回答的重大问题。为此，党的第一代中央领导集体还是坚持从加强学习、提高本领入手来解决问题。一是系统阐述中国共产党成为全国执政党后加强学习的必要性和紧迫性。这集中体现在中共八大期间中央领导人的系列论述中。比如，毛泽东指出，“我们现在也面临着和苏联建国初期大体相同的任务”，必须学习、再学习。刘少奇说：新的条件和任务“要求我们的干部和党员进行艰苦的学习来学会自己工作中所不懂的事情。我们学习得愈多，就会领导得愈好”。邓小平认为，执政党的地位，使我们党面临着新的考验，要应对这些考验就必须加强学习。可以看出，党中央领导集体在学习的问题上有着深刻共识：搞建设对于我们是比较新的事情，要避免栽跟头，就需要加强学习，从实践中总结经验，认识社会主义经济建设的客观规律，克服盲目性。二是提出要善于向外国学习，反对盲目排外和照搬照抄。针对新中国成立初期存在的单纯学习苏联、把苏联经验教条化的偏向，毛泽东在《论十大关系》《同音乐工作者的谈话》《关于正确处理人民内部矛盾的问题》等著作中，郑重提出要善于向外国学习。他指出：“苏联方面暴露了他们在建设社会主义过程中的一些缺点和错误，他们走过的弯路，你还想走？”“当然更要引以为戒。”向外国学习不是只向苏联等社会主义国家学习，而是要向所有国家的长处学习；学习外国并不等于中国人要完全照外国办法办事，应该以我为主，通过学习外国的长处，来创造出中国自己的、有独特民族风格的东西。三是发出“向现代科学进军”的号召，要求全党努力学习现代先进科学技术。1956年1月，毛泽东在知识分子问题会议上，号召全党努力学习科学知识，为迅速赶上世界科学先进水平而奋斗。1957年春，他进一步指出：“现在处在转变时期：由阶级斗争到向自然界斗争，由革命到建设，由过去的革命到技术革命和文化革命。”1958年初，在起草《工作方法六十条（草案）》时，毛泽东提出，现在要来一个技术革命，“过去我们有本领，会打仗，会搞土改，现在仅仅有这些本领就不够了，要学新本领，要真正懂得业务，懂得科学和技术，不然就不可能领导好”。同年6月3日，《人民日报》发表题为《向技术革命进军》的社论，提出全党全民的主要注意力必须转移到技术革命和文化革命方面上来。四是及时纠正“左”的偏向，认真总结经验教训，深刻认识和掌握社会主义建设的客观规律并按照客观规律办事。由于主客观多种原因，全面建设社会主义开始不久，就发生了“大跃进”和人民公社化运动的曲折。党中央和毛泽东及时发现了其中存在的“左”的偏向并进行了许多纠“左”的努力。面对失误和困难，毛泽东多次号召通过学习来认识问题、纠正错误、解决困难。他多次说：革命事业是不容易的，是科学，经济建设也是科学，因此，“要老老实实学习。如果粗心大意、调皮、充好汉，一定会跌跤子的”。20世纪50年代末60年代初，毛泽东曾六次倡导领导干部学习政治经济学，特别是要结合学习苏联和我国社会主义建设中的成绩与问题，研究和总结社会主义建设规律。为此，1959年12月10日至1960年2月9日，毛泽东、刘少奇、周恩来等还分别亲自组织了苏联《政治经济学（教科书）》读书小组。之后，1961年9月，中央作出《关于轮训干部的决定》，决定对各级领导干部普遍进行一次轮训和学习，以进一步认识和掌握社会主义建设的客观规律。五是注意向群众和实践学习，在全党大兴调查研究之风。关于向群众和实践学习的重要性，毛泽东指出，真正的知识不是在机关里，而是在工厂、农村和学校里，没有基层生动的原材料，是“造”不出正确政策来的；结合我们的事业和当前工作来研究政治经济学，“比平素我们离开实际专门看书要好得多”。为此，从1958年2月到1959年2月的一年中，中央三次印发文件，要求每年都要组织干部到农村、工厂参加体力劳动，了解生产一线和基层群众的实际情况。1960年底至1961年初，毛泽东先后三次号召全党大兴调查研究之风。在毛泽东建议下，中央将1961年定为实事求是年、调查研究年。随后，毛泽东组织调查组先后到浙江、湖南、广东等省进行调查，发现了农村人民公社中存在许多问题，为此后主持起草《农村人民公社工作条例（草案）》，纠正农村工作中的“左”的错误提供了依据。刘少奇、周恩来、陈云等领导人也都身体力行，深入各地进行实际调查研究，为此后七千人大会纠“左”作了准备。全面建设社会主义的十年，虽然遭遇了严重挫折和经济困难局面，却依然取得了很大的建设成就。我们现在赖以进行现代化建设的物质技术基础，很大一部分是这期间发展起来的；全国经济文化建设等方面的骨干力量和他们的工作经验，大部分也是在这期间培养和积累起来的。这些成就的取得，离不开全党持续不懈地探索和学习。（中央文献研究室副研究员高长武）", "https://img.gmw.cn/pic/content_logo.png ; ", "2018-01-16 09:21:00", "康慧珍", "中国纪检监察报", "党建频道; 党建文献", "http://dangjian.gmw.cn/; http://dangjian.gmw.cn/node_11923.htm")
+2018-02-03 22:32:43 [stdout] INFO: article_count : 11
+2018-02-03 22:32:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://junshi.gmw.cn/2017-12/15/content_27107079.htm> (referer: http://junshi.gmw.cn/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://junshi.gmw.cn/2017-12/15/content_27107079.htm
+2018-02-03 22:32:44 [stdout] INFO: article_count : 12
+2018-02-03 22:32:44 [stdout] INFO: article_count : 13
+2018-02-03 22:32:44 [stdout] INFO: article_count : 14
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 2 | delay:  495 ms (-57) | latency: 4371 ms | size: 33228 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 4 | delay: 1231 ms (+981) | latency:12315 ms | size:  1798 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 2 | delay: 1112 ms (+498) | latency:11127 ms | size:  8516 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 2 | delay:  494 ms (-55) | latency: 4388 ms | size: 19884 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 3 | delay: 1232 ms (+46) | latency:12324 ms | size:  1717 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 2 | delay:  587 ms (-179) | latency: 4082 ms | size:  8019 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay:  481 ms (-74) | latency: 4077 ms | size:  2623 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 2 | delay:  498 ms (-60) | latency: 4386 ms | size: 10864 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 2 | delay:  503 ms (-86) | latency: 4164 ms | size: 14475 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 2 | delay:  776 ms (+0) | latency: 4085 ms | size:  1750 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 2 | delay:  496 ms (-73) | latency: 4232 ms | size: 17737 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 2 | delay:  507 ms (-94) | latency: 4132 ms | size:  8925 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 2 | delay:  489 ms (-75) | latency: 4137 ms | size: 10428 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 2 | delay:  634 ms (-197) | latency: 4366 ms | size: 28648 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 2 | delay:  485 ms (-65) | latency: 4204 ms | size: 12191 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 2 | delay:  603 ms (-221) | latency: 3816 ms | size: 35446 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 2 | delay:  522 ms (-91) | latency: 4312 ms | size:  7324 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 2 | delay:  524 ms (-81) | latency: 4430 ms | size:  6968 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 2 | delay:  639 ms (-207) | latency: 4319 ms | size:  9554 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 2 | delay:  622 ms (-214) | latency: 4082 ms | size:  6387 bytes
+2018-02-03 22:32:44 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 2 | delay:  493 ms (-43) | latency: 4497 ms | size: 35131 bytes
+2018-02-03 22:32:44 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://liuxue.gmw.cn/2016-07/18/content_21016036.htm", "2016-0718c_21016036", "日媒调查上海迪士尼游客:属高收入人群 超4成年入过10万", "中国国家统计方面负责人17日警告，尽管中国居民收入上半年与中国经济增长保持增长节奏，但很难保证居民收入一直保持这个增长节奏。", "白秭赫", "迪士尼 收入调查", "7月16日报道日媒称，以100位上海迪士尼游客为对象实施了一项调查。结果显示，中国消费者中的中产阶层比例增加。值得注意的是，40%以上的受访者“年收入超过10万元”、70%以上的受访者表示“想去日本”。据日经中文网7月14日报道，6月14到16日，日本经济新闻旗下《日经MJ》随机采访了100位上海迪士尼游客。虽然上海迪士尼6月16日才正式开业，但从市中心始发的地铁已于4月下旬开通，购物餐饮娱乐区“上海迪士尼小镇”也已于5月开业。在迪士尼乐园正式开业前，已有大批游客慕名而来。报道称，在100位受访者中，17人的家庭年收入超过20万元，27人为10万～20万元。考虑到受访者中还有20%的学生，实际的家庭年收入应该还会更高。作为中国最大的经济城市之一，上海的最低工资标准为2190元。市内餐饮店的招聘工资多为3000元左右，服务业管理层的月薪大概在6000～8000元。中国一般为双职工家庭，近半数家庭年收入超过10万元。迪士尼乐园周末票价为499元，平日票价为370元。一家人玩一趟的花费就相当于1个月的最低工资。由此可见，上海迪士尼游客是中国中产阶层中的高收入人群。报道称，调查中关于“主要财产”一项，100人中有67人拥有“房产”，其中52人同时拥有“私家车”，99人持有“智能手机”。中国城市房价高涨已经成为社会问题，但若购房时期较早，房价上涨也会为家庭带去高额的潜在利润。从调查结果可以看出，越来越多的中国家庭已经解决了购房问题，开始享受假日消费。关于“想要的东西、想做的事情”的问题（多选），回答“旅行”的人数最多，为57人，大幅超过“电脑、智能手机”（14人）和“汽车”（13人）。中国消费者的关注点已从物质商品转为精神体验。欧洲、夏威夷、日本等观光地颇受中国游客青睐。此外，还有10人回答“健身和减肥”。", "", "2016-07-18 17:01:00", "白秭赫", "", "光明留学网; 实用信息", "http://liuxue.gmw.cn/; http://liuxue.gmw.cn/node_47107.htm")
+2018-02-03 22:32:44 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://view.gmw.cn/2012-12/17/content_6058297.htm", "2012-1217c_6058297", "差距", "从上世纪80年代以来，不同制度养老金的差距越来越大，公务员事业单位能比企业高3、4倍，最少的是农民养老金，60岁以上老年人一月60块。", "章丽鋆", "差距", "差距 焦海洋 图当前，在我国，公务员、事业单位人员、企业职工、城镇居民和农民分别属于五种不同的养老保障制度，由此也带来不公平。一位退休的老先生说，公务员与企业退休职工基本养老金都一样，但是生活补贴数额上有差别。公务员是按照地方财政水平计发，但是企业、事业单位就要根据效益，如果好就发，不好就没法发。从上世纪80年代以来，不同制度养老金的差距越来越大，公务员事业单位能比企业高3、4倍，不过最少的是农民养老金，有的地方农保，60岁以上老年人一个月60块养老金。企业大概是2000块左右，农村是60块，这差30倍。公务员平均下来是4000多块钱，和60块钱差多少倍？差60倍。", "http://img.gmw.cn/imgview/attachement/jpg/site2/20121217/f04da226e381123904bc10.jpg ; ", "2012-12-17 15:06:00", "章丽鋆", "", "", "")
+2018-02-03 22:32:44 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://liuxue.gmw.cn/2016-07/18/content_21015853.htm", "2016-0718c_21015853", "哈萨克斯坦和克罗地亚将正式加入亚欧会议", "中国代表团在首脑会议前就警告说，不接受在多边场合讨论涉及主权争议的话题，中国只准备与相关国家进行双边会谈。", "白秭赫", "亚欧会议", "人民网北京10月8日电 （记者 杨牧）8日上午，外交部就李克强总理出访德国、俄罗斯、意大利，并参加第十届亚欧会议等有关情况举行中外媒体吹风会。李保东副部长介绍，本届亚欧首脑会议将正式接纳哈萨克斯坦和克罗地亚成为成员国，届时会议成员国将扩至53个。李保东介绍，第十届亚欧会议将于10月16日至17日在意大利米兰举行，会议主题为“构建负责任的伙伴关系，促进可持续增长与安全”。中国国务院总理李克强将出席会议。亚欧会议成立于1996年，是亚洲和欧洲间重要的跨区域政府间论坛，旨在通过政治对话、经济合作和社会文化交流，增进了解，加强互信，推动建立亚欧新型、全面伙伴关系。中国是亚欧会议创始国之一。自成立以来，中国总理出席了历届亚欧会议，并在会议框架内提出了25项倡议，涉及科技创新、节能环保等多个领域。", "http://img.gmw.cn/pic/content_logo.png ; ", "2016-07-18 16:48:00", "白秭赫", "", "光明留学网; 实用信息", "http://liuxue.gmw.cn/; http://liuxue.gmw.cn/node_47107.htm")
+2018-02-03 22:32:44 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://news.gmw.cn/2017-09/22/content_26275595.htm", "2017-0922c_26275595", "邮局", "邮局作者：贺捷生（军旅作家、少将，鲁迅文学奖获得者）两岁前的记忆，模模糊糊，影影绰绰。遥远的一", "邱亭", "&nbsp", "作者：贺捷生（军旅作家、少将，鲁迅文学奖获得者）两岁前的记忆，模模糊糊，影影绰绰。遥远的一片破碎的印象中，我叫爸爸的那个人，还有我叫伯伯的那个人，他们日夜兼程，跋山涉水，轮流抱着我，走了很远很远的路。后来，在若即若离的乡音中，他们把我安置在湘西一座叫洪江的小城中一个古色古香的院落里。爸爸在安江的一家纱厂拥有股份，老盯在那儿，到了月底才回家陪陪我；姆妈大户人家出身，抽上了大烟，晨昏颠倒，整天懒洋洋的。与我做伴的，唯有一只温顺的小狗：天亮了，它用舌头把我舔醒；天黑了，它叼着我的裤脚，往我们一同睡觉的床上拖。不会说话的小狗和没人说话的我待在一起，在空空荡荡的大院里，我们显得既孤单又寂寞。插图：郭红松有一天，门口响起了一串清脆的自行车铃铛声，是送信的邮差来了。我迎到大门口，邮差叔叔对我说：“小姑娘，叫你爸爸妈妈拿图章来，领邮包。”姆妈正躺在床上过烟瘾，她美美地吐出一大口烟，乜一眼我踮起脚尖递给她的单子，说：“这是寄给你的东西，你自己去领，自己收起来。”记忆中，我在湘西的那座小城待了四五年了，生活上，比如穿衣服啊，梳头啊，偶尔去小街上买点盐，打个酱油啊，我都能做了。但才五六岁，到底还是个孩子，是谁给我寄东西呢？在人们的印象里，收信和寄信，还有给远方的亲人和朋友邮东西，那可是大人的事情，我怎么也有这种好事？从邮差手里接过包裹，回到自己的房间，急不可待地打开一看，都是常用的普普通通的生活小物品，有小鞋子、小袜子、小手套什么的。在床上摊开这些东西，我既高兴，又有点失望。你想啊，我是个长得比桌子还高一点的小女孩了，都有自己的好朋友了，给我寄东西的人也太粗心了，为什么不给我寄一些好看点、好玩点的？之后，每隔一两个月，门口就会响起邮差叔叔丁零零的车铃声。那时我还没有上学，不识字，不知道邮包是从哪里寄来的，也不知道是谁给我寄的邮包。但邮局经常来送邮包，让我孤单的生活有了盼头，就像平静的湖面，突然泛起一朵朵美丽的浪花。一次次收到的邮包里，最多的，是给我的衣服，偶尔也有糖果，还有用旧了但洗得很干净的布娃娃。奇怪的是，每次收到的衣服，都是用黄军装改小的；更奇怪的是，每次收到衣服，爸爸都让我穿在身上，带我到照相馆照相。我至今还保留着当年的两张照片，一张穿着小八路的衣服骑在木马上，一张穿着截短的露出密密麻麻针脚的军大衣。有一年，从春天到冬天，我都没有收到邮包，心里空落落的，好像丢了什么，不知不觉走出了院子，走到了附近街道上的小邮局。我踮起脚尖问柜台上的阿姨：“阿姨，有我的邮包吗？”叔叔阿姨们像见到一个小怪物，纷纷围过来，七嘴八舌地问：“你就是经常收到邮包的那个女孩吗？你可真有本事，是谁给你寄那么多邮包啊？”我没见过这么多的人围着我，也不知道怎么回答他们，吓得要哭了。这时，经常来我家送邮包的那个邮差叔叔挤进来，蹲下身子，用大大的手轻轻拍着我的肩膀说：“莫哭，孩子，这段时间真的没有你的邮包。”接着，他从人群里把我拽出来，推出自行车，让我坐在上面，一路摇着铃铛，把送我回家。我有个小伙伴叫红莲，她的爸爸在邮局工作，就是常来我家送邮包的那个邮差叔叔。她家和我家在同一条街上，走几步就是邮局。一次，我看见红莲在玩一卷细长细长的电报纸，很是羡慕。红莲说，你也想玩对吧？那你得用东西给我换。刚好我收到的新邮包里有几个子弹壳，黄灿灿的，贴着嘴唇可以吹出呜呜响的声音。我送红莲一个弹壳，她送我一卷电报纸。我们坐在邮局的台阶上，各得其所，玩得很开心。和蔼可亲的爸爸回来了。奇怪的是，他一回到家，就走进我的房间，掩上门，严肃地对我说：“听说你经常和街上的孩子玩，还往邮局跑？现在一条街上的人都在议论我们家多了一个女孩子。你知不知道，这太危险了！”我被爸爸吓坏了，不知道犯了什么错，从此再也不敢出门了，直到爸爸血肉模糊地被人抬回家。原来，爸爸老不回家，不光是在纱厂忙活，他还到处为八路军筹集物资。这次，他去给八路军桂林办事处送药品，不幸被日本鬼子的飞机炸伤了。离世前，他把我叫到床前，说他和姆妈只是我的养父养母。我的亲爸爸，是赫赫有名的贺龙将军，正率领八路军在前线打鬼子。我的亲妈妈也是八路军，我收到的邮包，就是她从前线寄来的。邮包寄来的衣服，是我爸爸妈妈用节省下来的军装改成的。所以，妈妈每次寄来衣服，养父都要带我去照一张相，寄给他们。养父不让我出门，是怕我暴露身份。我爸爸贺龙在湘西拉起了一支红军队伍，长期坚持武装斗争，打土豪分田地是他们的基本斗争方式。红军长征离开湘西后，一些躲藏的土豪劣绅，还有一些被杀了的土豪劣绅的家人都回来了，要是让他们知道贺龙贺胡子的女儿寄养在湘西，非要了我的小命不可。养父刚去世，日本飞机飞到湘西来了，扔下一串串炸弹。有一颗炸弹，正好落在邮局的屋顶上，熊熊火焰把天都烧红了。在小城没法生存了，姆妈和我汇进了逃难的人群中，俗称“跑日本”。逃到湘西的另一座叫乾州的小城，我和姆妈隐姓埋名，不为人知地生活下来。因为洪江的邮局被炸，联络中断，对爸爸妈妈来说，我就像从人间蒸发了。抗战胜利后，妈妈托朋友在报纸上登广告，想通过寻找我的养父再找到我。几十年后，我的朋友在档案馆发黄的报纸上给我复印来一条拇指大小的小广告，上面说：“瞿玉屏兄鉴：别后九年，不知消息，至念。望兄见报后，即将通讯地址示知。来信请寄重庆《新华日报》熊经理收转。”可惜，养父早在一年前就去世了，没能看到这条广告。这时，离全国解放还有三年，我还得在茫茫人海中继续漂泊……《光明日报》（ 2017年09月22日15版）", "http://imgnews.gmw.cn/attachement/jpg/site2/20170922/f44d305ea0d81b2e7a0e12.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-09-22 05:53:00", "邱亭", "光明网-《光明日报》", "光明日报", "http://news.gmw.cn/node_4108.htm")
+2018-02-03 22:32:48 [scrapy.core.scraper] ERROR: Spider error processing <GET http://jyj.gmw.cn/2016-06/21/content_20643267.htm> (referer: http://jyj.gmw.cn/node_77690.htm)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://jyj.gmw.cn/2016-06/21/content_20643267.htm
+2018-02-03 22:32:48 [stdout] INFO: article_count : 15
+2018-02-03 22:32:48 [stdout] INFO: article_count : 16
+2018-02-03 22:32:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://lady.gmw.cn/2016-11/14/content_22860221.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 1 | delay:  516 ms (-70) | latency: 4460 ms | size:  7929 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 1 | delay:  611 ms (-164) | latency: 4464 ms | size:  7047 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 1 | delay:  466 ms (-19) | latency: 4473 ms | size: 10201 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 2 | delay:  622 ms (-63) | latency: 5590 ms | size: 11000 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 2 | delay:  615 ms (-53) | latency: 5616 ms | size:  9253 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 4 | delay: 1024 ms (+341) | latency:10248 ms | size:  1797 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 1 | delay:  519 ms (-84) | latency: 4355 ms | size: 35428 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 2 | delay:  486 ms (-37) | latency: 4490 ms | size:  5169 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 1 | delay:  485 ms (-37) | latency: 4489 ms | size:  7290 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 2 | delay:  617 ms (-66) | latency: 5507 ms | size:  4574 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 2 | delay:  618 ms (-63) | latency: 5549 ms | size: 35620 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 2 | delay:  629 ms (-42) | latency: 5869 ms | size: 10158 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 3 | delay: 1026 ms (+346) | latency:10264 ms | size: 10552 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 1 | delay:  545 ms (-94) | latency: 4507 ms | size: 35448 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 4 | delay: 1231 ms (+0) | latency:10579 ms | size:  1798 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 2 | delay:  481 ms (-11) | latency: 4702 ms | size: 35123 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 2 | delay:  486 ms (-8) | latency: 4784 ms | size: 19657 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 1 | delay:  543 ms (-91) | latency: 4517 ms | size: 28648 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 1 | delay:  479 ms (-27) | latency: 4521 ms | size:  7680 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 2 | delay:  626 ms (-56) | latency: 5697 ms | size:  9795 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay:  578 ms (+7) | latency: 5782 ms | size:  8656 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 3 | delay: 1060 ms (+311) | latency:10603 ms | size:  3490 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 2 | delay:  713 ms (-121) | latency: 5923 ms | size: 25975 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 2 | delay:  633 ms (-53) | latency: 5802 ms | size:  5700 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 2 | delay:  838 ms (-274) | latency: 5641 ms | size:  8900 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay:  467 ms (-13) | latency: 4541 ms | size:  7734 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 1 | delay:  538 ms (-84) | latency: 4540 ms | size:  6506 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 2 | delay:  605 ms (-23) | latency: 5813 ms | size:  8647 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 4 | delay: 1070 ms (+307) | latency:10707 ms | size:  1626 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 1 | delay:  479 ms (-23) | latency: 4552 ms | size:  6191 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 3 | delay: 1232 ms (+0) | latency:10027 ms | size:  1717 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 1 | delay:  476 ms (-20) | latency: 4560 ms | size: 16007 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 2 | delay:  664 ms (-84) | latency: 5800 ms | size:  8644 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 4 | delay: 1072 ms (+359) | latency:10720 ms | size:   123 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 2 | delay:  707 ms (-114) | latency: 5935 ms | size:  6923 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 1 | delay:  489 ms (+0) | latency: 4566 ms | size:  1798 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 2 | delay:  496 ms (-2) | latency: 4932 ms | size:  9101 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 2 | delay:  488 ms (-6) | latency: 4823 ms | size: 33230 bytes
+2018-02-03 22:32:48 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 2 | delay:  704 ms (-122) | latency: 5816 ms | size: 10384 bytes
+2018-02-03 22:32:48 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://news.gmw.cn/2017-10/23/content_26573806.htm", "2017-1023c_26573806", "霜叶", "霜叶作者：郑学富“远上寒山石径斜，白云深处有人家。停车坐爱枫林晚，霜叶红于二月花。”其实，红叶", "邱亭", "&nbsp", "作者：郑学富“远上寒山石径斜，白云深处有人家。停车坐爱枫林晚，霜叶红于二月花。”其实，红叶并非霜染成，而是气温、光照使然。但在文人诗作和民间谚语中，红叶与霜有着不解之缘。俗话说：“霜降始霜。”此时黄栌、枫树、柿树等树叶“万山红遍”，因此，霜降期间也是红叶观赏的最佳时期。在古代，人们往往把红叶和霜联系起来，唐李益在《诣红楼院寻广宣不遇留题》中说：“柿叶翻红霜景秋，碧天如水倚红楼。”清颜光敏在《登太华山·白云峰》中也说：“秋色何时来，万里霜林丹。”宋代诗人杨万里《红叶》诗云：“小枫一夜偷天酒，却倩孤松掩醉容。”他认为枫树是偷喝天酒而醉红的。霜叶红于二月花。李可染/绘从科学上讲，树叶随着气温的下降和夜长昼短，化学成分发生了改变。特别是昼夜温差增大，有助于花青素的形成，因此树叶颜色很快就会由绿变红。北京香山地势险峻，层峦叠嶂。树叶随着山势的起伏、光照的疏密，所呈现的色彩绚丽多姿，美不胜收。香山红叶从山上到山下逐步变红，从单棵变色到漫山红透，再到后段枝叶飘零，可谓一步一景，气象万千。金代诗人周昂有《香山》诗曰：“山林朝市两茫然，红叶黄花自一川。”《光明日报》（ 2017年10月23日16版）", "http://imgnews.gmw.cn/attachement/jpg/site2/20171023/f44d305ea0d81b57669e12.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-10-23 06:55:00", "邱亭", "光明网-《光明日报》", "光明日报", "http://news.gmw.cn/node_4108.htm")
+2018-02-03 22:32:49 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://meiwen.gmw.cn/2017-11/15/content_26790717.htm", "2017-1115c_26790717", "宅童", "早在1970年代，三毛便写过一篇题为《塑胶儿童》的文字，将那些生长于现代都市里的孩子称之为“塑胶儿童”。而问题是，要改变这一不良现状，实在也不像强行把孩子赶出舒适的房屋这么简单。", "杨帆", "大自然 课外班 林间最后的孩子 塑胶儿童 孩子会", "03版:家园 上一版 下一版早在1970年代，三毛便写过一篇题为《塑胶儿童》的文字，将那些生长于现代都市里的孩子称之为“塑胶儿童”。在她看来，大自然对于这些孩子是完全不存在的，他们早已丧失了大自然赋予的天然灵性。他们对赏月没有兴趣，对看海没有兴趣，成天只想和塑料玩具打交道，要不就是眼盯着电视屏幕心无旁骛。大自然里的一切美物，他们差不多都是通过电视或书本接触到的，即便尚有几分对于大自然的好奇，却也因充满恐惧望而却步。为此，三毛感叹道：“这一代还能接受狗尾巴草，只是自己去采已无兴趣了，那么下一代是否连墙上画的花草都不再看了呢？”三毛的忧虑并非杞人忧天，时隔近半个世纪，塑胶时代的趋势可谓已盛况空前。淳朴的乡村正惨遭日益加剧的蚕食，摧枯拉朽的房地产事业将大自然疯狂切割得支离破碎，如今的孩子们几乎都被囚禁在了人造的空间里。久而久之，他们便习惯了这种囚禁，甚至喜欢上了这种囚禁，成为名副其实的“宅童”。他们不是在家中，就是在学校或者课外班，即使是家中和学校、课外班之间的路上，他们也仍是待在汽车里。别说大自然，就连户外的时光，对于他们也是少得可怜。眼看着亲朋家那些天真烂漫的的孩子们一个个都戴上了眼镜，我总要痛心疾首地提醒他们：没有雾霾的天里，课间一定要去操场上好好活动一番，既为锻炼身体，亦为保护视力。然而，他们却都惊人一致地告诉我：课间老师是不允许走出教室的，除非是上厕所。我问何故？他们答曰：为了安全。鉴于这样的学校管理现状，所以女儿在家的时候，我总是尽量督促她去户外玩耍，寒暑假则必带上她去海边度假，希望她尽可能多地同大自然相处。但是，我不得不十分遗憾地承认，即使是这样，我的女儿也依然还是一个宅童。她宁愿待在自己的屋里看书或画画，也不肯出去寻找玩伴。至于那些迷恋电视和电脑游戏的孩子们，户外就更没有什么吸引力可言了。爱默生说：“太阳仅仅照亮成年人的眼睛，可它却透过孩子的眼睛一直照亮他的心灵。热爱大自然的人是那种内外感觉始终协调一致的人，他在成年之后依旧能够保持着孩童般的纯真。他与天地的交流变成了自己每日食粮的一部分。”可是，孩子与大自然这种先天的亲密联系今天已然中断，自然也就无法从中获得什么宝贵的恩赐了。而与大自然不断疏离的结果，是我们孩子的身上无不或多或少都存在着“自然缺失症”的问题。理查德·洛夫在《林间最后的孩子》一书中，详尽论述了此种症状带给孩子们的一系列困扰。多项实验研究表明：生活越是贴近自然的孩子，在面临生活中的压力时，所产生的心理负担也就会越少。孩子居所周围的自然环境越多，孩子便会越少出现多动、焦虑或消沉等行为。理查德·洛夫认为：“与电视不同，大自然不会偷走孩子的时间，她只会将时间放大。大自然能够修复一个生活在破碎家庭中的孩子的心灵；大自然要求孩子用所有的感官来感受，从而激发孩子的创造力；大自然有时也会让孩子感到恐惧，但这恐惧也有着它原本的意义。在大自然中，孩子会找到自由、幻想以及自己的私密空间……”大自然不仅可以教会孩子们独处，也可以教会他们同别人相处。她把自身拥有的一切美好，皆在不知不觉中毫无保留传授给在她的怀抱里嬉戏的孩子们。她从不指手划脚，仅凭一种深刻的情感联系默默影响着热爱她的孩童。在这一点上，大自然是任何老师任何书本都无可替代的。当然，一旦错过了大自然的情感教育，那也是绝对无法弥补的。因此，自然缺失症即意味着永久的缺憾。理查德·洛夫还提供了一个有趣的实例，和常在塑胶操场上活动的孩子相比，那些经常在天然草地上活动的孩子会明显表现出更强的表达能力以及虚构故事的能力。这也就是说，孩子们摆脱不掉的太多人工环境正悄悄无情压制和剥夺着他们的诉说欲望以及想象力。也许，我们的宅童没有病，但却一定是不健康的。也许，我们的宅童可以交出完美的试卷，但试卷背后却掩盖着一个苍白的深渊。而问题是，要改变这一不良现状，实在也不像强行把孩子赶出舒适的房屋这么简单。路文彬", "http://img.gmw.cn/imgmeiwen/attachement/jpg/site2/20171115/c03fd5535e9c1b75cc7731.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-11-15 08:14:00", "杨帆", "中华读书报", "文荟频道; 书人茶座", "http://meiwen.gmw.cn/; http://meiwen.gmw.cn/node_23777.htm")
+2018-02-03 22:32:49 [scrapy.core.scraper] ERROR: Spider error processing <GET http://junshi.gmw.cn/2018-01/06/content_27282524.htm> (referer: http://junshi.gmw.cn/)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://junshi.gmw.cn/2018-01/06/content_27282524.htm
+2018-02-03 22:32:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://m.gmw.cn/%3CP%3Ehttps:/s.cloud.gmw.cn/2016/c/2017-02-20/710297.shtml%20%3C/P%3E>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jyj.gmw.cn/2015-10/31/content_17555929.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:52 [stdout] INFO: article_count : 17
+2018-02-03 22:32:52 [stdout] INFO: article_count : 18
+2018-02-03 22:32:52 [stdout] INFO: article_count : 19
+2018-02-03 22:32:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://it.gmw.cn/node_58741.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://lady.gmw.cn/2013-06/03/content_7842760.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://sports.gmw.cn/2017-02/27/content_23837711.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://m.gmw.cn/%3CSPAN%3Ehttp:/s.cloud.gmw.cn/2016/c/2016-12-23/642865.shtml%3C/SPAN%3E>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://e.gmw.cn/2016-11/01/content_22756332.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://economy.gmw.cn/jjzt8.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 3 | delay: 1734 ms (+664) | latency:17347 ms | size:  9774 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 1 | delay:  915 ms (+426) | latency: 9155 ms | size: 33150 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay:  989 ms (+411) | latency: 9893 ms | size: 17017 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 3 | delay: 1743 ms (+671) | latency:17437 ms | size: 16910 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 2 | delay: 1013 ms (+306) | latency:10136 ms | size:  7193 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 3 | delay: 1707 ms (+682) | latency:17078 ms | size:  1797 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 2 | delay:  980 ms (+316) | latency: 9809 ms | size: 10720 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 1 | delay:  919 ms (+432) | latency: 9190 ms | size:  6657 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 3 | delay: 1739 ms (+678) | latency:17392 ms | size:  3091 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 2 | delay: 1239 ms (+0) | latency: 9598 ms | size:  1569 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay:  927 ms (+459) | latency: 9271 ms | size:  7635 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 1 | delay:  927 ms (+431) | latency: 9275 ms | size:  9759 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 1 | delay:  988 ms (+284) | latency: 9889 ms | size: 10460 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 2 | delay:  959 ms (+246) | latency: 9597 ms | size: 25830 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 3 | delay:  992 ms (+220) | latency: 9920 ms | size:   123 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 2 | delay: 1520 ms (+528) | latency:15200 ms | size:   123 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 2 | delay: 1024 ms (+394) | latency:10240 ms | size: 10422 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 2 | delay:  990 ms (+364) | latency: 9900 ms | size:  9194 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 1 | delay:  975 ms (+357) | latency: 9754 ms | size:  6899 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 3 | delay: 1522 ms (+495) | latency:15222 ms | size: 10754 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 1 | delay: 1511 ms (+272) | latency:15117 ms | size:  1569 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 2 | delay: 1005 ms (+167) | latency:10058 ms | size:  7998 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 1 | delay:  919 ms (+432) | latency: 9194 ms | size:  5846 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 3 | delay: 1751 ms (+519) | latency:17515 ms | size:  1798 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 2 | delay:  959 ms (+336) | latency: 9590 ms | size: 28325 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 1 | delay:  976 ms (+370) | latency: 9761 ms | size: 10725 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 2 | delay: 1023 ms (+389) | latency:10237 ms | size:  6470 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 1 | delay:  921 ms (+439) | latency: 9217 ms | size: 35099 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 1 | delay:  967 ms (+348) | latency: 9671 ms | size: 35475 bytes
+2018-02-03 22:32:57 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 2 | delay:  971 ms (+355) | latency: 9714 ms | size:  9128 bytes
+2018-02-03 22:32:57 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://edu.gmw.cn/2016-11/29/content_23130293.htm", "2016-1129c_23130293", "清华大学校长邱勇：今天的大学需要一份宁静", "清华大学校长邱勇：今天的大学需要一份宁静", "王焕君", "瓦尔登湖 大学生活 诫子书 同学 初心", "在收到录取通知书的同时，今年同学们也收到了我送给你们的书——《瓦尔登湖》。《瓦尔登湖》是美国著名作家、诗人亨利·梭罗的不朽名著，讲述了1845年7月到1847年9月作者在瓦尔登湖边远离尘嚣、简朴至极的生活和瓦尔登湖随四季变幻的湖光山色。当时的美国，随着经济迅猛发展，拜金主义和享乐主义泛滥，人们把追逐物质财富作为唯一目标。梭罗对此进行了强烈的批判和反思。一个多世纪后，我们仍能从《瓦尔登湖》中获得灵魂的滋养。大学是一个需要宁静的地方。随着时代的发展，大学的职能越来越多，社会也越来越喧嚣浮躁，大学在当下尤其要强调远离世俗利益的诱惑，驱除急功近利的障蔽，真正成为人类的精神家园。“万物得其本者生”，大学必须牢记并笃行育人的根本任务，将精力和资源集中到人才培养上。大学需要一个安静美丽的校园，校园的风貌体现了大学的品位和境界。在我心中，清华园的美丽景象还应该包括：繁花落叶间教授行走在去教室的路上，藤影荷声里同学们在长椅上读书，墨韵书香中校长与师生谈心论道。你们已经迈进清华的大门，丰富多彩的大学生活从此展开。我想，你们现在首先要做的事情就是让自己安静下来，忘却曾经的成绩和掌声，忘却一时的满足和得意，解放心灵、释放真我，在宁静中寻找新的梦想。希望你们在宁静中追问本心。青年人应该努力充实精神而不是崇拜物质，应该直面内心而不是随波逐流，应该独立思考而不是人云亦云。一个人如果缺乏内心的指引，就很容易在一片嘈杂声中迷失自我，耗尽个人的潜能和创造力，最多只能得到平庸的优秀和贫乏的成功。同学们，你们需要反复地追问，什么是自己最喜欢、最热爱的？什么是最有意义、最有价值的？发自内心的热爱，是你们前进的不竭动力。追随本心的召唤，你们才能铸就无悔的人生。希望你们在宁静中坚守初心。人生是一个漫长的过程，在追寻梦想的道路上，你们会面对很多选择，只有坚守初心，才能抵御诱惑，才能不忘记为什么出发。今年刚刚毕业的2012级经管学院本科生卢昌婷，进入大学后被戏剧的魅力所折服。她加入话剧队编剧组，创建音乐剧社，坚持早上7点朗读莎士比亚、易卜生、曹禺的作品……毕业时，面对进入投资、互联网领域工作的机会，她最终选择到美国加州艺术学院戏剧专业深造。希望你们在宁静中笃学砥砺。诸葛亮在《诫子书》中说：“夫学须静也，才须学也，非学无以广才，非志无以成学”。学习不仅需要安静的环境，更需要安静的内心。只有心无旁骛、潜心笃学，才能获得真知、增长才干；只有坚韧不拔、百折不挠，才能超越自我、升华人生。勤奋是理想的阶梯，困难是人生的试金石，在宁静中笃学、在砥砺中前行，你们就一定能创造无限美好的未来。（作者系清华大学校长，本文摘自其在清华大学2016级本科生开学典礼上的讲话（原文））(来源:中国教育报)", "http://imgedu.gmw.cn/attachement/jpg/site2/20161129/448a5bb24a3419a768b926.jpg ; http://img.gmw.cn/pic/content_logo.png ; ", "2016-11-29 14:43:00", "王焕君", "中国教育报", "教育频道; 校友风采", "http://edu.gmw.cn/; http://edu.gmw.cn/node_9741.htm")
+2018-02-03 22:32:57 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://view.gmw.cn/2013-01/03/content_6228867.htm", "2013-0103c_6228867", "闪招", "春节将至，一些应届大学毕业生还在为找到一份满意的工作四处奔波，而一些国有企业、事业单位则是刻意避开公开招聘，“偷偷摸摸”地招人。", "章丽鋆", "闪招", "闪招 焦海洋 图据《海峡导报》1日报道：春节将至，一些应届大学毕业生还在为找到一份满意的工作四处奔波，而一些国有企业、事业单位则是刻意避开公开招聘，“偷偷摸摸”地招人。日前，一家国有企业在短短6天内，就完成了一个岗位的招聘，为什么这么快？是招了个“关系户”吗？有关人士告诉导报记者，这次企业搞“闪招”，主要的原因就是公司领导想要躲避关系户。", "http://img.gmw.cn/imgview/attachement/jpg/site2/20130103/f04da226e381124f3a5207.jpg ; ", "2013-01-03 11:06:00", "章丽鋆", "", "", "")
+2018-02-03 22:32:57 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://mil.gmw.cn/2017-01/22/content_23542526.htm", "2017-0122c_23542526", "各地武警官兵服务春运 小乘客亲吻感谢(组图)", "武警贵州总队贵阳支队官兵在火车站站前广场执勤警戒。安晓惠摄在北京各个火车站，武警北京总队设立了“便民服务哨”等爱心哨位，执勤官兵帮助困难旅客搬运行李的身影随处可见。", "王丽媛", "何智利 武警 武警官兵 乘客 亲吻", "乘客小朋友感谢武警河南总队官兵。韩会岳摄过年回家，回家过年。铁路部门预计2017年全国春运旅客发送量将达29.78亿人次，创下历史新高。1月13日，春运第一天，石家庄火车站熙熙攘攘。突然，验票口传来一阵喧哗，一名醉醺醺的无票旅客坚持要进站，影响了其他旅客的正常进站。正在执勤的武警河北总队石家庄市支队十五中队班长王超，立即开启执法记录仪，与民警赶到现场，稳定当事人的情绪，并将当事人连带执勤录像一并安全移交给警方。在武警官兵的维护下，东进站口恢复了正常秩序。武警贵州总队贵阳支队官兵在火车站站前广场执勤警戒。田胜平武文治摄影报道遇到突发情况首先开启执法记录仪是规范执勤、依法执勤、文明执勤的一项新举措，也是今年石家庄火车站春运执勤的一大变化。佩戴执法记录仪执勤，帮助警方及时收集、固定证据，记录各类事件现场处置情况，在助民爱民为民的同时，既做到自觉接受人民群众监督，又展示和维护了武警官兵为民服务的形象。武警北京总队官兵在火车站执勤。安晓惠摄在北京各个火车站，武警北京总队设立了“便民服务哨”等爱心哨位，执勤官兵帮助困难旅客搬运行李的身影随处可见。官兵们还提前做好充分准备，认真熟悉火车站周边情况和地理位置，在旅客需要时积极为他们提供售票厅、候车区、银行取款机、洗手间等地理位置查询服务，被旅客亲切地称呼为“活地图”“活雷锋”。武警湖北总队官兵引导旅客进站。何智利摄在该总队设立在北京站的前进指挥所里，记者看到一本《春运执勤手册》，里面详细罗列了哨兵在执勤过程中如何及时有效帮助旅客。卫生队还定期对官兵进行培训，传授基本的医疗救护常识。武警北京总队政治部主任苏瑞超介绍，战士们用最好的形象坚守在北京3个火车站和11个长途客运站，坚守在乘客们幸福旅途的起点，为广大旅客平安返程保驾护航。在“旱码头”贵阳火车站，武警贵州总队贵阳市支队的官兵们昼夜担负着火车站执勤处突、反恐维稳等任务；在人流量较大的汉口火车站，武警武汉市支队三中队专门设立了巡逻、固定哨，协助车站工作人员疏导旅客。武警湖北总队在武汉三大车站、机场等地重点开展巡逻执勤。武警湖北总队随州支队官兵执勤。赵天宇摄为确保春运期间完成安保执勤任务，在春运首日的前一天，武警重庆总队七支队围绕旅客疏散、隐蔽侦察、营救人质等内容开展了火车反劫持实兵实装对抗演练，确保部队能够迅速出动，高效处置。武警重庆总队七支队开展火车反劫持实兵实装对抗演练。曹 峰蔡方仁摄影报道今年春运预计持续至2月21日，共40天。各地武警官兵在春运重点区域投入重兵力，日夜不间断24小时执勤，为旅客的返乡之旅筑起了一道道坚不可摧的安全屏障。（本报记者卢晓琳）", "http://imgmil.gmw.cn/attachement/jpg/site2/20170122/0023ae634fe019ee603a06.jpg ; http://imgmil.gmw.cn/attachement/jpg/site2/20170122/0023ae634fe019ee603a07.jpg ; http://imgmil.gmw.cn/attachement/jpg/site2/20170122/0023ae634fe019ee603a08.jpg ; http://imgmil.gmw.cn/attachement/jpg/site2/20170122/0023ae634fe019ee603a09.jpg ; http://imgmil.gmw.cn/attachement/jpg/site2/20170122/0023ae634fe019ee603a0a.jpg ; http://imgmil.gmw.cn/attachement/jpg/site2/20170122/0023ae634fe019ee603a0b.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-01-22 10:37:00", "王丽媛", "人民日报", "军事频道; 军事要闻", "http://mil.gmw.cn/; http://mil.gmw.cn/node_8986.htm")
+2018-02-03 22:32:58 [stdout] INFO: article_count : 20
+2018-02-03 22:32:58 [stdout] INFO: article_count : 21
+2018-02-03 22:33:00 [scrapy.core.scraper] ERROR: Spider error processing <GET http://jyj.gmw.cn/2015-10/31/content_17555957.htm> (referer: http://jyj.gmw.cn/node_77697_2.htm)
+Traceback (most recent call last):
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\hahah\Desktop\gmwSpider\gmwSpider\spiders\spider.py", line 71, in parse_article
+    raise ValueError("Page style isn't defined : " + response.url)
+ValueError: Page style isn't defined : http://jyj.gmw.cn/2015-10/31/content_17555957.htm
+2018-02-03 22:33:00 [stdout] INFO: article_count : 22
+2018-02-03 22:33:00 [stdout] INFO: article_count : 23
+2018-02-03 22:33:00 [stdout] INFO: article_count : 24
+2018-02-03 22:33:00 [stdout] INFO: article_count : 25
+2018-02-03 22:33:00 [stdout] INFO: article_count : 26
+2018-02-03 22:33:00 [stdout] INFO: article_count : 27
+2018-02-03 22:33:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://it.gmw.cn/node_61382.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 3 | delay: 1805 ms (+573) | latency:18056 ms | size:  1717 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 3 | delay: 1743 ms (+0) | latency:16848 ms | size:   123 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 2 | delay:  895 ms (+284) | latency: 8953 ms | size:  9023 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 2 | delay:  845 ms (-113) | latency: 7316 ms | size: 26590 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 1 | delay:  655 ms (-315) | latency: 3397 ms | size:  9053 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 2 | delay:  890 ms (-133) | latency: 7579 ms | size: 10192 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 2 | delay:  896 ms (+379) | latency: 8968 ms | size:  7485 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 2 | delay:  897 ms (+418) | latency: 8974 ms | size: 24758 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 2 | delay:  897 ms (+421) | latency: 8976 ms | size: 25062 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 3 | delay: 1751 ms (+0) | latency:17255 ms | size:  1798 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 2 | delay:  898 ms (+418) | latency: 8980 ms | size:  7011 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 2 | delay:  914 ms (+425) | latency: 9146 ms | size:  1798 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 2 | delay:  901 ms (+358) | latency: 9018 ms | size: 28648 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 2 | delay:  990 ms (+0) | latency: 7458 ms | size:  1626 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay:  877 ms (-111) | latency: 7655 ms | size:  8641 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 2 | delay:  908 ms (+441) | latency: 9082 ms | size: 10465 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 2 | delay:  872 ms (-133) | latency: 7398 ms | size: 11661 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 2 | delay:  844 ms (-114) | latency: 7298 ms | size: 25939 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 2 | delay:  892 ms (-131) | latency: 7616 ms | size: 16999 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 2 | delay:  906 ms (+387) | latency: 9069 ms | size: 35439 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 2 | delay:  900 ms (+414) | latency: 9006 ms | size:  7323 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 3 | delay: 1721 ms (-13) | latency:17086 ms | size: 23856 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 2 | delay:  901 ms (+355) | latency: 9010 ms | size:  9421 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 2 | delay:  838 ms (-141) | latency: 6969 ms | size: 10248 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 2 | delay:  882 ms (-130) | latency: 7523 ms | size:  7327 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 3 | delay: 1699 ms (-7) | latency:16919 ms | size:  4336 bytes
+2018-02-03 22:33:01 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 2 | delay:  903 ms (+365) | latency: 9032 ms | size:  6516 bytes
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://world.gmw.cn/2017-06/26/content_24888142.htm", "2017-0626c_24888142", "一艘游船在哥伦比亚西北部水库沉没（组图）", "一艘游船在哥伦比亚西北部水库沉没", "刘洋", "水库 游船 哥伦比亚 安蒂奥基亚省 警方", "这张哥伦比亚警方提供的照片显示，在哥伦比亚西北部安蒂奥基亚省瓜塔佩市，救援人员乘船前往沉船地点进行搜救（6月25日摄）。一艘载有150人左右的游船25日在哥伦比亚西北部安蒂奥基亚省瓜塔佩市的一个水库沉没，目前救援工作正在进行中。新华社发这张哥伦比亚警方提供的照片显示，在哥伦比亚西北部安蒂奥基亚省瓜塔佩市，救援人员乘船前往沉船地点进行搜救（6月25日摄）。一艘载有150人左右的游船25日在哥伦比亚西北部安蒂奥基亚省瓜塔佩市的一个水库沉没，目前救援工作正在进行中。新华社发", "http://imgworld.gmw.cn/attachement/jpg/site2/20170626/f44d3075897a1abaa2584e.jpg ; http://imgworld.gmw.cn/attachement/jpg/site2/20170626/f44d3075897a1abaa2584f.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-06-26 09:01:00", "刘洋来源新华社201706260901", "新华社", "", "")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://news.gmw.cn/2017-02/03/content_23615276.htm", "2017-0203c_23615276", "打春", "莫名其妙地觉得，打春这个词，比立春要活泼多了。打春，有一种跳跃的动感在里面，喜悦的，明亮的，热气腾腾，是民间风俗画特有的调子。", "李国强", "打春", "【新闻随笔】作者：付秀莹（《长篇小说选刊》执行主编，青年作家）在我们老家，把立春不叫立春，叫作“打春”。莫名其妙地觉得，打春这个词，比立春要活泼多了。打春，有一种跳跃的动感在里面，喜悦的，明亮的，热气腾腾，是民间风俗画特有的调子。我的家乡在华北大平原上，我们那个村庄，在我的小说里，叫作芳村。在芳村，有一句俗语，春打六九头。每年打春的时候，已经是六九了。七九八九，沿河看柳。九九加一九，耕牛遍地走。打春这个节气意味着，一年中最寒冷的日子过去了，气候学意义上的春天要来了。打春往往是在春节前后，有的时候早几天，有的时候迟几天。打春总是同新年连在一起，到处都是新的：新衣服，新鞋子，新对联。那时候，母亲长年卧病，早好几天就开始念叨，快打春啦。翻着墙上的月份牌，看一遍，又看一遍。月份牌是那种小小的日历，在乡下很常见。没有老上海的旗袍美人，只有文字和数字，阴历、阳历、节气、星期。往往有红、绿、黑三种颜色，朴素的，家常的，邻家姑娘一样亲近而温煦。月份牌上，有打春的具体时刻，比方说，上午十一点三十五。芳村有个风俗，不能把春打在炕上。意思是说，打春这一天，尤其是打春那一刻，不能在炕上躺着。打春这一天，无论是多么不适，母亲一定要挣扎着起来，下炕，在院子里走一走，或者是在大门口立一立。在内心深处，我多么盼着每天都是打春。打春的时候，母亲就会下炕了。闲闲地，在房前屋后走一走，看一看。院子里，阳光温软，金子一般。满院子的彩，在微风里飘摇着，飘摇着，简直就要飞起来了。门外就是田野，麦田还懵懂着，是那种深的冷凝的绿。七九河开，八九燕来。打春过后，大约等不了几天，万物就该醒过来了。在我们芳村，有一个民谚，一年打俩春，粮食赛如金。意思是说，如果一年有两个立春，当年的年景就不好了，粮食会像金子一样珍贵。在芳村，节气的意思，不是二十四节气，而是节日。春节，正月十五元宵节，五月初五端午节，八月十五中秋节。在我的长篇《陌上》的楔子里，我就是用的节气这个词，还引来了一些疑问。可见，一个地方文化的力量是多么的强大，仿佛树的根须，早已经深深扎根在血脉里了。芳村人过节气，不外是吃一顿好饭食罢了。芳村有句俗话，好吃不过饺子，好受不过躺着。吃饺子，是芳村人过节气最隆重的仪式了。然而，打春这一天，好像在吃上是不大讲究的。不过是家常便饭，擀面条、蒸馒头、烙饼、小米粥。这个时节，新鲜菜蔬还没有下来，大白菜却还多着。炒白菜，炖白菜，醋杀白菜，翻过来倒过去，横竖都离不开白菜。芳村人说，白菜就是百菜。我们却吃出了不一样的滋味。打春这一天，母亲下炕了，也有兴致和闲情，亲手给我们做饭了。母亲就是有这样的本事，再简单的饭食，都能做出天下的美味来。有时候，倘若打春恰巧在新年正月里，饭菜就越发丰盛了。窗外有零星的鞭炮声，屋子里香气弥漫。丰饶的，甜美的，太平的，热腾腾世俗生活的气息，穿过重重光阴，扑面而来。而今，母亲离开人世已经十九个年头了。我也早已远离故乡，在异地辗转漂泊。流年似水，往日不可追。每年的打春，再没有人监督我下炕了，再也吃不上母亲的饭菜了。我却总是记着那一个场景，母亲立在院子里，衣衫洁净，鬓发清爽，微微笑着，笑着，看着她的家，看着她的孩子们。阳光和煦，满院子纸鸢飘摇。打春了。春来了。《光明日报》（ 2017年02月03日02版）", "http://imgnews.gmw.cn/attachement/jpg/site2/20170203/f44d307589d619fe28c80e.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-02-03 04:00:00", "李国强", "光明网-《光明日报》", "光明日报", "http://news.gmw.cn/node_4108.htm")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://news.gmw.cn/2016-09/18/content_22010743.htm", "2016-0918c_22010743", "义不容辞的责任", "保护好三江源头，这是我们义不容辞的责任和担当。首先，我们要做的就是结合昂赛乡的实际，加强牧民的生态环保意识，把当前群众自发开展的捡拾垃圾行为升华为乡风文明建设，并形成群众自发持久的行为，从一点一滴的实际行动中保护好澜沧江源。", "李国强", "责任", "【守护者心声】作者：光明日报记者刘鹏采访整理我叫尕扎，原来是玉树藏族自治州杂多县昂赛乡的牧民，三江源国家公园体制试点启动后，昂赛乡被纳入澜沧江源园区，我就成了这里的生态管护员。保护好三江源头，这是我们义不容辞的责任和担当。首先，我们要做的就是结合昂赛乡的实际，加强牧民的生态环保意识，把当前群众自发开展的捡拾垃圾行为升华为乡风文明建设，并形成群众自发持久的行为，从一点一滴的实际行动中保护好澜沧江源。《光明日报》（ 2016年09月18日01版）", "http://img.gmw.cn/pic/content_logo.png ; ", "2016-09-18 03:14:00", "李国强", "光明网-《光明日报》", "光明日报", "http://news.gmw.cn/node_4108.htm")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://view.gmw.cn/2013-02/06/content_6648250.htm", "2013-0206c_6648250", "重负", "国家税务总局纳税服务司表示，按照规定，个人缴纳的大病医疗保险金不能在个人所得税税前扣除，须缴个税。近日再度对纳税咨询热点做出解答。", "章丽鋆", "交个税", "重负 焦海洋 图国家税务总局纳税服务司昨日表示，按照规定，个人缴纳的大病医疗保险金不能在个人所得税税前扣除，须缴个税。纳税服务司近日再度通过官方网站对近期纳税咨询热点做出解答。有纳税人咨询个人缴纳的大病医疗保险金是否可以在个人所得税税前扣除？纳税服务司表示，单位为个人缴付和个人缴付的基本养老保险费、基本医疗保险费、失业保险费、住房公积金，从纳税义务人的应纳税所得额中扣除。纳税服务司同时表示，大病医疗保险金不属于个人所得税法实施条例里列举的基本保险类，由于目前未有相应的政策规定，因此不允许在个人所得税前扣除，需要并入个人当期的工资、薪金收入，计征个税。", "http://img.gmw.cn/imgview/attachement/jpg/site2/20130206/f04da226e381127c31881c.jpg ; ", "2013-02-06 13:41:00", "章丽鋆", "", "", "")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://liuxue.gmw.cn/2016-07/18/content_21015925.htm", "2016-0718c_21015925", "湖北神农架申遗成功 为中国第50个世界遗产项目", "神农架是中国第50个世界遗产项目，当地的自然保护区具有完整的亚热带森林生态系统和丰富的生物多样性，并因“野人”的传说等引人关注。", "白秭赫", "神农架 申遗成功", "7月18日报道新媒称，正在土耳其伊斯坦布尔举行的第40届联合国教科文组织世界遗产委员会会议（世界遗产大会），17日把中国湖北神农架列入世界遗产名录。据新加坡《联合早报》网站7月18日报道，神农架是中国第50个世界遗产项目，当地的自然保护区具有完整的亚热带森林生态系统和丰富的生物多样性，并因“野人”的传说等引人关注。1990年，神农架加入教科文组织世界生物圈保护区网，2013年被列入教科文组织世界地质公园网络名录。报道称，本届世界遗产大会于本月10日开幕，原计划20日结束。不料土耳其突发军事政变，会议于16日暂停一天。会议17日恢复举行，在审议剩余申遗项目及完成相关议程后将于当天闭幕。今年中国另外一个申遗项目——广西左江花山岩画艺术文化景观已于15日获准列入世界遗产名录。", "", "2016-07-18 16:54:00", "白秭赫", "", "光明留学网; 实用信息", "http://liuxue.gmw.cn/; http://liuxue.gmw.cn/node_47107.htm")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://difang.gmw.cn/jx/2018-01/19/content_27393172.htm", "2018-0119c_27393172", "节前加强巡查 严防“四风”抬头", "江西省南昌市青云谱区纪委工作人员走访一家烟酒礼品商店，了解有无公款消费情况（1月17日摄）。春节临近，为严防“四风”问题反弹，江西省南昌市青云谱区纪委对节前公款消费、送礼请吃、形式主义等进行查访。", "白丽克孜·帕哈丁", "四风 纪委 青云谱区 形式主义 江西省南昌市", "江西省南昌市青云谱区纪委工作人员走访一家烟酒礼品商店，了解有无公款消费情况（1月17日摄）。春节临近，为严防“四风”问题反弹，江西省南昌市青云谱区纪委对节前公款消费、送礼请吃、形式主义等进行查访。新华社记者 彭昭之 摄江西省南昌市青云谱区纪委工作人员走访一处在建工程项目，核查实际工程进度（1月17日摄）。春节临近，为严防“四风”问题反弹，江西省南昌市青云谱区纪委对节前公款消费、送礼请吃、形式主义等进行查访。新华社记者 彭昭之 摄", "http://imgdifang.gmw.cn/attachement/jpg/site2/20180119/f44d305ea0a21bcbcdbb61.jpg ; http://imgdifang.gmw.cn/attachement/jpg/site2/20180119/f44d305ea0a21bcbcdbb62.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2018-01-19 13:55:00", "白丽克孜帕哈丁来源新华网201801191355", "新华网", "", "")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://meiwen.gmw.cn/2018-01/05/content_27275596.htm", "2018-0105c_27275596", "大雪", "大雪作者：周家海 大雪从风中刮来大地一片洁白积雪深深雪野无垠", "宫辞", "1", "作者：周家海大雪从风中刮来大地一片洁白积雪深深雪野无垠白茫茫的雪地吟唱着寂寞的歌谣如一张干干净净的白纸如一首干脆利落的诗忒似思过者在真诚忏悔亦若他那被洗濯过的灵魂……", "https://img.gmw.cn/pic/content_logo.png ; ", "2018-01-05 11:03:00", "宫辞", "光明网", "文荟频道; 读者天地", "http://meiwen.gmw.cn/; http://meiwen.gmw.cn/node_23769.htm")
+2018-02-03 22:33:01 [stdout] INFO: Sql : INSERT INTO gmw_news(url, article_id, title, summary, author, key_words, content, picture_url, date_time, editor, source, path_text, path_href) VALUES ("http://shuhua.gmw.cn/2017-07/04/content_24976475.htm", "2017-0704c_24976475", "凌云", "凌云凌云（中国画）庞泰嵩", "郝魁府", "中国画", "凌云（中国画）庞泰嵩", "http://imgshuhua.gmw.cn/attachement/jpg/site2/20170704/f44d305ea5c91ac5b04f60.jpg ; https://img.gmw.cn/pic/content_logo.png ; ", "2017-07-04 18:15:00", "郝魁府", "人民日报", "书画频道; 书画展厅", "http://shuhua.gmw.cn/; http://shuhua.gmw.cn/node_9661.htm")
+2018-02-03 22:33:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://edu.gmw.cn/2013-07/09/content_8227628.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:33:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://edu.gmw.cn/2013-04/01/content_7171768.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:33:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://lady.gmw.cn/2016-11/14/content_19628218.htm>: HTTP status code is not handled or not allowed
+2018-02-03 22:33:09 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: gmwSpider)
+2018-02-03 22:33:09 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-02-03 22:33:09 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_START_DELAY': 0.25, 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0, 'BOT_NAME': 'gmwSpider', 'CONCURRENT_ITEMS': 3000, 'CONCURRENT_REQUESTS': 5000, 'COOKIES_ENABLED': False, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'gmwSpider/logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'LOG_STDOUT': True, 'NEWSPIDER_MODULE': 'gmwSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['gmwSpider.spiders'], 'USER_AGENT': ''}
+2018-02-03 22:33:09 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-02-03 22:33:09 [py.warnings] WARNING: C:\Users\hahah\AppData\Local\Programs\Python\Python36-32\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-02-03 22:33:09 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'gmwSpider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-03 22:33:09 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-03 22:33:09 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'gmwSpider.pipelines.SaveToMysqlPipeline']
+2018-02-03 22:33:09 [scrapy.core.engine] INFO: Spider opened
+2018-02-03 22:33:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-03 22:33:14 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 2 | delay:  130 ms (-119) | latency:  119 ms | size: 30473 bytes
+2018-02-03 22:33:14 [scrapy.extensions.throttle] INFO: slot: difang.gmw.cn | conc: 1 | delay:  421 ms (+290) | latency: 4217 ms | size: 29945 bytes
+2018-02-03 22:33:14 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 2 | delay:  415 ms (+165) | latency: 4158 ms | size:  2913 bytes
+2018-02-03 22:33:14 [scrapy.extensions.throttle] INFO: slot: book.gmw.cn | conc: 1 | delay:  214 ms (-201) | latency:  129 ms | size:  2922 bytes
+2018-02-03 22:33:14 [scrapy.extensions.throttle] INFO: slot: djzsjs.gmw.cn | conc: 1 | delay:  183 ms (-66) | latency: 1172 ms | size: 11225 bytes
+2018-02-03 22:33:14 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 2 | delay:  398 ms (+148) | latency: 3980 ms | size: 10583 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 2 | delay:  132 ms (-117) | latency:  157 ms | size:  7938 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 2 | delay:  414 ms (+164) | latency: 4149 ms | size:  1797 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency:  159 ms | size:  1798 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: liuxue.gmw.cn | conc: 1 | delay:  206 ms (-191) | latency:  156 ms | size: 10656 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency:  161 ms | size:  1626 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 2 | delay:  413 ms (+163) | latency: 4136 ms | size: 23386 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 2 | delay:  135 ms (-114) | latency:  211 ms | size:  7469 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 2 | delay:  371 ms (+121) | latency: 3710 ms | size:  1626 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 2 | delay:  368 ms (+118) | latency: 3683 ms | size:  8577 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency:  202 ms | size:  1777 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: gongyi.gmw.cn | conc: 1 | delay:  420 ms (+170) | latency: 4207 ms | size:  5907 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 2 | delay:  136 ms (-113) | latency:  234 ms | size:  9385 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: gmrb3.wap.gmw.cn | conc: 1 | delay:  204 ms (-45) | latency: 1596 ms | size:  4321 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 2 | delay:  425 ms (+175) | latency: 4257 ms | size:  7337 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 2 | delay:  432 ms (+182) | latency: 4321 ms | size:  9093 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 2 | delay:  422 ms (+172) | latency: 4220 ms | size: 10812 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: dangjian.gmw.cn | conc: 1 | delay:  231 ms (-190) | latency:  414 ms | size: 11263 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: ku.theory.gmw.cn | conc: 2 | delay:  145 ms (-104) | latency:  412 ms | size:  8384 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: shuhua.gmw.cn | conc: 1 | delay:  237 ms (-194) | latency:  437 ms | size:  9703 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 2 | delay:  413 ms (+163) | latency: 4130 ms | size:  8298 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 2 | delay:  146 ms (-103) | latency:  439 ms | size: 18685 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: wycz.gmw.cn | conc: 1 | delay:  199 ms (-50) | latency: 1490 ms | size: 12764 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 2 | delay:  434 ms (+184) | latency: 4347 ms | size: 13233 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: sports.gmw.cn | conc: 1 | delay:  402 ms (+152) | latency: 4027 ms | size:  1626 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 2 | delay:  430 ms (+180) | latency: 4300 ms | size: 10138 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: legal.gmw.cn | conc: 1 | delay:  448 ms (+301) | latency: 4489 ms | size:  8352 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 2 | delay:  449 ms (+199) | latency: 4491 ms | size:  7842 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 2 | delay:  147 ms (-102) | latency:  449 ms | size:  9962 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 2 | delay:  147 ms (-102) | latency:  458 ms | size:  9757 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: finance.gmw.cn | conc: 1 | delay:  208 ms (-162) | latency:  467 ms | size: 33484 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 3 | delay:  148 ms (-101) | latency:  477 ms | size:  7444 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 2 | delay:  133 ms (-116) | latency:  175 ms | size: 21125 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 2 | delay:  450 ms (+200) | latency: 4504 ms | size:  8886 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: culture.gmw.cn | conc: 2 | delay:  429 ms (+280) | latency: 4290 ms | size:  7347 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 2 | delay:  450 ms (+200) | latency: 4503 ms | size:  7302 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: junshi.gmw.cn | conc: 2 | delay:  132 ms (-117) | latency:  147 ms | size: 34294 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: m.gmw.cn | conc: 1 | delay:  208 ms (-160) | latency:  480 ms | size: 11364 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: life.gmw.cn | conc: 1 | delay:  250 ms (-199) | latency:  505 ms | size:  9964 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 2 | delay:  151 ms (-98) | latency:  527 ms | size:  9782 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: ku.theory.gmw.cn | conc: 1 | delay:  147 ms (+2) | latency: 1476 ms | size: 40018 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 2 | delay:  451 ms (+201) | latency: 4519 ms | size:  8861 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: meiwen.gmw.cn | conc: 1 | delay:  240 ms (-189) | latency:  509 ms | size: 10068 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 2 | delay:  152 ms (-97) | latency:  541 ms | size:  8709 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: yangsheng.gmw.cn | conc: 1 | delay:  121 ms (-25) | latency:  962 ms | size:  9971 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: kepu.gmw.cn | conc: 1 | delay:  420 ms (+286) | latency: 4200 ms | size: 26958 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 2 | delay:  153 ms (-96) | latency:  561 ms | size: 10097 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: news.gmw.cn | conc: 1 | delay:  469 ms (+317) | latency: 4692 ms | size:  9889 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 2 | delay:  151 ms (-98) | latency:  538 ms | size:  2670 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 2 | delay:  151 ms (-98) | latency:  536 ms | size:  9308 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 2 | delay:  415 ms (+165) | latency: 4152 ms | size: 24848 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: history.gmw.cn | conc: 1 | delay:  469 ms (+333) | latency: 4697 ms | size:  1797 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: it.gmw.cn | conc: 1 | delay:  414 ms (+0) | latency:  559 ms | size:  1797 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 2 | delay:  415 ms (+165) | latency: 4150 ms | size: 32287 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: topics.gmw.cn | conc: 1 | delay:  470 ms (+317) | latency: 4702 ms | size:  9421 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: health.gmw.cn | conc: 1 | delay:  252 ms (-196) | latency:  566 ms | size:  4723 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 2 | delay:  250 ms (+0) | latency:  591 ms | size:  1798 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: guancha.gmw.cn | conc: 1 | delay:  413 ms (+0) | latency:  587 ms | size:   123 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: www.gmw.cn | conc: 1 | delay:  454 ms (+302) | latency: 4543 ms | size:  2670 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: shipin.gmw.cn | conc: 1 | delay:  218 ms (-196) | latency:  220 ms | size: 29732 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: jyj.gmw.cn | conc: 1 | delay:  234 ms (-178) | latency:  562 ms | size:  7219 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: mil.gmw.cn | conc: 1 | delay:  255 ms (-196) | latency:  585 ms | size:  8644 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: economy.gmw.cn | conc: 1 | delay:  472 ms (+222) | latency: 4725 ms | size: 10368 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: reader.gmw.cn | conc: 1 | delay:  242 ms (-183) | latency:  594 ms | size:  6393 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 2 | delay:  456 ms (+206) | latency: 4561 ms | size: 29150 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: cm.health.gmw.cn | conc: 1 | delay:  253 ms (+105) | latency: 2534 ms | size:  9454 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: theory.gmw.cn | conc: 1 | delay:  238 ms (-176) | latency:  613 ms | size:  7232 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: politics.gmw.cn | conc: 1 | delay:  456 ms (+0) | latency:  597 ms | size:  1798 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 3 | delay:  457 ms (+207) | latency: 4571 ms | size:   123 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 3 | delay:  155 ms (-94) | latency:  618 ms | size: 11030 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: interview.gmw.cn | conc: 2 | delay:  474 ms (+318) | latency: 4740 ms | size: 21906 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 3 | delay:  458 ms (+208) | latency: 4585 ms | size:   123 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: e.gmw.cn | conc: 2 | delay:  457 ms (+0) | latency:  622 ms | size:   123 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: tech.gmw.cn | conc: 1 | delay:  480 ms (+328) | latency: 4808 ms | size:  8673 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: zj.theory.gmw.cn | conc: 1 | delay:  258 ms (-192) | latency:  661 ms | size:  8516 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: world.gmw.cn | conc: 2 | delay:  468 ms (+335) | latency: 4682 ms | size:  8019 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: lady.gmw.cn | conc: 1 | delay:  458 ms (+208) | latency: 4582 ms | size:  1798 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: travel.gmw.cn | conc: 1 | delay:  481 ms (+345) | latency: 4814 ms | size:  7695 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: edu.gmw.cn | conc: 2 | delay:  458 ms (+0) | latency:  650 ms | size:   123 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: junshi.gmw.cn | conc: 1 | delay:  421 ms (+289) | latency: 4219 ms | size: 39730 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 3 | delay:  136 ms (-113) | latency:  235 ms | size: 26605 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: view.gmw.cn | conc: 1 | delay:  458 ms (+306) | latency: 4585 ms | size: 10037 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: photo.gmw.cn | conc: 2 | delay:  482 ms (+345) | latency: 4826 ms | size:  7402 bytes
+2018-02-03 22:33:15 [scrapy.extensions.throttle] INFO: slot: wenyi.gmw.cn | conc: 1 | delay:  250 ms (-184) | latency:  666 ms | size: 10326 bytes
